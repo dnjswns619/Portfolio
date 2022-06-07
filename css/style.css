@@ -1,0 +1,302 @@
+/* FontAwesome CDN 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+/* xeicon */
+@import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+/* 눈누폰트 */
+@font-face {
+  font-family: 'GangwonEdu_OTFBoldA';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+/* header {display: none;} */
+/* .home-inner {display: none;} */
+/* .about-inner {display: none;} */
+.skill-inner {display: none;}
+.project-inner {display: none;}
+footer {display: none;}
+
+/* reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+/* default css */
+body {
+  font-family: 'GangwonEdu_OTFBoldA';
+  font-size: 18px;
+}
+/* common css */
+.headline {
+  text-align: center;
+}
+.headline h1{
+  font-size: 2em;
+}
+.headline hr {
+  border: transparent;
+  width: 100px;
+  height: 3px;
+  margin: 0 auto;
+  background-color:cornflowerblue
+}
+
+/* ----------------------- header ----------------------- */
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+header.active {
+  background-color: #fff;
+}
+.header-inner {
+  width: 1300px;
+  margin: 0 auto;
+  overflow: hidden;
+  height: 65px;
+}
+.logo {
+  float: left;
+}
+.logo a {
+  display: inline-block;
+  padding: 20px 0;
+  font-size: 1.5em;
+}
+.gnb {
+  float: right;
+}
+.gnb a {
+  font-size: 1.5em;
+  display: inline-block;
+  padding: 20px 0 20px 60px; 
+}
+.trigger {
+  display: none;
+}
+/* ----------------------- section : home ----------------------- */
+#home {
+  padding-top: 150px;
+}
+.home-inner {
+  width: 1300px;
+  height: 90vh;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-top: 100px;
+}
+.home-content {
+  animation: opacity 1s 3.5s both;
+}
+.home-content > div {
+  width: 50%;
+  float: left;
+}
+.home-text {
+  text-align: center;
+  padding: 0 30px;
+}
+.home-text h1 {
+  font-size: 4em;
+  margin-bottom: 30px;
+}
+.home-text p#typeit {
+  font-size: 2.5em;
+  color: cornflowerblue;
+}
+.home-text p:last-child {
+  margin-top: 30px;
+  padding: 0 50px;
+}
+.home-text span {
+  font-size: 2em;
+}
+.home-image {
+  height: 400px;
+}
+.home-image img {
+  display: block;
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+  float: right;
+  border-radius: 10px;
+}
+.welcome-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  text-align: center;
+  font-size: 2.5em;
+  transition: 0.5s;
+  animation: dtu 2s linear both;
+}
+.home-inner::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 65px;
+  left: 0;
+  width: 100%;
+  height: 95vh;
+  background-color: #000;
+  animation: overlay 1s 2s ease-in-out both;
+}
+.welcome-text span {
+  display: block;
+}
+@keyframes dtu {
+  0% {
+    opacity: 0;
+    margin-top: 100px;
+  }
+  20% {
+    opacity: 1;
+    margin-top: 0;
+  }
+  70% {
+    opacity: 1;
+    margin-top: 0;
+  }
+  100% {
+    opacity: 0;
+    margin-top: -100px;
+  }
+}
+@keyframes overlay {
+  0% {
+    width: 0;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* ----------------------- section : about ----------------------- */
+
+.about-inner {
+  width: 1300px;
+  margin: 38px auto 0;
+}
+.about-me {
+  margin: 100px 0;
+  overflow: hidden;
+}
+.about-me > div {
+  float: left;
+}
+.face-photo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+}
+.face-photo img {
+  display: block;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 30%;
+}
+.personal-info {
+  padding-top: 20px;
+}
+.personal-info span{
+  font-size: 1.5em;
+  display: block;
+  margin: 20px 0 10px;
+}
+.personal-info a{
+  color: cornflowerblue;
+}
+.educations {
+  margin: 50px 0;
+}
+.educations hr {
+  border: transparent;
+  background-color: cornflowerblue;
+  width: 100px;
+  height: 3px;
+  margin-bottom: 20px;
+}
+.education {
+  width: 100%;
+  height: 130px;
+  overflow: hidden;
+}
+.education >div {
+  float: left;
+}
+.title {
+  width: 40%;
+  height: inherit;
+  text-align: right;
+  padding-right: 100px;
+  border-right: 1px solid #ddd;
+  position: relative;
+}
+.title h3 {
+  padding-top: 10px;
+}
+.title::after {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border: 2px solid skyblue;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  right: -8px;
+}
+.info {
+  padding-left: 150px;
+  padding-top: 10px;
+}
+.info span {
+  font-size: 1.1em;
+}
+.info li {
+  color: rgb(92, 92, 92);
+}
+.experiences hr {
+  border: transparent;
+  background-color: cornflowerblue;
+  width: 100px;
+  height: 3px;
+  margin-bottom: 20px;
+}
+.experience {
+  width: 100%;
+  height: 130px;
+  overflow: hidden;
+}
+.experience >div {
+  float: left;
+}
+

@@ -1,0 +1,49 @@
+@media (max-width:768px) {
+  /* default css */
+  body.active {
+    overflow: hidden;
+  }
+  /* ----------------------- header ----------------------- */
+  .header-inner {
+    width: 100%;
+  }
+  .trigger {
+    display: block;
+    width: 20px;
+    height: 25px;
+    font-size: 1.5em;
+    position: absolute;
+    top: 13px;
+    right: 20px;
+  }
+  .logo a {
+    font: inherit;
+  }
+  .gnb {
+    width: 200px;
+    height: 100vh;
+    border: 1px solid crimson;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: -220px;
+    background-color: #fff;
+    transition: 0.5s;
+  }
+  .gnb.active {
+    right: 0px;
+  }
+  .gnb a:first-child {
+    margin-top: 80px;
+  }
+  .trigger::before {
+    content:"\e91c";
+    font-family: xeicon;
+    transition: 0.5s;
+  }
+  .trigger.active::before {
+    content: "\e921";
+    font-family: xeicon;
+  }
+}
