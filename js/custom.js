@@ -18,6 +18,13 @@ $(function(){
       $('header').removeClass('active')
     }
   })
+  //slick slider 
+  $('.slick-slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+  });
   //typeit
   new TypeIt("#typeit", { 
     lifeLike: false, 

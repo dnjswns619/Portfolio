@@ -4,19 +4,21 @@
 <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- slick.js -->
-  <link rel="stylesheet" href="./js/slick/slick.css">
-  <link rel="stylesheet" href="./js/slick/slick-theme.css">
-  <script src="./js/slick/slick.min.js"></script>
-  <!-- typeit -->
-  <script src="https://unpkg.com/typeit@8.5.4/dist/index.umd.js"></script>
   <!-- jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- typeit -->
+  <script src="https://unpkg.com/typeit@8.5.4/dist/index.umd.js"></script>
+  <!-- featherlight css & js -->
+  <link rel="stylesheet" href="./js/featherlight/featherlight.css">
+  <script src="./js/featherlight/featherlight.js"></script>
+  <!-- slick slider css & js -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <!-- custom css & js -->
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/responsive.css">
   <script src="./js/custom.js"></script>
-  <title>Document</title>
+  <title>WONJUN'S PROTFOLIO</title>
 </head>
 <body>
   <div class="container">
@@ -27,7 +29,7 @@
             <a href="#about">ABOUT ME</a>
             <a href="#skill">SKILL</a>
             <a href="#project">PROJECT</a>
-            <a href="#contact">CONTACT</a>
+            <a href="#epilogue">EPILOGUE & CONTACT</a>
         </div>
         <div class="trigger"></div>
       </div>
@@ -86,8 +88,7 @@
               <div class="info">
                 <ul>
                   <span>코리아 it 아카데미에서 진행하는 프론트 앤드 개발자 육성과정</span>
-                  <li>6개월 교육</li>
-                  <li>FE 개발자가 알아야 하는 언어 교육</li>
+                  <li>개발자로 일하면서 필요한 기술의 교육</li>
                   <li>팀 프로젝트를 통한 협업 경험</li>
                 </ul>
               </div>
@@ -148,76 +149,208 @@
           <h1>SKILL</h1>
           <hr>
         </div>
-        <div class="skill_cont">
-          <input type="radio" name="tabmenu" id="tab1">
-          <input type="radio" name="tabmenu" id="tab2">
-          <input type="radio" name="tabmenu" id="tab3">
-          <input type="radio" name="tabmenu" id="tab4">
-          <input type="radio" name="tabmenu" id="tab5">
-          <label for="tab1"></label>
-          <label for="tab2"></label>
-          <label for="tab3"></label>
-          <label for="tab4"></label>
-          <label for="tab5"></label>
-          <div class="tabs">
-            <div class="tab tab1">html</div>
-            <div class="tab tab2">css</div>
-            <div class="tab tab3">js</div>
-            <div class="tab tab4">jquery</div>
-            <div class="tab tab5">tools</div>
+        <div class="skill-content">
+          <div class="skill">
+            <div class="skill-title">
+              <span>HTML</span>
+            </div>
+            <p>웹 표준과 웹 접근성을 준수하는 웹사이트 퍼블리싱을 하려고<br> 노력하고 있습니다.
+            웹 표준을 위해 HTML5에서 권장하는 마크업 방식과 시멘틱 태그를 사용해 전체 레이아웃을 설계합니다.</p>
+          </div>
+          <div class="skill">
+            <div class="skill-title">
+              <span>CSS</span>
+            </div>
+            <p>IE의 지원도 고려하면서 크로스브라우징을 위해 안정적인 CSS 속성을 사용해 HTML의 배치와 디자인을 하려고 노력합니다.
+            하지만 특벽한 경우 CSS3에서 새롭게 지원하는 속성을 이용해 배치와 디자인을 합니다</p>
+          </div>
+          <div class="skill">
+            <div class="skill-title">
+              <span>JavaScript & JQUERY</span>
+            </div>
+            <p>웹 퍼블리싱에 반드시 필요한 네비게이션, 탭 메뉴, 어코디언 등 기능적으로 필요한 부분을 제이쿼리 플러그인을 사용하지 않고 순수한 제이쿼리 코딩으로 제작합니다.<br>
+            if 조건문, for 반복문등 필수적인 자바스크립트도 활용은 가능하며 주로 제이쿼리와 병행해서 활용하고있습니다.</p>
+          </div>
+          <div class="skill">
+            <div class="skill-title">
+              <span>Resposive Web</span>
+            </div>
+            <p>반응형 웹 제작에 있어서 크로스브라우징을 위해 안정적인 float, position등을 활용한 반응형 웹 제작 경험을 가지고 있습니다.</p>
+          </div>
+          <div class="skill">
+            <div class="skill-title">
+              <span>Text Editor</span>
+            </div>
+            <p>텍스트 에디터는 Visual Srudio Code를 메인으로 사용하며 Brackets을 사용한 경험이 있습니다.</p>
           </div>
         </div>
       </div>
     </section>
     <section id="project">
-        <div class="project-inner">
-          <div class="headline">
-            <h1>PROJECT</h1>
-            <hr>
-          </div>
-            <div class="project_sb">
-                <div class="sb_img"></div>
-                <div class="sb_cont">
-                    <div class="sb_txt">
-                        <h3>Star-Bucks</h3>
-                        <p>Publishing 100%</p>
-                        <p>반응형웹을 공부하기 위해 팀프로젝트에서 starbuck홈페이지의<br>
-                            store에 해당하는 페이지들을 반응형으로 클론코딩해 만들었습니다.</p>
-                    </div>
-                    <div class="demo"></div>
-                    <div class="code"></div>
-                </div>
-            </div>
-            <div class="project_jtbc">
-                <div class="jtbc_img"></div>
-                <div class="jtbc_cont">
-                    <div class="jtbc_txt">
-                        <h3>JTBC</h3>
-                        <p>동적인 효과들을 공부하기 위해 팀프로젝트에서 jtbcjtbcmediatech 홈페이지의<br>
-                            보도제작에 해당하는 페이지들의 기능들을 js와 swiper.js를 이용해 제작했습니다</p>
-                    </div>
-                    <div class="demo"></div>
-                    <div class="code"></div>
-                </div>
-                
-            </div>
+      <div class="project-inner">
+        <div class="headline">
+          <h1>PROJECT</h1>
+          <hr>
         </div>
+        <div class="project-content">
+          <input type="radio" name="tabmenu" id="tab1">
+          <input type="radio" name="tabmenu" id="tab2">
+          <input type="radio" name="tabmenu" id="tab3">
+          <input type="radio" name="tabmenu" id="tab4">
+          <input type="radio" name="tabmenu" id="tab5" checked>
+          <label for="tab1">stat-bucks</label>
+          <label for="tab2">jtbc</label>
+          <label for="tab3">****</label>
+          <label for="tab4">####</label>
+          <label for="tab5">portfolio</label>
+          <div class="tabs">
+            <div class="tab project">
+              <div class="project-text">
+                <div class="sb-text">
+                  <h2>Star-Bucks</h2>
+                  <p>진행 내용:<br>
+                    반응형 웹페이지를 제작하기 위해 팀프로젝트로 starbuck홈페이지<br>
+                    클론코딩을 진행하였습니다.<br>
+                    매장 검색을 제외한 store에 해당하는 페이지들을 pc, 테블릿, 핸드폰에서 잘 나올수 있도록 만들었으며<br>
+                  취합은 github를 통해 각각의 브랜치를 만들고 pull request 통해 main에 marge하는 방식을 사용했습니다</p>
+                  <p>제작참여율: 100%</p>
+                  <p>제작방식 : HTML + CSS + JQUERY</p>
+                </div>
+                <div class="view-more">
+                  <a class="demo" href="./pages" data-featherlight="iframe">view</a>
+                  <a class="code" href="">code</a>
+                </div>
+              </div>
+              <div class="slick-slider">
+                <div><img src="./images/" alt=""></div>
+                <div><img src="./images/" alt=""></div>
+                <div><img src="./images/" alt=""></div>
+              </div>
+            </div>
+            <div class="tab project">
+              <div class="project-text">
+                <div class="sb-text">
+                  <h2>jtbc</h2>
+                  <p>진행 내용:<br>
+                    반응형 웹페이지를 제작하기 위해 팀프로젝트로 starbuck홈페이지<br>
+                    클론코딩을 진행하였습니다.<br>
+                    매장 검색을 제외한 store에 해당하는 페이지들을 pc, 테블릿, 핸드폰에서 잘 나올수 있도록 만들었으며<br>
+                  취합은 github를 통해 각각의 브랜치를 만들고 pull request 통해 main에 marge하는 방식을 사용했습니다<br>
+                  동적인 효과들을 공부하기 위해 팀프로젝트에서 jtbcjtbcmediatech 홈페이지의<br>
+                  보도제작에 해당하는 페이지들의 기능들을 js와 swiper.js를 이용해 제작했습니다</p>
+                  <p>제작참여율: 100%</p>
+                  <p>제작방식 : HTML + CSS + JQUERY</p>
+                </div>
+                <div class="view-more">
+                  <a class="demo" href="./pages" data-featherlight="iframe">view</a>
+                  <a class="code" href="">code</a>
+                </div>
+              </div>
+              <div class="slick-slider">
+                <div><img src="./images/" alt=""></div>
+                <div><img src="./images/" alt=""></div>
+                <div><img src="./images/" alt=""></div>
+              </div>
+            </div>
+            <div class="tab project">
+              <div class="project-text">
+                <div class="sb-text">
+                  <h2>****</h2>
+                  <p>진행 내용:<br>
+                    반응형 웹페이지를 제작하기 위해 팀프로젝트로 starbuck홈페이지<br>
+                    클론코딩을 진행하였습니다.<br>
+                    매장 검색을 제외한 store에 해당하는 페이지들을 pc, 테블릿, 핸드폰에서 잘 나올수 있도록 만들었으며<br>
+                  취합은 github를 통해 각각의 브랜치를 만들고 pull request 통해 main에 marge하는 방식을 사용했습니다</p>
+                  <p>제작참여율: 100%</p>
+                  <p>제작방식 : HTML + CSS + JQUERY</p>
+                </div>
+                <div class="view-more">
+                  <a class="demo" href="./pages" data-featherlight="iframe">view</a>
+                  <a class="code" href="">code</a>
+                </div>
+              </div>
+              <div class="slick-slider">
+                <div><img src="./images/" alt=""></div>
+                <div><img src="./images/" alt=""></div>
+                <div><img src="./images/" alt=""></div>
+              </div>
+            </div>
+            <div class="tab project">
+              <div class="project-text">
+                <div class="sb-text">
+                  <h2>####</h2>
+                  <p>진행 내용:<br>
+                    반응형 웹페이지를 제작하기 위해 팀프로젝트로 starbuck홈페이지<br>
+                    클론코딩을 진행하였습니다.<br>
+                    매장 검색을 제외한 store에 해당하는 페이지들을 pc, 테블릿, 핸드폰에서 잘 나올수 있도록 만들었으며<br>
+                  취합은 github를 통해 각각의 브랜치를 만들고 pull request 통해 main에 marge하는 방식을 사용했습니다</p>
+                  <p>제작참여율: 100%</p>
+                  <p>제작방식 : HTML + CSS + JQUERY</p>
+                </div>
+                <div class="view-more">
+                  <a class="demo" href="./pages" data-featherlight="iframe">view</a>
+                  <a class="code" href="">code</a>
+                </div>
+              </div>
+              <div class="slick-slider">
+                <div><img src="./images/" alt=""></div>
+                <div><img src="./images/" alt=""></div>
+                <div><img src="./images/" alt=""></div>
+              </div>
+            </div>
+            <div class="tab project">
+              <div class="project-text">
+                <div class="sb-text">
+                  <h2>portfolio</h2>
+                  <p>진행 내용:<br>
+                    포트폴리오 홈페이지입니다. 너무 요란하지 않게 심플한 스타일로 디자인 했으며
+                  CSS를 이용하여 project의 탭 메뉴를 구성하였고<br>
+                  slick-slider 플로그인을 사용해 project의 이미지를 슬라이드시키고 사용자가 
+                  홈페이지에 계속 머물도록 featherlight를 이용해 모달창이 나오도록 구현했습니다.<br>
+                반응형일때는 header에 네비게이션을 햄버거메뉴로 만든 후 눌렀을때 나오고 이동하거나 
+                다시 눌렀을 때 혹은 메뉴가 아닌 부분을 눌렀을때는 메뉴가 사라지게 jquery로 구현했습니다.</p>
+                  <p>제작참여율: 100%</p>
+                  <p>제작방식 : HTML + CSS + JQUERY</p>
+                </div>
+                <div class="view-more">
+                  <a class="demo" href="./pages" data-featherlight="iframe">view</a>
+                  <a class="code" href="">code</a>
+                </div>
+              </div>
+              <div class="slick-slider">
+                <div><img src="./images/" alt=""></div>
+                <div><img src="./images/" alt=""></div>
+                <div><img src="./images/" alt=""></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-    <footer>
-      <div id="footer_inner">
-        <ul id="fot_link1">
-          <li><a>깃허브</a></li>
-          <li><a>블로그</a></li>
-        </ul>
-        <p>웹의 컨텐츠들이 구현되는것을 보며 즐거워하는 신입 퍼블리셔 이원준입니다.</p>
-        <p>책임감이 강하며 만드는 것과 결과가 눈에 보이는것을 좋아하는 저는<br>
+    <section id="epilogue">
+      <div class="epilogue-inner">
+        <div class="headline">
+          <h1>EPILOGUE</h1>
+          <hr>
+        </div>
+        <h2>콘텐츠들이 제 손에 의해 구현되는 것을 즐거워하는 신입 퍼블리셔 이원준입니다.</h2>
+        <p><span>책임감</span>이 강하며 만드는 것과 결과가 눈에 보이는것을 좋아하는 저는<br>
           웹을 구현하는데에 있어 강점으로 작용할것입니다.</p>
-        <p>지금보다 더 나은 결과를 위해서 새로운 것을 배우는 것을 마다하지 않으며<br>
+        <p>지금보다 더 나은 결과를 위해서 <span>새로운 것</span>을 배우는 것을 마다하지 않으며<br>
           항상 개발자와 사용자에게 최적의 경험을 전달해주기 위해서 노력하겠습니다.</p>
-        <p>구현, 기록, 성장이라는 키워드는 지속적으로 성장해 나아가기위해 끊임없이<br>
-          추구하는 저의 모토입니다.</p>
-        <p>©2022. 이원준 ALL RIGHTS RESERVED</p>
-        <p>본 사이트는 개인 포트폴리오 사이트로 제작되어 상업적 목적이 아닙니다.</p>
+        <p><span>구현, 기록, 성장</span>이라는 키워드를 지속적으로 성장해 나아가기위해<br>
+          항상 추구하겠습니다.</p>
+      </div>
+    </section>
+    <footer id="footer">
+      <div class="footer-inner">
+        <div class="contact-info">
+          <h2>THANK YOU</h2>
+          <p>CONTACT</p>
+          <p>연락처 : 010-4035-0588<br>
+          이메일 : dnjswns619@naver.com</p>
+        </div>
+        <a href="#">위로 가기<i class="xi-arrow-up"></i></a>
       </div>
     </footer>
   </div>
