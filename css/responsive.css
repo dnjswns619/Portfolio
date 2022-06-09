@@ -16,13 +16,15 @@
     top: 13px;
     right: 20px;
   }
+  .logo {
+    margin-left: 20px
+  }
   .logo a {
     font: inherit;
   }
   .gnb {
     width: 200px;
     height: 100vh;
-    border: 1px solid crimson;
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -30,6 +32,7 @@
     right: -220px;
     background-color: #fff;
     transition: 0.5s;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.212);
   }
   .gnb.active {
     right: 0px;
@@ -45,5 +48,123 @@
   .trigger.active::before {
     content: "\e921";
     font-family: xeicon;
+  }
+  /* ----------------------- section : home ----------------------- */
+  .home-inner {
+    width: 100%;
+  }
+  .home-content > div {
+    float: none;
+    width: 100%;
+  }
+  .home-text h1 {
+    font-size: 2em;
+  }
+  .home-text p#typeit {
+    font-size: 1.5em;
+  }
+  .home-text span {
+    font-size: 1em;
+  }
+  .home-image {
+    display: none;
+  }
+  /* ----------------------- section : about ----------------------- */
+  .about-inner {
+    width: 100%;
+  }
+  .about-me > div {
+    float: none;
+  }
+  .face-photo {
+    width: 100%;
+  }
+  .personal-info {
+    text-align: center;
+  }
+  .about-content {
+    padding: 0 20px;
+  }
+  .education {
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .education >div {
+    float: none;
+  }
+  .title {
+    width: 100%;
+    height: auto;
+    border-right: none;
+    text-align: left;
+  }
+  .title::after {
+    display: none;
+  }
+  .info {
+    padding-left: 0;
+    padding-top: 10px;
+  }
+  .experience {
+    height: auto;
+    margin-bottom: 20px;
+  }
+  /* ----------------------- section : skill ----------------------- */
+  .skill-inner {
+    width: 100%;
+  }
+  .skill {
+    float: none;
+    width: 100%;
+    animation: utd 0.3s linear both;
+  }
+  .skill:nth-child(1),
+  .skill:nth-child(2) {
+    width: 100%;
+  }
+  .skill p {
+    padding: 20px 20px;
+  }
+  .skill:nth-child(1) p,
+  .skill:nth-child(2) p {
+  padding: 20px 20px;
+  }
+  /* ----------------------- section : project ----------------------- */
+  .project > div {
+    float: none;
+  }
+  .slick-slider {
+    width: 100%;
+  }
+  .tab {
+    height: auto;
+  }
+  .project-text {
+    width: 100%;
+  }
+  label {
+    padding: 5px;
+    margin-right: 5px;
+  }
+  /* ----------------------- section : epilogue ----------------------- */
+  .epilogue-inner {
+    width: 100%;
+    padding: 0 20px
+  }
+  .epilogue-inner p {
+    line-height: 1.5em;
+  }
+  .epilogue-inner p br {
+    display: none;
+  }
+  /* ----------------------- footer ----------------------- */
+  .footer-inner {
+    width: 100%;
+  }
+  .footer-inner a {
+    bottom: 0;
+  }
+  .contact-info {
+    padding-bottom: 70px;
   }
 }
