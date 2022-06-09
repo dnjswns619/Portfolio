@@ -10,10 +10,11 @@
   font-style: normal;
 }
 /* header {display: none;} */
-/* .home-inner {display: none;} */
-/* .about-inner {display: none;} */
-/* .skill-inner {display: none;} */
-/* .project-inner {display: none;} */
+/* #home {display: none;} */
+/* #about {display: none;} */
+/* #skill {display: none;} */
+/* #project {display: none;} */
+/* #epilogue {display: none;} */
 /* footer {display: none;} */
 
 /* reset CSS */
@@ -53,7 +54,32 @@ section {
   margin: 0 auto;
   background-color:cornflowerblue
 }
-
+.ltr {
+  animation: ltr 0.5s linear both;
+}
+.rtl {
+  animation: rtl 0.5s linear both;
+}
+@keyframes ltr {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes rtl {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 /* ----------------------- header ----------------------- */
 header {
   width: 100%;
@@ -325,6 +351,7 @@ header.active {
 .skill {
   float: left;
   width: 33.33333333%;
+  
 }
 .skill:nth-child(1),
 .skill:nth-child(2) {
@@ -337,6 +364,10 @@ header.active {
   border-radius: 50%;
   margin: 10px auto;
   position: relative;
+  transition: 0.5s;
+}
+.skill-title i {
+  display: none;
 }
 .skill-title span {
   position: absolute;
@@ -344,12 +375,40 @@ header.active {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.skill-title:hover {
+  transform: rotateY(360deg);
+}
+.skill-title:hover i{
+  display: block;
+  font-size: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: cornflowerblue;
+}
+.skill-title:hover span{
+  display: none;
+}
 .skill p {
   padding: 20px 50px;
 }
 .skill:nth-child(1) p,
 .skill:nth-child(2) p {
   padding: 20px 100px;
+}
+.utd {
+  animation: utd 0.3s linear both;
+}
+@keyframes utd {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 /* ----------------------- section : project ----------------------- */
 #project {
@@ -434,6 +493,13 @@ label {
   height: 70vh;
   float: left;
 }
+label[for=tab1]:hover,
+label[for=tab2]:hover,
+label[for=tab3]:hover,
+label[for=tab4]:hover,
+label[for=tab5]:hover {
+  border-color: #000;
+}
 input[id=tab1]:checked ~ label[for=tab1],
 input[id=tab2]:checked ~ label[for=tab2],
 input[id=tab3]:checked ~ label[for=tab3],
@@ -484,6 +550,8 @@ input[id=tab5]:checked ~ .tabs {
   margin-bottom: 0;
 }
 .epilogue-inner {
+  width: 1300px;
+  margin: 0 auto;
   text-align: center;
 }
 .epilogue-inner h2 {
@@ -491,6 +559,12 @@ input[id=tab5]:checked ~ .tabs {
 }
 .epilogue-inner p {
   line-height: 2em;
+  color: rgb(112, 112, 112);
+  animation: ltr 0.5s 0.3s linear both;
+}
+.epilogue-inner p span {
+  font-size: 1.2em;
+  color: #000;
 }
 /* ----------------------- footer ----------------------- */
 .footer-inner {
@@ -518,6 +592,18 @@ input[id=tab5]:checked ~ .tabs {
   text-align: center;
   font-size: 30px;
   position: absolute;
-  bottom: 10px;
+  bottom: 70px;
   right: 5px;
+  animation: infinite 2s linear infinite;
+}
+@keyframes infinite {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }

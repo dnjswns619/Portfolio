@@ -8,6 +8,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <!-- typeit -->
   <script src="https://unpkg.com/typeit@8.5.4/dist/index.umd.js"></script>
+  <!-- wow.js -->
+  <script src="./js/wow/wow.min.js"></script>
   <!-- featherlight css & js -->
   <link rel="stylesheet" href="./js/featherlight/featherlight.css">
   <script src="./js/featherlight/featherlight.js"></script>
@@ -43,8 +45,8 @@
               <span>안녕하세요! 저는</span>
               <p id="typeit"></p>
               <span>신입 퍼블리셔 이원준입니다</span>
-                <p>더 한발 나아가기 위해 끊임없이 노력하며 늘 배우고 탐구하는 자세로 소통과 기획능력까지 갖춘 겸손하고 
-                책임감 있는 웹 퍼블리셔가 되겠습니다</p>
+              <p>더 한발 나아가기 위해 끊임없이 노력하며 늘 배우고 탐구하는 자세로 소통과 기획능력까지 갖춘 겸손하고 
+              책임감 있는 웹 퍼블리셔가 되겠습니다</p>
             </div>
             <div class="home-image">
               <img src="./images/비행기사진.jpg" alt="">
@@ -58,11 +60,11 @@
           <h1>ABOUT ME</h1>
           <hr>
         </div>
-        <div class="about-me">
+        <div class="about-me wow ltr">
           <div class="face-photo">
             <img src="./images/증명사진.jpg" alt="">
           </div>
-          <div class="personal-info">
+          <div class="personal-info wow rtl">
             <span>인적사항</span>
             <p>이름 : 이원준<br>
             생년월일 : 1997.06.19<br>
@@ -80,7 +82,7 @@
           <div class="educations">
             <h2>Eduaction</h2>
             <hr>
-            <div class="education">
+            <div class="education wow ltr">
               <div class="title">
                 <h3>코리아 it 아카데미</h3>
                 <p>2021.10.09 ~ 2022.04.03</p>
@@ -93,7 +95,7 @@
                 </ul>
               </div>
             </div>
-            <div class="education">
+            <div class="education wow ltr">
               <div class="title">
                 <h3>신구대학교</h3>
                 <p>2016.03 ~ 2021.02</p>
@@ -111,7 +113,7 @@
           <div class="experiences">
             <h2>Experience</h2>
             <hr>
-            <div class="experience">
+            <div class="experience wow ltr">
               <div class="title">
                 <h3>본치과기공소</h3>
                 <p>2021.03 ~ 2021.04</p>
@@ -125,7 +127,7 @@
                 </ul>
               </div>
             </div>
-            <div class="experience">
+            <div class="experience wow ltr">
               <div class="title">
                 <h3>아이센스리그PC 송파방이점</h3>
                 <p>2019.03 ~ 2020.04</p>
@@ -150,36 +152,41 @@
           <hr>
         </div>
         <div class="skill-content">
-          <div class="skill">
+          <div class="skill wow utd">
             <div class="skill-title">
               <span>HTML</span>
+              <i class="xi-html5"></i>
             </div>
             <p>웹 표준과 웹 접근성을 준수하는 웹사이트 퍼블리싱을 하려고<br> 노력하고 있습니다.
             웹 표준을 위해 HTML5에서 권장하는 마크업 방식과 시멘틱 태그를 사용해 전체 레이아웃을 설계합니다.</p>
           </div>
-          <div class="skill">
+          <div class="skill wow utd" data-wow-delay="0.3s">
             <div class="skill-title">
               <span>CSS</span>
+              <i class="xi-css3"></i>
             </div>
             <p>IE의 지원도 고려하면서 크로스브라우징을 위해 안정적인 CSS 속성을 사용해 HTML의 배치와 디자인을 하려고 노력합니다.
-            하지만 특벽한 경우 CSS3에서 새롭게 지원하는 속성을 이용해 배치와 디자인을 합니다</p>
+            하지만 특별한 경우 CSS3에서 새롭게 지원하는 속성을 이용해 배치와 디자인을 합니다</p>
           </div>
-          <div class="skill">
+          <div class="skill wow utd" data-wow-delay="0.6s">
             <div class="skill-title">
               <span>JavaScript & JQUERY</span>
+              <i class="xi-javascript"></i>
             </div>
             <p>웹 퍼블리싱에 반드시 필요한 네비게이션, 탭 메뉴, 어코디언 등 기능적으로 필요한 부분을 제이쿼리 플러그인을 사용하지 않고 순수한 제이쿼리 코딩으로 제작합니다.<br>
             if 조건문, for 반복문등 필수적인 자바스크립트도 활용은 가능하며 주로 제이쿼리와 병행해서 활용하고있습니다.</p>
           </div>
-          <div class="skill">
+          <div class="skill wow utd" data-wow-delay="0.9s">
             <div class="skill-title">
               <span>Resposive Web</span>
+              <i class="xi-devices"></i>
             </div>
             <p>반응형 웹 제작에 있어서 크로스브라우징을 위해 안정적인 float, position등을 활용한 반응형 웹 제작 경험을 가지고 있습니다.</p>
           </div>
-          <div class="skill">
+          <div class="skill wow utd" data-wow-delay="1.2s">
             <div class="skill-title">
               <span>Text Editor</span>
+              <i class="xi-code"></i>
             </div>
             <p>텍스트 에디터는 Visual Srudio Code를 메인으로 사용하며 Brackets을 사용한 경험이 있습니다.</p>
           </div>
@@ -193,12 +200,12 @@
           <hr>
         </div>
         <div class="project-content">
-          <input type="radio" name="tabmenu" id="tab1">
+          <input type="radio" name="tabmenu" id="tab1" checked>
           <input type="radio" name="tabmenu" id="tab2">
           <input type="radio" name="tabmenu" id="tab3">
           <input type="radio" name="tabmenu" id="tab4">
-          <input type="radio" name="tabmenu" id="tab5" checked>
-          <label for="tab1">stat-bucks</label>
+          <input type="radio" name="tabmenu" id="tab5">
+          <label for="tab1">starbucks</label>
           <label for="tab2">jtbc</label>
           <label for="tab3">****</label>
           <label for="tab4">####</label>
@@ -212,7 +219,7 @@
                     반응형 웹페이지를 제작하기 위해 팀프로젝트로 starbuck홈페이지<br>
                     클론코딩을 진행하였습니다.<br>
                     매장 검색을 제외한 store에 해당하는 페이지들을 pc, 테블릿, 핸드폰에서 잘 나올수 있도록 만들었으며<br>
-                  취합은 github를 통해 각각의 브랜치를 만들고 pull request 통해 main에 marge하는 방식을 사용했습니다</p>
+                  취합은 github를 통해 각각의 브랜치를 만들고 pull request 통해 main에 merge하는 방식을 사용했습니다</p>
                   <p>제작참여율: 100%</p>
                   <p>제작방식 : HTML + CSS + JQUERY</p>
                 </div>
@@ -222,9 +229,9 @@
                 </div>
               </div>
               <div class="slick-slider">
-                <div><img src="./images/" alt=""></div>
-                <div><img src="./images/" alt=""></div>
-                <div><img src="./images/" alt=""></div>
+                <div><img src="./images/화면 캡처 2022-06-09 131953.png" alt=""></div>
+                <div><img src="./images/화면 캡처 2022-06-09 131953.png" alt=""></div>
+                <div><img src="./images/화면 캡처 2022-06-09 131953.png" alt=""></div>
               </div>
             </div>
             <div class="tab project">
@@ -333,12 +340,12 @@
           <h1>EPILOGUE</h1>
           <hr>
         </div>
-        <h2>콘텐츠들이 제 손에 의해 구현되는 것을 즐거워하는 신입 퍼블리셔 이원준입니다.</h2>
-        <p><span>책임감</span>이 강하며 만드는 것과 결과가 눈에 보이는것을 좋아하는 저는<br>
+        <h2 class="wow ltr">콘텐츠들이 제 손에 의해 구현되는 것을 즐거워하는 신입 퍼블리셔 이원준입니다.</h2>
+        <p class="wow ltr" data-wow-delay="0.2s"><span>책임감</span>이 강하며 만드는 것과 결과가 눈에 보이는것을 좋아하는 저는<br>
           웹을 구현하는데에 있어 강점으로 작용할것입니다.</p>
-        <p>지금보다 더 나은 결과를 위해서 <span>새로운 것</span>을 배우는 것을 마다하지 않으며<br>
+        <p class="wow ltr" data-wow-delay="0.4s">지금보다 더 나은 결과를 위해서 <span>새로운 것</span>을 배우는 것을 마다하지 않으며<br>
           항상 개발자와 사용자에게 최적의 경험을 전달해주기 위해서 노력하겠습니다.</p>
-        <p><span>구현, 기록, 성장</span>이라는 키워드를 지속적으로 성장해 나아가기위해<br>
+        <p class="wow ltr" data-wow-delay="0.6s"><span>구현, 기록, 성장</span>이라는 키워드를 지속적으로 성장해 나아가기위해<br>
           항상 추구하겠습니다.</p>
       </div>
     </section>
