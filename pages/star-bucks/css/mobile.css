@@ -1,0 +1,16 @@
+.mobile {
+  width: 33.33333%;
+  height: 100vh;
+  position: relative;
+  background: url(../../../images/phone.png) no-repeat;
+  background-size: contain;
+  float: left;
+}
+.mobile iframe {
+  width: 50%;
+  height: 60%;
+  position: absolute;
+  top: 97px;
+  left: 47%;
+  transform: translateX(-50%);
+}

@@ -1,0 +1,16 @@
+.laptop {
+  height: 100vh;
+  position: relative;
+  background: url(../../../images/laptop.png) no-repeat;
+  background-position: center;
+}
+
+.laptop iframe {
+  background-color: #fff;
+  width: 828px;
+  height: 541px;
+  position: absolute;
+  top: 170px;
+  left: 50%;
+  transform: translateX(-50%);
+}
