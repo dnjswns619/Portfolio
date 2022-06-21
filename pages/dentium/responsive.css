@@ -1,0 +1,369 @@
+@media (max-width: 768px) {
+  html {
+    scroll-behavior: smooth;
+  }
+  header {
+    z-index: 100;
+  }
+  .cd-section {
+    height: auto;
+  }
+  .cd-section > div {
+    height: auto;
+  }
+  .content {
+    position: static;
+    width: 100%;
+    height: 100%;
+  }
+  .cd-vertical-nav {
+    display: none;
+  }
+  /* Header */
+  header {
+    transition: 0.5s;
+  }
+  header.active {
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+  }
+  .menu {
+    display: block;
+  }
+  .slogan {
+    display: none;
+  }
+  .gnb {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    right: -270px;
+    width: 250px;
+    height: 100vh;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.096);
+    transition: 0.5s;
+  }
+  .gnb.active {
+    right: 0;
+  }
+  .menu {
+    text-align: right;
+    line-height: 40px;
+    margin-top: 60px;
+  }
+  .menu a {
+    display: block;
+    padding-right: 20px;
+    color: #000;
+    font-size: 20px;
+  }
+
+  /* trigger */
+  .trigger {
+    display: block;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+  .trigger span {
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: #000;
+    transition: 0.5s;
+  }
+  .trigger span:nth-child(1) {
+    top: 0;
+  }
+  .trigger span:nth-child(2) {
+    top: 50%;
+    width: 90%;
+  }
+  .trigger span:nth-child(3) {
+    top: 100%;
+  }
+  .trigger.active span:nth-child(1) {
+    top: 50%;
+    transform: rotate(45deg);
+  }
+  .trigger.active span:nth-child(2) {
+    top: 50%;
+    width: 90%;
+    opacity: 0;
+  }
+  .trigger.active span:nth-child(3) {
+    top: 50%;
+    transform: rotate(-45deg);
+  }
+
+  /* Gototop */
+  .gototop {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 100;
+    border: 1px solid #eee;
+    background-color: rgba(0, 0, 0, 0.164);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    transform: translateY(30px);
+    opacity: 0;
+    transition: 0.5s;
+  }
+  .gototop.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .btn-hiring {
+    right: 20px;
+    bottom: 20px;
+  }
+  /* -------------------- Section : home -------------------- */
+  .home-inner {
+    height: 100vh;
+  }
+  .welcome-text {
+    transform: translate(-50%, -50%) scale(0.7);
+    width: 100%;
+  }
+  .home-heading {
+    left: 20px;
+  }
+  .home-heading span {
+    font-size: 50px;
+  }
+  /* -------------------- Section : about -------------------- */
+  .about-inner {
+    height: auto;
+    padding: 20px;
+  }
+  .about-items {
+    width: 100%;
+    position: static;
+    margin-left: 0;
+    transform: none;
+    text-align: center;
+  }
+  .item {
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .item img {
+    float: none;
+  }
+  /* -------------------- Section : project -------------------- */
+  #project {
+    height: auto;
+  }
+  .project-inner {
+    height: auto;
+    border: none;
+    overflow: hidden;
+  }
+  .tab > div {
+    float: none;
+    width: 100%;
+  }
+  .view-project {
+    width: 100%;
+  }
+  .project-info {
+    padding: 20px;
+  }
+  .detail div {
+    font-size: 13px;
+  }
+  .project-photo a img:last-child {
+    width: 100px;
+  }
+  .btn {
+    width: 100%;
+    bottom: 10px;
+  }
+  .view-project {
+    margin-left: 0;
+  }
+  /* -------------------- Section : academy -------------------- */
+  .academy-inner {
+    height: auto;
+    padding: 20px;
+  }
+  .academy-feature {
+    width: 100%;
+    position: static;
+    transform: none;
+  }
+  .academy-heading {
+    width: 100%;
+  }
+  .academy-heading p {
+    width: 100%;
+  }
+  .academy-info {
+    margin-bottom: 40px;
+  }
+  .academy-info > div {
+    float: none;
+    width: 100%;
+  }
+  .academy-photo img {
+    width: 100%;
+    height: auto;
+  }
+  .academy-heading {
+    padding-right: 0;
+  }
+  .slick-slide img {
+    width: 100%;
+  }
+  /* -------------------- Section : world -------------------- */
+  .world-inner {
+    height: auto;
+    background-size: cover;
+    background-position: left;
+  }
+  .world-inner > div {
+    float: none;
+    width: 100%;
+  }
+  .world-heading {
+    position: static;
+    transform: none;
+    padding: 40px 20px;
+  }
+  .world-heading {
+    width: 100%;
+  }
+  /* ------------------- Section : center ------------------- */
+  .center-inner {
+    height: auto;
+  }
+  .feature {
+    width: 100%;
+    position: static;
+    transform: none;
+  }
+  .research p {
+    padding: 0;
+    background: none;
+    height: 100%;
+  }
+  .feature > div {
+    float: none;
+    width: 100%;
+    padding: 20px;
+  }
+  .process-item p {
+    width: 100%;
+    float: none;
+    padding: 0;
+  }
+  .process-item p:nth-of-type(4),
+  .process-item p:nth-of-type(5) {
+    padding-left: 0;
+}
+  /* ------------------- Section : contact ------------------- */
+  .contact-inner {
+    height: auto;
+  }
+  .contact-feature {
+    position: static;
+    transform: none;
+    width: 100%;
+  }
+  .contact-feature > div {
+    float: none;
+    width: 100%;
+  }
+  .contact-info p {
+    line-height: 2em;
+  }
+  /* ------------------- Subpage : project ------------------- */
+  .modal-main {
+    height: 500px;
+    overflow: hidden;
+  }
+  .modal-heading {
+    width: 100%;
+    top: 65%;
+  }
+  .modal-heading h1 {
+    font-size: 40px;
+    margin-top: 20px;
+  }
+  .modal-info {
+    overflow: hidden;
+    padding: 20px;
+  }
+  .modal-info > div {
+    float: none;
+    width: 100%;
+    margin-top: 50px;
+    height: auto;
+  }
+  .case-parent,
+  .case-child {
+    position: static;
+    transform: none;
+    width: 100%;
+    text-align: center;
+  }
+  .case-parent.flex-order {
+    order: -1;
+  }
+  .photo.project-info {
+    padding-top: 0;
+    font-size: 19px;
+  }
+  .photo.project-info ul {
+    padding: 0;
+    text-align: center;
+  }
+  .photo iframe {
+    height: 300px;
+  }
+  .modal-info:nth-of-type(3) {
+    display: flex;
+    flex-direction: column;
+  }
+  .modal-slogan {
+    width: 100%;
+    padding: 50px 0;
+  }
+  .modal-slogan p {
+    width: 100%;
+    font-size: 1.5em;
+  }
+  .modal-slogan p::before {
+    font-size: 150px;
+    top: -90px;
+    left: 10px !important;
+  }
+  .modal-slogan a {
+    font-size: 0.8em;
+  }
+  .center-child h2 {
+    font-size: 22px;
+  }
+  /* Featherlight Mobile CSS */
+  .featherlight .featherlight-close-icon {
+    font-size: 24px;
+    right: 20px;
+    top: 35px;
+  }
+  /* ------------------- Subpage : project01 ------------------- */
+  .project-main01 .modal-info:nth-of-type(1) > div {
+    height: 300px;
+  }
+  /* ------------------- Subpage : project02 ------------------- */
+  .modal-info:nth-of-type(5) {
+    display: flex;
+    flex-direction: column;
+  }
+}

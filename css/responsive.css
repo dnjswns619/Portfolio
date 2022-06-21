@@ -34,11 +34,25 @@
     transition: 0.5s;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.212);
   }
+  .gnb a i {
+    font-size: 35px;
+  }
   .gnb.active {
     right: 0px;
   }
   .gnb a:first-child {
     margin-top: 80px;
+  }
+  .gnb a:nth-child(5)::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    border: 1px solid cornflowerblue;
+    background-color: cornflowerblue;
+    position: relative;
+    top: 60px;
+    left: 60px;
   }
   .trigger::before {
     content:"\e91c";
@@ -80,11 +94,15 @@
     width: 100%;
   }
   .personal-info {
+    margin-top: 40px;
     text-align: center;
+  }
+  .personal-info hr {
+    display: none;
   }
   .about-content {
     padding: 0 20px;
-  }
+  } 
   .education {
     height: auto;
     margin-bottom: 20px;
@@ -142,7 +160,11 @@
   .project-text {
     width: 100%;
   }
+  .project-text br {
+    display: none;
+  }
   label {
+    width: 30%;
     padding: 5px;
     margin-right: 5px;
   }
@@ -150,6 +172,9 @@
   .epilogue-inner {
     width: 100%;
     padding: 0 20px
+  }
+  .epilogue-inner h2 {
+    font-size: 29px;
   }
   .epilogue-inner p {
     line-height: 1.5em;
