@@ -9,13 +9,13 @@
   font-weight: normal;
   font-style: normal;
 }
-/* header {display: none;} */
-/* #home {display: none;} */
-/* #about {display: none;} */
-/* #skill {display: none;} */
-/* #project {display: none;} */
-/* #epilogue {display: none;} */
-/* footer {display: none;} */
+/* header {display: none;}
+#home {display: none;}
+#about {display: none;}
+#skill {display: none;}
+#project {display: none;}
+#epilogue {display: none;}
+footer {display: none;} */
 
 /* reset CSS */
 * {
@@ -90,12 +90,13 @@ header {
 }
 header.active {
   background-color: #fff;
+  box-shadow: 5px 0 5px rgba(0, 0, 0, 0.473);
 }
 .header-inner {
   width: 1300px;
   margin: 0 auto;
-  overflow: hidden;
   height: 65px;
+  position: relative;
 }
 .logo {
   float: left;
@@ -104,6 +105,10 @@ header.active {
   display: inline-block;
   padding: 20px 0;
   font-size: 1.5em;
+}
+.logo a img {
+  width: 25px;
+  height: 25px;
 }
 .gnb {
   float: right;
@@ -161,7 +166,7 @@ header.active {
   width: inherit;
   height: inherit;
   object-fit: cover;
-  float: right;
+  margin: 0 auto;
   border-radius: 10px;
 }
 .welcome-text {
@@ -247,6 +252,7 @@ header.active {
   align-items: center;
   justify-content: center;
   width: 60%;
+  margin-top: 55px;
 }
 .face-photo img {
   display: block;
@@ -255,13 +261,19 @@ header.active {
   object-fit: cover;
   border-radius: 30%;
 }
-.personal-info {
-  padding-top: 20px;
-}
 .personal-info span{
   font-size: 1.5em;
   display: block;
   margin: 20px 0 10px;
+  padding-top: 15px;
+}
+.personal-info span:first-child{
+  margin-top: 0;
+  padding-top: 0;
+}
+.personal-info p {
+  line-height: 1.5em;
+  padding-bottom: 30px;
 }
 .personal-info a{
   color: cornflowerblue;
@@ -280,6 +292,9 @@ header.active {
   width: 100%;
   height: 130px;
   overflow: hidden;
+}
+.educations h2 {
+  font-size: 1.8em;
 }
 .education >div {
   float: left;
@@ -324,6 +339,9 @@ header.active {
   height: 3px;
   margin-bottom: 20px;
 }
+.experiences h2 {
+  font-size: 1.8em;
+}
 .experience {
   width: 100%;
   height: 130px;
@@ -351,7 +369,6 @@ header.active {
 .skill {
   float: left;
   width: 33.33333333%;
-  
 }
 .skill:nth-child(1),
 .skill:nth-child(2) {
@@ -366,7 +383,7 @@ header.active {
   position: relative;
   transition: 0.5s;
 }
-.skill-title i {
+.skill-title img {
   display: none;
 }
 .skill-title span {
@@ -374,13 +391,15 @@ header.active {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
 }
 .skill-title:hover {
   transform: rotateY(360deg);
 }
-.skill-title:hover i{
+.skill-title:hover img{
   display: block;
-  font-size: 40px;
+  width: 45px;
+  height: 45px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -430,6 +449,7 @@ header.active {
 .slick-slider {
   width: 70%;
   height: 100%;
+  position: relative;
 }
 .slick-list,
 .slick-track {
@@ -444,6 +464,26 @@ header.active {
 .slick-arrow {
   display: none !important;
 }
+.slick-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+.slick-dots li{
+  list-style: none;
+  margin: 5px;
+  width: 13px;
+  height: 13px;
+  display: inline-block;
+  text-indent: -9999px;
+  background-color: cornflowerblue;
+  border-radius: 50%;
+} 
+.slick-dots li.slick-active {
+  background-color: crimson;
+}
 .project-text {
   width: 30%;
   height: 100%;
@@ -452,6 +492,7 @@ header.active {
 .sb-text h2 {
   font-size: 2em;
   margin-bottom: 30px;
+  text-decoration: underline;
 }
 .sb-text p {
   line-height: 1.5em;
@@ -464,21 +505,22 @@ header.active {
 }
 .demo,
 .code {
-  margin-top: 40px;
+  margin: 5px;
   border: 1px solid cornflowerblue;
-  display: inline-block;
-  padding: 15px 50px;
+  display: block;
+  padding: 10px 50px;
   border-radius: 10px;
 }
-.code {
-  margin-left: 40px;
+.demo:hover,
+.code:hover {
+  background-color: rgba(207, 220, 245, 0.205);;
 }
 input[type=radio] {
   display: none;
 }
 label {
   display: inline-block;
-  border: 2px solid cornflowerblue;
+  border: 2px solid #000;
   border-radius: 5px 5px 0 0;
   padding: 10px;
   border-bottom: none;
@@ -498,14 +540,15 @@ label[for=tab2]:hover,
 label[for=tab3]:hover,
 label[for=tab4]:hover,
 label[for=tab5]:hover {
-  border-color: #000;
+  border-color: cornflowerblue;
 }
 input[id=tab1]:checked ~ label[for=tab1],
 input[id=tab2]:checked ~ label[for=tab2],
 input[id=tab3]:checked ~ label[for=tab3],
 input[id=tab4]:checked ~ label[for=tab4],
 input[id=tab5]:checked ~ label[for=tab5] {
-  border-color: #222;
+  border-color: cornflowerblue;
+  background-color: cornflowerblue;
 }
 input[id=tab1]:checked ~ .tabs {
   margin-left: 0;
@@ -595,6 +638,10 @@ input[id=tab5]:checked ~ .tabs {
   bottom: 70px;
   right: 5px;
   animation: infinite 2s linear infinite;
+}
+.footer-inner a img {
+  width: 25px;
+  height: 25px;
 }
 @keyframes infinite {
   0% {

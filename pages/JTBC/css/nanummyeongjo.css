@@ -1,0 +1,26 @@
+@charset "utf-8";
+/*
+	noto sans kr 경량화 버젼
+*/
+
+@font-face {
+  font-family:'Nanum Myeongjo';
+  font-style: normal;
+  font-weight: 500;
+  src: url('font/nanummyeongjo/NanumMyeongjo-Bold.eot');
+  src: local('@'),
+	   url('font/nanummyeongjo/NanumMyeongjo-Bold.woff2') format('woff2'),
+       url('font/nanummyeongjo/NanumMyeongjo-Bold.woff') format('woff'),
+       url('font/nanummyeongjo/NanumMyeongjo-Bold.eot?#iefix') format('embedded-opentype');
+}
+
+@font-face {
+  font-family:'Nanum Myeongjo';
+  font-style: normal;
+  font-weight: 700;
+  src: url('font/nanummyeongjo/NanumMyeongjo-ExtraBold.eot');
+  src: local('@'),
+	   url('font/nanummyeongjo/NanumMyeongjo-ExtraBold.woff2') format('woff2'),
+       url('font/nanummyeongjo/NanumMyeongjo-ExtraBold.woff') format('woff'),
+       url('font/nanummyeongjo/NanumMyeongjo-ExtraBold.eot?#iefix') format('embedded-opentype');
+}

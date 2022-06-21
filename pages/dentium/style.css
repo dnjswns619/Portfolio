@@ -1,0 +1,796 @@
+/* Google Web Font : Montserrat */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Manrope:300,400,500,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
+
+/* FontAwesome CDN 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/*reset CSS*/
+* {
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+/* #home {display: none;}
+#about {display: none;}
+#project {display: none;}
+#academy {display: none;}
+#world {display: none;}
+#center {display: none;}
+#contact {display: none;} */
+/* default CSS */
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #222;
+  font-size: 15px;
+  margin: 0;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.cd-section {
+  height: 100vh;
+}
+.cd-section > div {
+  height: 100%;
+  position: relative;
+}
+.content {
+  background-color: #ddd;
+  position: absolute;
+  width: calc(100% - 40px);
+  height: calc(100% - 80px);
+  left: 20px;
+  bottom: 20px;
+  overflow: hidden;
+}
+
+/* Header */
+header {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.gnb-inner {
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  overflow: hidden;
+}
+.logo {
+  float: left;
+}
+.logo img {
+  padding-top: 10px;
+}
+.gnb {
+  float: right;
+}
+.menu {
+  display: none;
+}
+.slogan {
+  font-size: 18px;
+  font-style: italic;
+  line-height: 52px;
+}
+.trigger {
+  display: none;
+}
+nav {
+  height: auto;
+}
+.cd-vertical-nav {
+  display: block;
+}
+/* Hiring Button */
+.btn-hiring {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  color: #fff;
+  padding: 10px 20px;
+  background-color: #000;
+  border-radius: 20px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.233); 
+  transition: 0.5s;
+}
+.btn-hiring:active {
+  transform: scale(0);
+}
+/* ------------------------ Section : home ------------------------ */
+.home-inner {
+  background-color: #fff;
+  height: 100%;
+}
+.opacity-image {
+  background: url(./images/mRoll04.jpg) no-repeat center center;
+  background-size: cover;
+  height: 100%;
+  opacity: 0;
+  animation: opacity 1s ease-in both;
+}
+.home-heading {
+  position: absolute;
+  top: 50%;
+  left: 250px;
+  transform: translateY(-50%);
+}
+.home-heading span {
+  display: block;
+  font-size: 100px;
+  color: #c3d600;
+  font-weight: 600;
+  overflow: hidden;
+  animation: opacity 1s 1s ease-in-out both;
+}
+.home-heading span:nth-child(2) {
+  animation-delay: 1.2s;
+}
+.home-heading span:nth-child(3) {
+  animation-delay: 1.4s;
+}
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* -------------------- Section : about -------------------- */
+.about-inner {
+  background:  url(./images/mRoll03.jpg) no-repeat;
+  background-size: cover;
+  background-position: left;
+  height: 100%;
+  position: relative;
+}
+.about-inner::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.432);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.about-items {
+  width: 100%;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 150px;
+}
+.item {
+  width: 50%;
+  overflow: hidden;
+  margin-bottom: 20px;
+  position: relative;
+}
+.item:hover img {
+  filter: grayscale(0);
+}
+.item:hover h3 {
+  color: #c3d600;
+}
+.item img {
+  height: 160px;
+  float: left;
+  margin-right: 20px;
+  filter: grayscale(1);
+  transition: 0.5s;
+}
+.item:first-child img {
+  width: 160px;
+  border-radius: 50%;
+}
+.item h3 {
+  font-size: 22px;
+  font-weight: 500;
+  margin: 0;
+  transition: 0.5s;
+  letter-spacing: -1px;
+}
+.item p {
+  overflow: hidden;
+  font-size: 1em;
+}
+/* -------------------- Section : project -------------------- */
+.project-inner {
+  height: 100%;
+  overflow: hidden;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+.tabs {
+  height: 100%;
+  width: 200%;
+  transition: 0.5s;
+}
+.tab {
+  height: 100%;
+  float: left;
+  width: 50%;
+}
+.tab > div {
+  height: 100%;
+  float: left;
+}
+.project-info {
+  width: 35%;
+}
+.project-photo {
+  width: 65%;
+  overflow: hidden;
+}
+.slick-list,
+.slick-track {
+  height: 100%;
+}
+.project-photo a {
+  height: 100%;
+}
+.project-photo a img:first-child {
+  width: inherit;
+  height: inherit;
+  object-fit: cover;
+}
+.project-photo a img:last-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+input[name=tabmenu] {
+  display: none;
+}
+.btn {
+  position: absolute;
+  left: 0;
+  bottom: 30px;
+  width: 25%;
+  text-align: center;
+}
+.btn label {
+  cursor: pointer;
+  width: 5px;
+  height: 5px;
+  background-color: #000;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 8px;
+  position: relative;
+}
+.btn label::before {
+  content: '';
+  display: inline-block;
+  border: 1px solid transparent;
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  position: absolute;
+  top: -7px;
+  left: -7px;
+  transition: 0.5s;
+}
+.btn label:hover::before {
+  border-color: #aaa;
+}
+input[id=tab1]:checked ~ .btn label[for=tab1]::before,
+input[id=tab2]:checked ~ .btn label[for=tab2]::before {
+  border-color: #aaa;
+}
+input[id=tab1]:checked ~ .tabs {
+  margin-left: 0;
+}
+input[id=tab2]:checked ~ .tabs {
+  margin-left: -100%;
+}
+
+/* project info */
+.project-info {
+  position: relative;
+}
+.project-info h3,
+.project-info p,
+.detail ul {
+  padding: 0 50px;
+}
+.project-info h3 {
+  font-size: 20px;
+  position: relative;
+  padding-top: 50px;
+}
+.project-info p {
+  font-size: 16px;
+  line-height: 1.5em;
+}
+.detail ul {
+  line-height: 2em;
+  margin: 30px 0;
+}
+.detail {
+  margin-bottom: 50px;
+}
+.detail img {
+  width: 100%;
+}
+.view-project {
+  background-color: #3f3f3f;
+  color: #fff;
+  font-size: 13px;
+  text-align: center;
+  transition: 0.5s;
+  display: block;
+  width: 200px;
+  padding: 10px 25px 10px 10px;
+  text-align: center;
+  margin-left: 50px;
+  position: relative;
+}
+.view-project:hover {
+  background-color: #000;
+}
+.view-project img {
+  width: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 30px;
+  transition: 0.5s;
+  filter: invert(1);
+}
+.view-project:hover img {
+  right: 10px;
+}
+.project-info:before {
+  content: attr(data-text);
+  font-size: 130px;
+  color: rgba(221, 221, 221, 0.336);
+  position: absolute;
+  top: -10px;
+  left: 10px;
+}
+/* -------------------- Section : academy -------------------- */
+.academy-inner {
+  background-color: #1d1b24;
+  height: 100%;
+  color: #fff;
+}
+.academy-feature {
+  width: 78%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.academy-feature > div {
+  height: auto;
+  overflow: hidden;
+}
+.academy-info > div {
+  float: left;
+}
+.academy-heading {
+  width: 70%;
+}
+.academy-heading h2,
+.lectures-info h2 {
+  margin: 0;
+  color: #c3d600;
+}
+.academy-heading p {
+  font-size: 16px;
+  line-height: 1.6em;
+  width: 58%;
+}
+.academy-photo {
+  width: 30%;
+}
+.academy-photo img {
+  width: 100%;
+  height: 265px;
+}
+.academy-heading hr.bar,
+.lectures-info hr.bar {
+  background-color: dodgerblue;
+  display: inline-block;
+}
+/* Slick.JS Custom CSS */
+.lectures-slider .slick-dots li button:before {
+  color: #fff;
+  font-size: 24px;
+}
+/* -------------------- Section : world -------------------- */
+.world-inner {
+  height: 100%;
+  background: url(./images/world.png) no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.world-inner > div {
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+.world-heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 70%;
+}
+.world-heading h2 {
+  margin: 0;
+  font-size: 2em;
+}
+.world-heading span {
+  color: #c3d600;
+  font-weight: bold;
+}
+hr.bar {
+  width: 50px;
+  height: 4px;
+  border: none;
+  background-color: crimson;
+  margin: 30px auto;
+}
+.world-heading p {
+  font-size: 17px;
+  line-height: 1.5em;
+  margin-bottom: 30px;
+}
+.world-heading a {
+  color: #000;
+}
+.view-world {
+  border: 1px solid #c3d600;
+  padding:10px 20px;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+.view-world:hover {
+  background-color: #c3d600;
+  color: #fff;
+  border-color: transparent;
+}
+/* ------------------- Section : center ------------------- */
+#center .content {
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+.center-inner {
+  height: 100%;
+}
+.feature {
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.research b {
+  font-size: 2em;
+  font-weight: normal;
+}
+.research h3 {
+  font-size: 2em;
+  margin: 0;
+  margin-top: 5px;
+}
+.research h3 span {
+  color: #c3d600;
+}
+.research p {
+  display: block;
+  width: 100%;
+  height: 180px;
+  padding-right: 600px;
+  background: url(./images/vision02_01.jpg) no-repeat;
+  background-size: cover;
+  background-position: left;
+  font-size: 16px;
+  line-height: 1.5em;
+  margin-bottom: 0;
+}
+.research p span {
+  font-weight: bold;
+}
+.development-item {
+  margin-bottom: 30px;
+}
+.development-item h3 {
+  font-size: 22px;
+  margin: 0;
+}
+.process-item {
+  width: 100%;
+  overflow: hidden;
+}
+.process-item img {
+  width: 100%;
+  margin-top: 20px;
+}
+.process-item p {
+  display: block;
+  float: left;
+  width: 20%;
+  text-align: center;
+  padding: 20px;
+}
+.process-item p:nth-of-type(4) {
+  padding-left: 30px;
+}
+.process-item p:nth-of-type(5) {
+  padding-left: 50px;
+}
+.process-item p span {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+/* ------------------- Section : contact ------------------- */
+.contact-inner {
+  background-color: #fff;
+  height: 100%;
+}
+.contact-feature {
+  width: 70%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.contact-feature > div {
+  float: left;
+  width: 50%;
+  padding: 20px;
+}
+.contact-form h3 {
+  font-size: 30px;
+  margin: 0;
+}
+.send-box label {
+  display: block;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 20px 0 10px;
+}
+.send-box label span {
+  color: crimson;
+  font-weight: normal;
+}
+.send-box input[type=email],
+.send-box input[type=text],
+.send-box textarea {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 3px;
+  outline: none;
+  width: 100%;
+  transition: 0.5s;
+}
+.send-box input[type=submit] {
+  background-color: #c3d600;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-top: 10px;
+}
+.send-box input[type=submit]:hover {
+  background-color: #000;
+}
+.send-box input[type=email]:hover,
+.send-box input[type=text]:hover,
+.send-box textarea:hover
+.send-box input[type=email]:focus,
+.send-box input[type=text]:focus,
+.send-box textarea:focus {
+  border: 1px solid #c3d600;
+  box-shadow: 0 0 5px #c3d600;
+}
+.contact-info span {
+  font-weight: bold;
+}
+.contact-info b {
+  color: #c3d600;
+}
+.contact-info h4 {
+  font-weight: normal;
+  font-size: 20px;
+  margin: 0;
+}
+.contact-info ul li {
+  line-height: 2em;
+}
+.contact-info p {
+  line-height: 1.5em;
+}
+/* -------------------- Subpage : project -------------------- */
+.modal {
+  font-family: 'Source Sans Pro' , sans-serif;
+}
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  z-index: 100;
+}
+.header-inner {
+  width: 95%;
+  margin: 0 auto;
+  height: 90px;
+  line-height: 90px;
+  border-bottom: 1px solid #ddd;
+  z-index: 100;
+}
+.modal-display {
+  font-size: 16px;
+}
+.modal-main {
+  height: 600px;
+  position: relative;
+  background: #272727 url(./images/subTopBg6.jpg) no-repeat center center;
+  background-size: contain;
+}
+.modal-heading {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  animation: slidedown 1s linear both;
+}
+.modal-heading span {
+  font-weight: bold;
+  font-size: 20px;
+  position: relative;
+}
+.modal-heading span::after,
+.modal-heading span::before {
+  content: '';
+  height: 1px;
+  background-color: #fff;
+  width: 50px;
+  position: absolute;
+  top: 50%;
+}
+.modal-heading span::before {
+  right: 120%;
+}
+.modal-heading span::after {
+  left: 120%;
+}
+.modal-heading h1 {
+  font-size: 70px;
+  font-weight: 200;
+  margin: 40px 0 0;
+}
+.modal-info {
+  overflow: hidden;
+  margin-bottom: 0;
+}
+.modal-info > div {
+  float: left;
+  width: 50%;
+  height: 600px;
+}
+.case-parent {
+  position: relative;
+}
+.case-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+}
+.case-child h2 {
+  font-size: 2em;
+}
+.case-child p {
+  font-size: 1.5em;
+}
+.photo.project-info {
+  font-size: 20px;
+  font-weight: 300;
+  padding-top: 120px;
+}
+.photo iframe {
+  width: 100%;
+  height: 100%;
+}
+.modal-slogan {
+  padding: 100px 0;
+}
+.modal-slogan p {
+  font-size: 32px;
+  font-weight: 300;
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+  position: relative;
+}
+.modal-slogan p::before {
+  content: ',,';
+  font-family: 'Overpass', sans-serif;
+  font-size: 200px;
+  position: absolute;
+  color: #ddd;
+  transform: rotate(180deg);
+  top: -82px;
+  left: -100px;
+}
+.modal-slogan a {
+  display: block;
+}
+@keyframes slidedown {
+  0% {
+    opacity: 0;
+    margin-top: -50px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}
+/* Featherlight Custom CSS */
+.featherlight .featherlight-content {
+  position: relative;
+  text-align: left;
+  vertical-align: middle;
+  display: inline-block;
+  overflow: auto;
+  padding: 0;
+  border-bottom: 25px solid transparent;
+  margin-left: 0;
+  margin-right: 0;
+  max-height: 100%;
+  background: #fff;
+  cursor: auto;
+  white-space: normal;
+  width: 100%;
+  height: 100vh;
+}
+.featherlight iframe {
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+.featherlight .featherlight-close-icon {
+  position: absolute;
+  z-index: 9999;
+  top: 30px;
+  right: 70px;
+  line-height: 25px;
+  width: 25px;
+  cursor: pointer;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  background: rgba(255, 255, 255, 0.3);
+  color: #000;
+  border: none;
+  padding: 0;
+  font-size: 40px;
+  outline: none;
+}

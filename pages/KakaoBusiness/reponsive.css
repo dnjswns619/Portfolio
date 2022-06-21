@@ -1,0 +1,312 @@
+@media (max-width:768px) {
+  /* default css */
+  body {
+    font-size: 16px;
+  }
+  section {
+    padding: 50px 15px;
+  }
+  /* common css */
+  .headline-share h1 {
+    font-size: 1.7em;
+  }
+  .headline-share p {
+    padding: 0 20px;
+  }
+  /* ---------------- header ---------------- */
+  .header-inner {
+    width: 100%;
+  }
+  .logo {
+    margin-left: 35px;
+    width: 150px;
+  }
+  .logo img {
+    width: 100%;
+  }
+  .gnb {
+    float: none;
+    background-color: #fff;
+    position: fixed;
+    height: 100vh;
+    width: 250px;
+    top: 0;
+    right: -270px;
+    box-shadow: 3px 0 3px rgba(0, 0, 0, 0.15);
+    padding-top: 70px;
+    padding-left: 15px;
+    transition: 0.5s;
+  }
+  .gnb.active {
+    right: 0;
+  }
+  .gnb a {
+    display: block;
+  }
+  .trigger {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    font-size: 28px;
+    text-align: center;
+  }
+  .trigger img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  /* ---------------- section : welocme ---------------- */
+  .slideshow,
+  .slick-list,
+  .slick-track {
+    height: inherit;
+  }
+  .slick-slide > img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+    object-position: left;
+  }
+  .welcome-heading {
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .welcome-heading h1 {
+    font-size: 26px;
+  }
+  .welcome-heading span {
+    font-size: 18px;
+  }
+  .welcome-heading p {
+    padding: 0 30px;
+  }
+  .mouse {
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  /* ----------------- section : influence-ecosystem ----------------- */
+  #influence-ecosystem {
+    padding: 0;
+  }
+  .influence-content,
+  .ecosystem-inner {
+    width: 95%;
+  }
+  .ecosystem-inner {
+    border-bottom: 1px solid #eee;
+  }
+  .influence-content > div {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+  .influence-left {
+    padding-right: 0;
+  }
+  .influence-left h3 {
+    padding-right: 0;
+  }
+  .influence-left p {
+    font-size: 20px;
+  }
+  .influence-right > div {
+    float: none;
+    width: 100%;
+  }
+  .influence-info div {
+    font-size: 35px;
+  }
+  .ecosystem-content > div {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+  .ecosystem-left {
+    padding-right: 0;
+    padding-top: 20px;
+  }
+  .ecosystem-left p {
+    font-size: 20px;
+  }
+  .ecosystem-right {
+    margin-top: 40px;
+  }
+  .ecosystem-right img {
+    width: 100%;
+  }
+  /* --------------- section : guide --------------- */
+  .guide {
+    padding-top: 50px;
+    padding-bottom: 100px;
+  }
+  .guide-inner {
+    width: 100%;
+  }
+  .guide-content > div {
+    float: none;
+    width: 100%;
+  }
+  .guide-slider {
+    margin: 50px 0 80px;
+  }
+  .guide-text h1 {
+    font-size: 1.5em;
+  }
+  .guide-about h2 {
+    font-size: 1.4em;
+  }
+  
+  /* ----------------- section : channel ----------------- */
+  .channel {
+    padding-top: 30px;
+    background: linear-gradient(to right, #69acfe, #69aefd);;
+  }
+  .channel-inner {
+    width: 100%;
+  }
+  .channel-content > div {
+    float: none;
+    width: 100%;
+  }
+  .tab.btn {
+    text-align: center;
+  }
+  .tab {
+    padding: 20px;
+  }
+  .tab h2 br {
+    display: none;
+  }
+  .tab h2 {
+    font-size: 26px;
+  }
+  /* --------------- section : focus --------------- */
+  .focus-inner {
+    width: 100%;
+  }
+  .focus-item {
+    display: block;
+    width: 100%;
+    margin: 0 0 50px;
+  }
+  /* ----------------- section : service ----------------- */
+  #service {
+    padding: 72px 0 50px;
+  }
+  .service-inner {
+    width: 100%;
+    padding: 0 15px;
+  }
+  .service .headline-text {
+    width: 100%;
+    background: url(./images/kakao/m_kfb_tool_210521.gif) no-repeat;
+    background-size: contain;
+    background-position: center;
+    text-align: center;
+  }
+  .service .headline-text h1 br {
+    display: none;
+  }
+  .service .headline-text h1 {
+    width: 58%;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } 
+  .service-content {
+    width: 50%;
+    margin: 0;
+    padding: 10px;
+  }
+  .service-content > div {
+    text-align: left;
+  }
+  .service-title p {
+    font-size: 1.3em;
+  }
+  .service-about {
+    padding: 0;
+  }
+  .service-about h2 {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0;
+  }
+  .service-about p br {
+    display: none;
+  }
+  .service-about p {
+    font-size: 0.7em;
+    line-height: 1.5em;
+    margin-top: 5px;
+  }
+  .service-mockup img {
+    width: 100%;
+  }
+  /* ----------------- section : conjugation ----------------- */
+  .conjugation {
+    padding-top: 5px;
+  }
+  .conjugation-content > div {
+    float: none;
+    width: 100%;
+    height: auto;
+  }
+  .conjugation-item-desc {
+    padding: 20px 0;
+  }
+  .conjugation-item-headline {
+    width: 80%;
+  }
+  .conjugation-item-headline h3 {
+    font-size: 1.5em;
+  }
+  /* ----------------- section : faq ----------------- */
+  .faq-inner {
+    width: 100%;
+  }
+  .faq-inner .headline-share h1 {
+    font-size: 1.3em;
+  }
+  .faq-inner .headline-share p {
+    padding: 0;
+    font-size: 1em;
+  }
+  .faq-content > div {
+    width: 100%;
+    float: none;
+    padding: 0;
+  }
+  .faq-title img {
+    right: 3px;
+  }
+  /* ----------------- footer ----------------- */
+  footer {
+    padding: 40px 15px;
+    text-align: center;
+  }
+  .footer-inner {
+    width: 100%;
+  }
+  .footer-logo {
+    width: 50%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .copyright {
+    width: 100%;
+  }
+  .footer-content > div {
+    float: none;
+  }
+  .policy {
+    float: none;
+  }
+}

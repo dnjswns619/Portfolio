@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+@font-face {
+	font-family: 'jtbc';
+	font-style: normal;
+	font-weight: 900; 
+	src:url('font/jtbc/JTBC-Bold.eot'); 
+	src:local('@'),
+		url('font/jtbc/JTBC-Bold.eot?#iefix') format('embedded-opentype'), 
+		url('font/jtbc/JTBC-Bold.woff') format('woff'),
+		url('font/jtbc/JTBC-Bold.ttf') format('truetype');
+}
+
+
+@font-face {
+	font-family: 'jtbc';
+	font-style: normal;
+	font-weight: 300; 
+	src:url('font/jtbc/JTBC-Regular.eot'); 
+	src:local('@'),
+		url('font/jtbc/JTBC-Regular.eot?#iefix') format('embedded-opentype'), 
+		url('font/jtbc/JTBC-Regular.woff') format('woff'),
+		url('font/jtbc/JTBC-Regular.ttf') format('truetype');
+}
