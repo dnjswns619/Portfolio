@@ -504,7 +504,7 @@ header.active {
   
 }
 .demo,
-.code {
+.github {
   margin: 5px;
   border: 1px solid cornflowerblue;
   display: block;
@@ -512,7 +512,7 @@ header.active {
   border-radius: 10px;
 }
 .demo:hover,
-.code:hover {
+.github:hover {
   background-color: rgba(207, 220, 245, 0.205);;
 }
 input[type=radio] {
