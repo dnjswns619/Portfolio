@@ -14,3 +14,14 @@
   left: 47%;
   transform: translateX(-50%);
 }
+@media (max-width: 768px) {
+  .mobile {
+    width: 100%;
+    background: none;
+    margin: 30px auto;
+  }
+  .mobile iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
