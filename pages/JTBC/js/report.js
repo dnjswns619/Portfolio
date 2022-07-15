@@ -21,6 +21,74 @@ window.onload = function(){
             slide[i].classList.toggle('shadow_img');
         })
     }
+    //slide animation
+    let slides = document.querySelector(".slides");
+    let next = document.querySelector(".next");
+    let prev = document.querySelector(".prev");
+    let currentIndex = 0;
+    let slideCount = slide.length - 3;
+    let moveSlides = function(num){
+        slides.style.left = -num * 300 + 'px';
+    }
+    next.addEventListener('click',function(){
+        if(currentIndex < slideCount){
+            next.classList.remove('default');
+            prev.classList.remove('default');
+            currentIndex++;
+            moveSlides(currentIndex);
+        } else {
+            next.classList.add('default');
+            next.preventDefault();
+        }
+    })
+    prev.addEventListener('click',function(){
+        if(currentIndex>0){
+            prev.classList.remove('default');
+            next.classList.remove('default');
+            currentIndex--;
+            moveSlides(currentIndex);
+        } else {
+            prev.classList.add('default');
+        }
+    })
+    // modal slider js
+    let modal = document.getElementById("modal");
+    let modalClose = document.querySelector(".modal_close");
+    let modalSlide = document.querySelectorAll(".modal-mini");
+    let modalSlides = document.querySelector(".modal-slides");
+    let modalNext = document.querySelector(".modal-next");
+    let modalPrev = document.querySelector(".modal-prev");
+    let modalCount = modalSlide.length
+    let closeModal = () => {
+        modal.classList.add('hidden');
+    }
+    let moveModalSlides = function(num){
+        modalSlides.style.left = -num * 900 + 'px';
+    }
+    modalClose.addEventListener('click',closeModal);
+    for(let i = 0; i < slide.length; i++){
+        slide[i].addEventListener('click',()=>{
+            modal.classList.remove('hidden');
+            modalSlides.style.left = -i * 900 + 'px'
+            let modalIndex = i
+            modalNext.addEventListener('click',function(){
+                if(modalIndex < modalCount - 1){
+                    modalIndex++;
+                    moveModalSlides(modalIndex);
+                } else {
+                    stopImmediatePropagation();
+                }
+            })
+            modalPrev.addEventListener('click',function(){
+                if(modalIndex > 0){
+                    modalIndex--;
+                    moveModalSlides(modalIndex);
+                } else {
+                    stopImmediatePropagation();
+                }
+            })
+        });
+    }
     // hover item
     let item1 = document.getElementById('item1');
     let item2 = document.getElementById('item2');
@@ -93,47 +161,4 @@ window.onload = function(){
         fotlink2.classList.toggle('open');
         link2cont.classList.toggle('block');
     })
-    // modal js
-    let modal = document.getElementById("modal");
-    let modalClose = document.querySelector(".modal_close");
-    let swiperCont = document.querySelectorAll(".mini");
-    let currentCont = document.querySelector(".swiper-pagination-current");
-    let closeModal = () => {
-        modal.classList.add('hidden');
-    }
-    modalClose.addEventListener('click',closeModal);
-    for(let i = 0; i<swiperCont.length; i++){
-        swiperCont[i].addEventListener('click',()=>{
-            modal.classList.remove('hidden');
-        });
-        
-    }
-    //swiper.js 
-    let swiper1 = new Swiper(".first", {
-        slidesPerView: 3.75,
-        spaceBetween: 30,
-        freeMode: true,
-        slideToClickedSlide: true,
-        pagination: {
-            el: ".swiper-pagination",
-            type: "progressbar",
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-    });
-
-    let swiper2 = new Swiper(".second", {
-        slideToClickedSlide: true,
-        pagination: {
-            el: ".swiper-pagination",
-            type: "fraction",
-        },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-    });
-        
 }
