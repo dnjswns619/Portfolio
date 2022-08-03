@@ -176,6 +176,12 @@
   .project-info {
     padding: 20px;
   }
+  .project-info p {
+    padding: 0;
+  }
+  .project-info ul {
+    padding: 0;
+  }
   .detail div {
     font-size: 13px;
   }
@@ -237,6 +243,9 @@
     transform: none;
     padding: 40px 20px;
   }
+  .world-heading h2 {
+    font-size: 1.5em;
+  }
   .world-heading {
     width: 100%;
   }
@@ -253,6 +262,9 @@
     padding: 0;
     background: none;
     height: 100%;
+  }
+  .research h3 {
+    font-size: 1.5em;
   }
   .feature > div {
     float: none;
