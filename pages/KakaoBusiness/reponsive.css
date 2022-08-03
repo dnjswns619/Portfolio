@@ -14,6 +14,9 @@
     padding: 0 20px;
   }
   /* ---------------- header ---------------- */
+  header {
+    background-color: #bdd0de;
+  }
   .header-inner {
     width: 100%;
   }
@@ -59,6 +62,10 @@
   }
   
   /* ---------------- section : welocme ---------------- */
+  .welcome {
+    padding-top: 31px;
+    height: 100vh;
+  }
   .slideshow,
   .slick-list,
   .slick-track {
@@ -87,9 +94,7 @@
     padding: 0 30px;
   }
   .mouse {
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
+    display: none;
   }
   /* ----------------- section : influence-ecosystem ----------------- */
   #influence-ecosystem {
@@ -177,6 +182,13 @@
   }
   .tab.btn {
     text-align: center;
+  }
+  .tab-btn {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .tab-btn label {
+    width: 100%;
   }
   .tab {
     padding: 20px;
