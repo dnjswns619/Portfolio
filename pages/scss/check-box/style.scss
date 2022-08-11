@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-color: #000;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+//checkbox variables
+$icon-box-size: 100px;
+$icon-color: #74b9ff;
+/* checkbox item */
+.icons {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  li {
+    input[type=checkbox] {
+      display: none;
+      &:checked + div {
+        border: none;
+        box-shadow: 0 0 ($icon-box-size / 10) transparentize($icon-color, 0.5),
+                    0 0 ($icon-box-size / 6.66) transparentize($icon-color, 0.5),
+                    0 0 ($icon-box-size / 5) transparentize($icon-color, 0.5),
+                    inset 0 0 0 ($icon-box-size / 33.333) $icon-color;
+      }
+      &:checked + div span {
+        box-shadow: 0 0 ($icon-box-size / 3.333) ($icon-box-size / 20) $icon-color,
+                    0 0 ($icon-box-size / 3.333) ($icon-box-size / 10) $icon-color,
+                    0 0 ($icon-box-size / 3.333) ($icon-box-size / 6.66) $icon-color;
+      }
+    }
+    label {
+      cursor: pointer;
+      div {
+        border: ($icon-box-size / 33.333) solid #333;
+        width: $icon-box-size;
+        height: $icon-box-size;
+        border-radius: 10px;
+        background-color: #111;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s;
+        position: relative;
+        span {
+          width: 1px;
+          height: 1px;
+        }
+      }
+    }
+  }
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: $icon-box-size / 2;
+    height: $icon-box-size / 2;
+    filter: invert(1);
+  }
+}
