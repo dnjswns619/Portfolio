@@ -81,6 +81,31 @@
   .home-image {
     display: none;
   }
+  /* ----------------------- section : project ----------------------- */
+  .project > div {
+    float: none;
+  }
+  .slick-slider {
+    width: 100%;
+  }
+  .tab {
+    height: auto;
+  }
+  .project-text {
+    width: 100%;
+  }
+  .project-text br {
+    display: none;
+  }
+  label {
+    width: 30%;
+    padding: 5px;
+    margin-right: 5px;
+  }
+  /* --------------------- section : scss & grid --------------------- */
+  .practice-content a br {
+    display: none;
+  }
   /* ----------------------- section : about ----------------------- */
   .about-inner {
     width: 100%;
@@ -129,43 +154,17 @@
   .skill-inner {
     width: 100%;
   }
-  .skill {
-    float: none;
-    width: 100%;
-    animation: utd 0.3s linear both;
+  .skill-content {
+    overflow: hidden;
+    grid-template-columns: repeat(1, 1fr);
   }
-  .skill:nth-child(1),
-  .skill:nth-child(2) {
-    width: 100%;
+  .skill {
+    animation: utd 0.3s linear both;
   }
   .skill p {
     padding: 20px 20px;
   }
-  .skill:nth-child(1) p,
-  .skill:nth-child(2) p {
-  padding: 20px 20px;
-  }
-  /* ----------------------- section : project ----------------------- */
-  .project > div {
-    float: none;
-  }
-  .slick-slider {
-    width: 100%;
-  }
-  .tab {
-    height: auto;
-  }
-  .project-text {
-    width: 100%;
-  }
-  .project-text br {
-    display: none;
-  }
-  label {
-    width: 30%;
-    padding: 5px;
-    margin-right: 5px;
-  }
+  
   /* ----------------------- section : epilogue ----------------------- */
   .epilogue-inner {
     width: 100%;
