@@ -1,0 +1,29 @@
+//mixin
+// pc일때 inner 스타일
+@mixin inner-pc {
+  width: 1300px;
+  margin: 0 auto;
+}
+// mobile 일때 inner 스타일
+@mixin inner-mobile {
+  width: 100%;
+}
+// h2 공통 디자인
+@mixin h2-design {
+  color: $h2-color;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    width: 80px;
+    height: 4px;
+    background-color: $h2-color;
+  }
+}
