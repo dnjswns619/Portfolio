@@ -1,0 +1,341 @@
+// animation 정보를 담은 scss
+@import "./scss/animation";
+// mixin을 담은 scss
+@import "./scss/mixin";
+// reset css를 담은 scss
+@import "./scss/reset";
+// 변수를 담은 scss
+@import "./scss/variables";
+/* ----------------------- header ----------------------- */
+.header-inner {
+  @include inner-pc; // pc일때 inner 스타일
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  // 네비게이션
+  .header-nav {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+  }
+}
+/* ----------------------- welcome ----------------------- */
+#welcome {
+  height: 100vh;
+  background-color: map-get($background, main);
+}
+.welcome-inner {
+  @include inner-pc; // pc일때 inner 스타일
+  position: relative;
+  height: inherit;
+  // 문열리는 효과 effec
+  .welcome-effect {
+    width: 300px;
+    height: 300px;
+    background-color: map-get($background, white);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 300px;
+      height: 300px;
+      background-color: map-get($background, main);
+      transition: 0.5s;
+      top: 0;
+      transform: skewY(0);
+      border-right: 1px solid #fff;
+      border-bottom: 1px solid #fff;
+      animation: open 0.5s linear both;
+    }
+  }
+  // welcom 텍스트
+  .welcome-text {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    animation: ltr-pc 0.5s 0.5s linear both;
+    color: #fff;
+    p {
+      font-size: 4em;
+      text-transform: uppercase;
+    }
+    span {
+      font-size: 2em;
+    }
+  }
+}
+/* ----------------------- about ----------------------- */
+#about {
+  background-color: map-get($background, white);
+  // about 소제목
+  & > h2 {
+    @include h2-design; // h2 공통 디자인
+  }
+}
+.about-inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  // 자기 소개
+  .about-info {
+    grid-area: span 4 / span 2;
+    padding-left: 50px;
+    h2 {
+      color: $h2-color;
+    }
+    .info-content {
+      .info-title {
+        font-size: 1.3em;
+      }
+    }
+  }
+  // skill 소개
+  .about-skill {
+    background-color: map-get($background, secondary);
+    &:nth-child(3),
+    &:nth-child(5) {
+      background-color: map-get($background,third);
+    }
+    h2 {
+      color: $h2-color;
+      padding-left: 20px;
+    }
+    
+  }
+}
+/* ----------------------- portfolio ----------------------- */
+#portfolio {
+  background-color: map-get($background, secondary); // rgb(162, 203, 247)
+  // portfolio 소제목
+  & > h2 {
+    @include h2-design; // h2 공통 디자인
+  }
+}
+.portfolio-inner {
+  margin-top: 50px;
+  padding-bottom: 50px;
+  h2 {
+    color: $h2-color; // royalblue
+    padding-left: 50px;
+  }
+  // 그리드 portfolio 컨텐츠들
+  .items {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    .focus { // grid 2 x 2 사이즈
+      grid-area: span 2 / span 2;
+    }
+    div {
+      position: relative;
+      text-align: center;
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: 0.5s;
+        background-color: rgba(34, 34, 34, 0.3);
+      }
+      &:hover::after {
+        opacity: 1;
+      }
+      &:hover span {
+        animation: moveup 0.5s linear both;
+      }
+      a {
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
+      span {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        opacity: 0;
+        color: #fff;
+        transition: 0.5s;
+        z-index: 5;
+      }
+    }
+  }
+}
+/* ----------------------- epilogue ----------------------- */
+#epilogue {
+  overflow: hidden;
+  background-color: map-get($background, third); // rgb(206, 230, 255)
+  // epilogue 소제목
+  & > h2 {
+    @include h2-design; // h2 공통 디자인
+  }
+}
+.epilogue-inner {
+  @include inner-pc; // pc일때 inner 스타일
+  height: 50vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  // epilogue 텍스트
+  .epilogue-text {
+    h2 {
+      color: $h2-color;
+    }
+    p {
+      font-size: 1.3em;
+    }
+  }
+  // 얼굴 이미지
+  .epilogue-image {
+    position: relative;
+    height: inherit;
+    img {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      transition: 0.5s;
+      &:nth-of-type(1) {
+        left: 15%;
+        top: 5%;
+        width: 200px;
+      }
+      &:nth-of-type(2) {
+        left: 70%;
+        top: 20%;
+        width: 200px;
+      }
+      &:hover {
+      z-index: 5;
+      transform: scale(1.2);
+      padding: 10px;
+      border: 3px solid $h2-color; 
+      }
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1366px) {
+  /*common css*/
+  .header-inner,
+  .welcome-inner,
+  .epilogue-inner {
+    @include inner-mobile
+  }
+  /* ----------------------- welcome ----------------------- */
+  #welome {
+    height: auto;
+  }
+  .welcome-inner {
+    // welcom 텍스트
+    .welcome-text {
+      left: 60%;
+      animation: ltr-mobile 1s 0.5s linear both;
+    }
+  }
+  /* ----------------------- about ----------------------- */
+  .about-inner {
+    // 자기 소개
+    .about-info {
+      padding-left: 0;
+    }
+  }
+  /* ----------------------- portfolio ----------------------- */
+  .portfolio-inner {
+    // 그리드 portfolio 컨텐츠들
+    .items {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  /* ----------------------- epilogue ----------------------- */
+  .epilogue-inner {
+    // 얼굴 이미지
+    .epilogue-image {
+      img {
+        &:nth-of-type(2) {
+          left: 50%;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  /*common css*/
+  .header-inner,
+  .welcome-inner,
+  .epilogue-inner {
+    @include inner-mobile
+  }
+  /* ----------------------- header ----------------------- */
+  .header-inner {
+    // 네비게이션
+    .header-nav {
+      gap: 5px;
+    }
+  }
+  /* ----------------------- welcome ----------------------- */
+  #welome {
+    height: auto;
+  }
+  .welcome-inner {
+    // 문열리는 효과
+    .welcome-effect {
+      display: none;
+    }
+    // welcom 텍스트
+    .welcome-text {
+      top: 50%;
+      left: 50%;
+      p {
+        font-size: 2em;
+      }
+      span {
+        font-size: 1.2em;
+      }
+    }
+  }
+  /* ----------------------- about ----------------------- */
+  .about-inner {
+    grid-template-columns: repeat(1, 1fr);
+    // 자기 소개
+    .about-info {
+      padding-left: 0;
+      grid-area: span 1;
+    }
+  }
+  /* ----------------------- portfolio ----------------------- */
+  .portfolio-inner {
+    // 그리드 portfolio 컨텐츠들
+    .items {
+      grid-template-columns: repeat(1, 1fr);
+      .focus {
+        grid-area: span 1;
+      }
+    }
+  }
+  /* ----------------------- epilogue ----------------------- */
+  .epilogue-inner {
+    height: auto;
+    grid-template-columns: repeat(1, 1fr);
+    // 얼굴 이미지
+    .epilogue-image {
+      height: 500px;
+      img {
+        &:nth-of-type(1) {
+          left: 0;
+        }
+        &:nth-of-type(2) {
+          top: 40%;
+          left: 40%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,411 @@
+@charset "UTF-8";
+/* animation */
+@keyframes open {
+  0% {
+    width: 300px;
+    top: 0;
+    transform: skewY(0);
+  }
+  100% {
+    width: 250px;
+    top: 33px;
+    transform: skewY(15deg);
+  }
+}
+@keyframes ltr-pc {
+  0% {
+    opacity: 0;
+    left: 40%;
+  }
+  100% {
+    opacity: 1;
+    left: 45%;
+  }
+}
+@keyframes ltr-mobile {
+  0% {
+    opacity: 0;
+    left: 60%;
+  }
+  100% {
+    opacity: 1;
+    left: 75%;
+  }
+}
+@keyframes moveup {
+  0% {
+    opacity: 0;
+    bottom: 0;
+  }
+  100% {
+    opacity: 1;
+    bottom: 20px;
+  }
+}
+/* 강원교육모두체 폰트 */
+@font-face {
+  font-family: "GangwonEdu_OTFBoldA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+  font-family: "GangwonEdu_OTFBoldA";
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #222;
+}
+
+li {
+  list-style: none;
+}
+
+/* ----------------------- header ----------------------- */
+.header-inner {
+  width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.header-inner .header-nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+}
+
+/* ----------------------- welcome ----------------------- */
+#welcome {
+  height: 100vh;
+  background-color: cornflowerblue;
+}
+
+.welcome-inner {
+  width: 1300px;
+  margin: 0 auto;
+  position: relative;
+  height: inherit;
+}
+.welcome-inner .welcome-effect {
+  width: 300px;
+  height: 300px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.welcome-inner .welcome-effect::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 300px;
+  height: 300px;
+  background-color: cornflowerblue;
+  transition: 0.5s;
+  top: 0;
+  transform: skewY(0);
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  animation: open 0.5s linear both;
+}
+.welcome-inner .welcome-text {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  animation: ltr-pc 0.5s 0.5s linear both;
+  color: #fff;
+}
+.welcome-inner .welcome-text p {
+  font-size: 4em;
+  text-transform: uppercase;
+}
+.welcome-inner .welcome-text span {
+  font-size: 2em;
+}
+
+/* ----------------------- about ----------------------- */
+#about {
+  background-color: #fff;
+}
+#about > h2 {
+  color: royalblue;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+}
+#about > h2::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  width: 80px;
+  height: 4px;
+  background-color: royalblue;
+}
+
+.about-inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+}
+.about-inner .about-info {
+  grid-area: span 4/span 2;
+  padding-left: 50px;
+}
+.about-inner .about-info h2 {
+  color: royalblue;
+}
+.about-inner .about-info .info-content .info-title {
+  font-size: 1.3em;
+}
+.about-inner .about-skill {
+  background-color: rgb(162, 203, 247);
+}
+.about-inner .about-skill:nth-child(3), .about-inner .about-skill:nth-child(5) {
+  background-color: rgb(206, 230, 255);
+}
+.about-inner .about-skill h2 {
+  color: royalblue;
+  padding-left: 20px;
+}
+
+/* ----------------------- portfolio ----------------------- */
+#portfolio {
+  background-color: rgb(162, 203, 247);
+}
+#portfolio > h2 {
+  color: royalblue;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+}
+#portfolio > h2::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  width: 80px;
+  height: 4px;
+  background-color: royalblue;
+}
+
+.portfolio-inner {
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+.portfolio-inner h2 {
+  color: royalblue;
+  padding-left: 50px;
+}
+.portfolio-inner .items {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+}
+.portfolio-inner .items .focus {
+  grid-area: span 2/span 2;
+}
+.portfolio-inner .items div {
+  position: relative;
+  text-align: center;
+}
+.portfolio-inner .items div::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.5s;
+  background-color: rgba(34, 34, 34, 0.3);
+}
+.portfolio-inner .items div:hover::after {
+  opacity: 1;
+}
+.portfolio-inner .items div:hover span {
+  animation: moveup 0.5s linear both;
+}
+.portfolio-inner .items div a img {
+  display: block;
+  width: 100%;
+}
+.portfolio-inner .items div span {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  opacity: 0;
+  color: #fff;
+  transition: 0.5s;
+  z-index: 5;
+}
+
+/* ----------------------- epilogue ----------------------- */
+#epilogue {
+  overflow: hidden;
+  background-color: rgb(206, 230, 255);
+}
+#epilogue > h2 {
+  color: royalblue;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+}
+#epilogue > h2::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  width: 80px;
+  height: 4px;
+  background-color: royalblue;
+}
+
+.epilogue-inner {
+  width: 1300px;
+  margin: 0 auto;
+  height: 50vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+.epilogue-inner .epilogue-text h2 {
+  color: royalblue;
+}
+.epilogue-inner .epilogue-text p {
+  font-size: 1.3em;
+}
+.epilogue-inner .epilogue-image {
+  position: relative;
+  height: inherit;
+}
+.epilogue-inner .epilogue-image img {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  transition: 0.5s;
+}
+.epilogue-inner .epilogue-image img:nth-of-type(1) {
+  left: 15%;
+  top: 5%;
+  width: 200px;
+}
+.epilogue-inner .epilogue-image img:nth-of-type(2) {
+  left: 70%;
+  top: 20%;
+  width: 200px;
+}
+.epilogue-inner .epilogue-image img:hover {
+  z-index: 5;
+  transform: scale(1.2);
+  padding: 10px;
+  border: 3px solid royalblue;
+}
+
+@media (min-width: 768px) and (max-width: 1366px) {
+  /*common css*/
+  .header-inner,
+.welcome-inner,
+.epilogue-inner {
+    width: 100%;
+  }
+  /* ----------------------- welcome ----------------------- */
+  #welome {
+    height: auto;
+  }
+  .welcome-inner .welcome-text {
+    left: 60%;
+    animation: ltr-mobile 1s 0.5s linear both;
+  }
+  /* ----------------------- about ----------------------- */
+  .about-inner .about-info {
+    padding-left: 0;
+  }
+  /* ----------------------- portfolio ----------------------- */
+  .portfolio-inner .items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  /* ----------------------- epilogue ----------------------- */
+  .epilogue-inner .epilogue-image img:nth-of-type(2) {
+    left: 50%;
+  }
+}
+@media (max-width: 768px) {
+  /*common css*/
+  .header-inner,
+.welcome-inner,
+.epilogue-inner {
+    width: 100%;
+  }
+  /* ----------------------- header ----------------------- */
+  .header-inner .header-nav {
+    gap: 5px;
+  }
+  /* ----------------------- welcome ----------------------- */
+  #welome {
+    height: auto;
+  }
+  .welcome-inner .welcome-effect {
+    display: none;
+  }
+  .welcome-inner .welcome-text {
+    top: 50%;
+    left: 50%;
+  }
+  .welcome-inner .welcome-text p {
+    font-size: 2em;
+  }
+  .welcome-inner .welcome-text span {
+    font-size: 1.2em;
+  }
+  /* ----------------------- about ----------------------- */
+  .about-inner {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .about-inner .about-info {
+    padding-left: 0;
+    grid-area: span 1;
+  }
+  /* ----------------------- portfolio ----------------------- */
+  .portfolio-inner .items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .portfolio-inner .items .focus {
+    grid-area: span 1;
+  }
+  /* ----------------------- epilogue ----------------------- */
+  .epilogue-inner {
+    height: auto;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .epilogue-inner .epilogue-image {
+    height: 500px;
+  }
+  .epilogue-inner .epilogue-image img:nth-of-type(1) {
+    left: 0;
+  }
+  .epilogue-inner .epilogue-image img:nth-of-type(2) {
+    top: 40%;
+    left: 40%;
+  }
+}
