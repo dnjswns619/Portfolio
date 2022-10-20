@@ -20,7 +20,11 @@ ul, ol li{
 a{
     text-decoration: none;
 }
-/* common css */
+/* google 지도 */
+iframe {
+    width: 100%;
+}
+/* 현재 경로표시 */
 .tit_area {
     width:100%;
     height: 98px;
@@ -78,28 +82,24 @@ header {
     margin: 0 auto;
     width: 1100px;
     overflow: hidden;
+    display: flex;
+    justify-content: space-between;
 }
-.header_inner h1{
-    background: url(../images/main/logo/logo.png) no-repeat;
-    width: 76px;
-    height: 76px;
-    float: left;
-    margin-top: 20px;
-}
-.header_inner h1 a {
+/* 로고 */
+.header_inner > a {
     display: block;
     width: 76px;
     height: 76px;
-    line-height: 76px;
-    text-indent: -9999px;
-    overflow: hidden;
+    padding-top: 17px;
 }
+/* 모바일 네비게이션 컨텐츠 */
 .m_header_cont {
     display: none;
 }
 .header_cont {
     float: right;
 }
+/* 로그인, 나의 스타벅스, 고객센터, 매장찾기 */
 .up_nav li a {
     color: #555;
 }
@@ -146,6 +146,7 @@ header {
 .up_nav li:last-child::after {
     content: none;
 }
+/* 네비게이션 */
 .gnb {
     float: right;
     display: flex;
@@ -172,6 +173,7 @@ header {
     color: #669900;
     text-decoration: underline;
 }
+/* store hover시 나오는 store 서브 메뉴 */
 .store ul {
     display: none;
 }
@@ -238,13 +240,12 @@ header {
     color: #64a70b;
     font-size: 14px;
 }
-/* --------------------------- info --------------------------- */
+/* --------------------------- section : info --------------------------- */
 .info_area {
     width: 100%;
     height: 70px;
-    background: #000 url(../images/main/info/newsArea_bg2.jpg) no-repeat;
-    background-size: contain;
-    background-position: right;
+    background: #000;
+    position: relative;
 }
 .info_inner {
     margin: 0 auto;
@@ -255,27 +256,22 @@ header {
     box-sizing: border-box;
     position: relative;
 }
-.info_left {
-    width: 65%;
-    float: left;
-    height: inherit;
-}
-.info_right {
-    width: 35%;
-    float: right;
-    height: inherit;
-    background: url(../images/main/info/useInfo_bg.jpg) no-repeat;
-}
-.info_left img {
-    float: left;
-    vertical-align: middle;
-    padding: 26px 10px 0 0;
-}
+/* 보도자료 */
 .m_infoimg {
     display: none;
 }
 .m_infotxt{
     display: none;
+}
+.info_left {
+    width: 65%;
+    float: left;
+    height: inherit;
+}
+.info_left img {
+    float: left;
+    vertical-align: middle;
+    padding: 26px 10px 0 0;
 }
 .info_left a {
     display: block;
@@ -301,6 +297,14 @@ header {
     display: block;
     text-indent: -9999px;
 }
+/* 이용가이드 */
+.info_right {
+    width: 35%;
+    float: right;
+    height: inherit;
+    background: url(../images/main/info/useInfo_bg.jpg) no-repeat;
+    z-index: 1;
+}
 .info_right img:first-child {
     padding: 11px 15px 0 15px;
 }
@@ -322,7 +326,166 @@ header {
     display: block;
     text-indent: -9999px;
 }
+/* 이용가이드 백그라운드 채우기 */
+.background-right {
+    width: 21%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url(../images/main/info/useInfo_bg.jpg) no-repeat;;
+}
+/* --------------------------- footer --------------------------- */
+footer{
+    width: 100%;
+    background-color: #2c2a29;
+    padding-bottom: 40px;
+}
+.footer_inner{
+    width: 1182px;
+    margin: 0 auto;
+    overflow: hidden;
+    background: url(../images/main/footer/footer_logo.png) no-repeat;
+    background-position: right center;
+}
+.footer_inner ul{
+    margin-bottom: 60px;
+}
+.footer_inner > ul{
+    width: 220px;
+    float: left;
+}
+.footer_inner ul li{
+    padding: 3px 0;
+}
+.footer_inner ul li a{
+    color: #fff;
+    font-size: 12px;
+}
+.footer_inner ul li .footer_down_arrow {
+    display: none;
+}
+.footer_inner ul .li_tit a{
+    font-size: 14px;
+}
+.li_tit{
+    margin-top: 40px;
+    margin-bottom: 5px;
+}
+.footer_inner ul:last-child{
+    padding-right: 0;
+}
+/* 모바일 바로가기 버튼 */
+.footer_util_btn {
+    display: none;
+}
+/* 모바일 링크 */
+.footer_inner .m_txt {
+    display: none;
+}
+/* 수상 컨텐츠 */
+.awards_area{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background-color: #282828;
+}
+.awards_inner{
+    margin: 0 auto;
+    width: 1134px;
+    overflow: hidden;
+    position: relative;
+}
+.awards_inner ul {
+    display: flex;
+}
+.awards_inner ul li {
+    width: 16.666666%;
+}
+.awards_inner ul li a,
+.awards_inner ul li a img {
+    width: 100%;
+}
+.awards_control {
+    width: 9px;
+    height: 11px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+.awards_control a {
+    background: url(../images/main/footer/controls.png) no-repeat;
+    background-position: -86px -44px;
+    display: block;
+    width: 9px;
+    height: 11px;
+    text-indent: -99999px;
+}
+.awards_control a:hover {
+    background-position: -86px -33px;
+}
+/* 기타 컨텐츠 */
+.etc_area {
+    width: 100%;
+    background-color: #2c2a29;
+    text-align: center;
+}
+.etc_area ul:first-child {
+    padding-top: 30px;
+}
+.etc_area ul:first-child li {
+    display: inline-block;
+    padding: 0 10px;
+    border-right: 1px solid #393939;
+    text-align: center;
+    height: 16px;
+    line-height: 16px;
+}
+.etc_area ul li a {
+    color: #ccc;
+    font-size: 12px;
+}
+.etc_area ul li:first-child a {
+    color: #00b050;
+}
+.etc_box {
+    padding: 10px 0 20px 0;
+}
+.etc_box a {
+    display: inline-block;
+    font-size: 12px;
+    color: #fff;
+    padding: 5px 20px;
+    margin-right: 5px;
+    border: 2px solid #fff;
+    border-radius: 3px;
+}
+.etc_box a:hover{
+    text-decoration: underline;
+}
+.copyright_area {
+    width: 100%;
+    text-align: center;
+}
+.copyright_area ul{
+    margin-bottom: 20px;
+}
+.copyright_area ul li {
+    display: inline-block;
+    color: #999;
+    font-size: 12px;
+    padding: 0 10px;
+    letter-spacing: 0;
+}
+.copyright_area span{
+    font-family: arial, HelveticaNeue, DroidSans, Sans-serif, Helvetica;
+    color: #999;
+    font-size: 12px;
+    letter-spacing: 0;;
+}
 /* -------------------STORE main 페이지 시작(index.html)-----------------*/
+/* ---------- section : store ----------*/
 .m_bn {
     display: none;
 }
@@ -359,6 +522,7 @@ header {
     border: 2px solid #fff;
     color: #fff;
 }
+/* ---------- section : drive_thru ----------*/
 .dt_area{
     width: 100%;
     background: url(../images/main/content/store_bn2_img01.jpg) 80% 50% no-repeat;
@@ -378,6 +542,7 @@ header {
     border: 2px solid black;
     color: #000;
 }
+/* ---------- section : reserve ----------*/
 .res_area{
     width: 100%;
     background: url(../images/main/content/store_bn3_img01.jpg) no-repeat;
@@ -397,6 +562,7 @@ header {
     border: 2px solid #fff;
     color: #fff;
 }
+/* ---------- section : community ----------*/
 .com_area{
     width: 100%;
     height: 430px;
@@ -421,6 +587,8 @@ header {
 /* -------------------STORE main 페이지 끝(index.html)-----------------*/
 
 /* -------------STORE 드라이브 스루 매장 페이지 시작(dt.html)-----------------*/
+/* ---------- section : info ----------*/
+/* 현재 경로 */
 .dt_tit_link {
     position: absolute;
     bottom: 5px;
@@ -450,6 +618,7 @@ header {
 .dt_tit_link > a:last-child{
     color: #222;
 }
+/* 드라이브 스루 매장 소개 */
 .dtsec1_inner{
     margin: 40px auto;
     width: 1100px;
@@ -468,6 +637,7 @@ header {
     color: #444;
     font-weight: 700;
 }
+/* ---------- section : drive ----------*/
 .dt_bg{
     background: url(../images/drive_thru/content/drive_through_bg.jpg) no-repeat;
     width: 100%;
@@ -479,6 +649,7 @@ header {
     margin: 0 auto;
     width: 1100px;  
 }
+/* drive 이미지 */
 .dt_track{
     background: url(../images/drive_thru/content/drive_through_rail2.png) no-repeat;
     position: relative;
@@ -602,9 +773,11 @@ header {
         bottom: 280px;
     }
 }
+/* 모바일 버전 drive 이미지 */
 .m_dt_track {
     display: none;
 }
+/* ---------- section : drive system ----------*/
 .dt_sec2{
     padding-bottom: 100px;
     background-color: #f4f4f2;
@@ -625,6 +798,7 @@ header {
 .dtsec2_inner img {
     width: 40%;
 }
+/* 시스템 설명 */
 .dtsec2_cont{
     float: right;
     padding-left: 30px;
@@ -639,6 +813,7 @@ header {
     color: #666;
     font-size: 14px;
 }
+/* ---------- drive thru ----------*/
 .dtstore_ber{
     background-color: #063;
 }
@@ -656,9 +831,11 @@ header {
     color: #fff;
     padding: 32px 10px;
 }
+/* mobile 이미지 */
 .m_ber {
     display: none;
 }
+/* ---------- section : event ----------*/
 .event_inner{
     margin: 0 auto;
     width: 1100px;
@@ -729,6 +906,8 @@ header {
 /* -------------STORE 드라이브 스루 매장 페이지 끝(index.html)-----------------*/
 
 /* -------------STORE 스타벅스 리저브 매장 페이지 시작(index.html)-----------------*/
+/* ---------- section : info ----------*/
+/* 현재 경로 */
 .res_tit_link {
     position: absolute;
     bottom: 5px;
@@ -755,6 +934,7 @@ header {
 .res_tit_link > a:last-child {
     color: #222;
 }
+/* 리저브 매장 소개 */
 .ressec1_inner {
     margin: 40px auto;
     width: 1100px;
@@ -773,6 +953,7 @@ header {
     font-size: 14px;
     color: #666;
 }
+/* ---------- section : 리저브 매장 기술 ----------*/
 .res_sec2 {
     background-color: #f7f6f3;
 }
@@ -813,11 +994,13 @@ header {
 .ressec2_img img {
     width: 100%;
 }
+/* ---------- section : 추출방식 ----------*/
 .ressec3_inner {
     margin: 0 auto;
     width: 1200px;
     text-align: center;
 }
+/* 추출방식 모바일 이미지 */
 .ressec3_inner .m_pic {
     display: none;
 }
@@ -827,6 +1010,7 @@ header {
     font-size: 18px;
     font-weight: bold;
 }
+/* 추출시스템 소개 */
 .ressec3_cont1 {
     padding: 60px 0;
     overflow: hidden;
@@ -892,6 +1076,7 @@ header {
     display: block;
     clear: both;
 }
+/* 추출방식 보러가기 링크 */
 .res_link {
     display: inline-block;
     margin: 30px auto;
@@ -911,6 +1096,7 @@ header {
     color: #666;
     line-height: 1.6;
 }
+/* ---------- section : 리저브 매장 홍보 ----------*/
 .res_sec4{
     margin: 120px auto 0 auto;
     background: url(../images/reserve/content/reserve_beverage_bg.png);
@@ -928,9 +1114,11 @@ header {
     font-size: 17px;
     padding-bottom: 20px;
 }
+/* mobile버전 매장 홍보 텍스트 */
 .ressec4_inner .m_txt {
     display: none;
 }
+/* pc버전 매장 홍보 텍스트 */
 .ressec4_inner .w_txt {
     font-size: 14px;
     color: #ddd;
@@ -938,6 +1126,7 @@ header {
     line-height: 24px;
     padding-bottom: 50px;
 }
+/* ---------- section : 리저브 매장 ----------*/
 .resstore_ber{
     background-color: #000;
 }
@@ -973,6 +1162,8 @@ header {
 /* -------------STORE 스타벅스 리저브 매장 페이지 끝(index.html)-----------------*/
 
 /* -------------STORE 커뮤니티 스토어 페이지 시작(index.html)-----------------*/
+/* ---------- section : info ----------*/
+/* 현재 경로 */
 .com_tit_inner img {
     padding: 30px 0;
 }
@@ -1007,6 +1198,7 @@ header {
 .com_tit_link > a:last-child{
     color: #222;
 }   
+/* 커뮤니티 스토어 매장 소개 */
 .comsec1_inner{
     margin: 20px auto;
     width: 1100px;
@@ -1030,6 +1222,7 @@ header {
 .comsec1_inner > p > span{
     letter-spacing: 0;
 }
+/* ---------- section : 커뮤니티 스토어 소개 ----------*/
 .com_sec2{
     background-color: #f4f4f2;
 }
@@ -1046,19 +1239,21 @@ header {
     padding-top: 40px;
     margin-bottom: 25px;
 }
-.comsec2_box1 .m_pic{
-    display: none;
-}
 .comsec2_box1 {
     overflow: hidden;
 }
-.comsec2_cont1{
+/* mobile 버전 지역사회 환원 활동 이미지 */
+.comsec2_box1 .m_pic{
+    display: none;
+}
+/* 지역사회 환원 활동 이미지 소개 텍스트 1*/
+.comsec2_cont1 {
     float: right;
-    padding-left: 30px;
+    margin-left: 30px;
     white-space: nowrap;
     width: 520px;
 }
-.comsec2_cont1 p{
+.comsec2_cont1 p {
     letter-spacing: -1.5px;
 }
 .comsec2_cont1 > p:first-child {
@@ -1069,6 +1264,7 @@ header {
     color: #666;
     font-size: 14px;
 }
+/* 지역사회 환원 활동 이미지 소개 텍스트 2 */
 .comsec2_box2 {
     margin-top: 40px;
     padding-bottom: 40px;
@@ -1085,13 +1281,15 @@ header {
 .cont_img{
     float: right;
 }
-.comsec2_box2 .m_pic{
-    display: none;
-}
 .comsec2_cont2 > p:last-child {
     color: #666;
     font-size: 14px;
 }
+/* mobile 버전 청년 인재 양성 이미지 */
+.comsec2_box2 .m_pic{
+    display: none;
+}
+/* ---------- section : 커뮤니티 스토어 매장 ----------*/
 .comstore_ber {
     background-color: #063;
 }
@@ -1112,6 +1310,8 @@ header {
 /* -------------STORE 커뮤니티 스토어 페이지 끝-----------------*/
 
 /* -------------STORE 티바나 바 매장 페이지 시작-----------------*/
+/* ---------- section : info ----------*/
+/* 현재 경로 */
 .tbn_tit_inner img{
     padding: 30px 0;
 }
@@ -1146,6 +1346,7 @@ header {
 .tbn_tit_link > a:last-child{
     color: #222;
 }
+/* 티바나 바 매장 소개 */
 .tbn_sec1 {
     background: url(../images/teavana/content/starField_visual_bg.jpg) no-repeat;
     width: 100%;
@@ -1186,6 +1387,7 @@ header {
     height: 40px;
     width: 100%;
 }
+/* ---------- section : 티바나 바 매장 기술 ----------*/
 .tbn_sec2 {
     background: url(../images/teavana/content/store_teavana_bg.jpg) no-repeat;
     background-size: cover;
@@ -1198,35 +1400,12 @@ header {
     margin: 0 auto;
     width: 1100px;
 }
-.m_seccont_tit,
-.tbnsec2_art1 .m_pic,
-.tbnsec2_art2 .m_pic,
-.tbnsec2_art3 .m_pic,
-.tbnsec2_art4 .m_pic,
-.tbnsec2_art1 .m_txt,
-.tbnsec2_art2 .m_txt,
-.tbnsec2_art3 .m_txt,
-.tbnsec2_art4 .m_txt {
-    display: none;
-}
-.tbnsec2_art1::after {
-    content: "";
-    display: block;
-    clear: both;
-}
-.tbnsec2_art1 .w_pic {
-    width: 800px;
-    display: block;
-    position: relative;
-    top: 0;
-    left: 0;
-    margin-left: -365px;
+.tbnsec2_cont .w_txt {
+    color: #666;
+    font-size: 14px;
 }
 .tbnsec2_cont {
     line-height: 1.6;
-}
-.tbnsec2_art1 .tbnsec2_cont {
-    white-space: nowrap;
 }
 .tbnsec2_cont > div {
     width: 12px;
@@ -1245,9 +1424,34 @@ header {
     color: #1d2682;
     padding: 0 15px 0 5px;
 }
-.tbnsec2_cont .w_txt {
-    color: #666;
-    font-size: 14px;
+/* mobile 버전 매장이미지, 소개 텍스트 */
+.m_seccont_tit,
+.tbnsec2_art1 .m_pic,
+.tbnsec2_art2 .m_pic,
+.tbnsec2_art3 .m_pic,
+.tbnsec2_art4 .m_pic,
+.tbnsec2_art1 .m_txt,
+.tbnsec2_art2 .m_txt,
+.tbnsec2_art3 .m_txt,
+.tbnsec2_art4 .m_txt {
+    display: none;
+}
+/* 매장이미지, 소개 */
+.tbnsec2_art1::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.tbnsec2_art1 .w_pic {
+    width: 800px;
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-left: -365px;
+}
+.tbnsec2_art1 .tbnsec2_cont {
+    white-space: nowrap;
 }
 .tbnsec2_art1 .tbnsec2_cont {
     float: right;
@@ -1255,6 +1459,7 @@ header {
     top: -350px;
     right: 0;
 }
+/* 메뉴 이미지, 소개 */
 .tbnsec2_art2 .w_pic {
     float: right;
     width: 940px;
@@ -1276,6 +1481,7 @@ header {
 .tbnsec2_art2 {
     height: 165px;
 }
+/* 티 저니 이미지, 소개 */
 .tbnsec2_art3 > .w_pic {
     position: relative;
     left: 50px;
@@ -1288,6 +1494,7 @@ header {
     top: 220px;
     right: 100px;
 }
+/* 스페셜 상품 이미지, 소개 */
 .tbnsec2_art4 > .tbnsec2_cont > .sec2cont_tit {
     padding-right: 280px;
     white-space: nowrap;
@@ -1332,11 +1539,11 @@ header {
     display: block;
     clear: both;
 }
+/* ---------- section : 티바나 바 매장 ----------*/
 .tbnstore_ber{
     width: 100%;
     margin: 0 auto;
     background-color: #006633;
-
 }
 .tbnstore_inner {
     position: relative;
@@ -1374,13 +1581,19 @@ header {
 .tbnstore_inner ul:first-child {
     float: left;
 }
+.tbnstore_ber::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+/* 매장 선택 박스 */
 .tbnstore_inner .select_list {
     float: right;
 }
-.tbnstore_inner ul li label {
+.select_list label {
     font-size: 16px;
 }
-.tbnstore_inner ul li select{
+.select_list select{
     width: 210px;
     padding: 10px;
     border-radius: 3px;
@@ -1388,156 +1601,5 @@ header {
     font-family: 'ngb';
     box-sizing: border-box;
 }
-.tbnstore_ber::after {
-    content: "";
-    display: block;
-    clear: both;
-}
 /* -------------STORE 티바나 바 매장 페이지 끝-----------------*/
-/* --------------------------- 푸터 --------------------------- */
-footer{
-    width: 100%;
-    background-color: #2c2a29;
-    padding-bottom: 40px;
-}
-.footer_inner{
-    width: 1182px;
-    margin: 0 auto;
-    overflow: hidden;
-    background: url(../images/main/footer/footer_logo.png) no-repeat;
-    background-position: right center;
-}
-.footer_inner ul{
-    margin-bottom: 60px;
-}
-.footer_inner ul li{
-    padding: 3px 0;
-}
-.footer_inner ul li a{
-    color: #fff;
-    font-size: 12px;
-}
-.footer_inner ul .li_tit a{
-    font-size: 14px;
-}
-.footer_inner ul li .footer_down_arrow {
-    display: none;
-}
-.li_tit{
-    margin-top: 40px;
-    margin-bottom: 5px;
-}
-.footer_inner .m_txt {
-    display: none;
-}
-.footer_inner > ul{
-    width: 220px;
-    float: left;
-}
-.footer_inner ul:last-child{
-    padding-right: 0;
-}
-.footer_util_btn {
-    display: none;
-}
-.awards_area{
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-    background-color: #282828;
-}
-.awards_inner{
-    margin: 0 auto;
-    width: 1134px;
-    overflow: hidden;
-    position: relative;
-}
-.awards_inner ul {
-    display: flex;
-}
-.awards_inner ul li {
-    width: 16.666666%;
-}
-.awards_inner ul li a,
-.awards_inner ul li a img {
-    width: 100%;
-}
-.awards_control {
-    width: 9px;
-    height: 11px;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-}
-.awards_control a {
-    background: url(../images/main/footer/controls.png) no-repeat;
-    background-position: -86px -44px;
-    display: block;
-    width: 9px;
-    height: 11px;
-    text-indent: -99999px;
-}
-.awards_control a:hover {
-    background-position: -86px -33px;
-}
-.etc_area {
-    width: 100%;
-    background-color: #2c2a29;
-    text-align: center;
-}
-.etc_area ul:first-child {
-    padding-top: 30px;
-}
-.etc_area ul:first-child li {
-    display: inline-block;
-    padding: 0 10px;
-    border-right: 1px solid #393939;
-    text-align: center;
-    height: 16px;
-    line-height: 16px;
-}
-.etc_area ul li a {
-    color: #ccc;
-    font-size: 12px;
-}
-.etc_area ul li:first-child a {
-    color: #00b050;
-}
-.etc_box {
-    padding: 10px 0 20px 0;
-}
-.etc_box a {
-    display: inline-block;
-    font-size: 12px;
-    color: #fff;
-    padding: 5px 20px;
-    margin-right: 5px;
-    border: 2px solid #fff;
-    border-radius: 3px;
-}
-.etc_box a:hover{
-    text-decoration: underline;
-}
-.copyright_area {
-    width: 100%;
-    text-align: center;
-}
-.copyright_area ul{
-    margin-bottom: 20px;
-}
-.copyright_area ul li {
-    display: inline-block;
-    color: #999;
-    font-size: 12px;
-    padding: 0 10px;
-    letter-spacing: 0;
-}
-.copyright_area span{
-    font-family: arial, HelveticaNeue, DroidSans, Sans-serif, Helvetica;
-    color: #999;
-    font-size: 12px;
-    letter-spacing: 0;;
-}
-
 

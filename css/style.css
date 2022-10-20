@@ -40,6 +40,7 @@ section {
   padding-top: 90px;
 }
 /* common css */
+/* 소제목 스타일링 */
 .headline {
   text-align: center;
   margin-bottom: 50px;
@@ -54,6 +55,7 @@ section {
   margin: 0 auto;
   background-color:cornflowerblue
 }
+/* animation 정보 */
 .ltr {
   animation: ltr 0.5s linear both;
 }
@@ -98,6 +100,7 @@ header.active {
   height: 65px;
   position: relative;
 }
+/* 로고 */
 .logo {
   float: left;
 }
@@ -110,6 +113,7 @@ header.active {
   width: 25px;
   height: 25px;
 }
+/* 네비게이션 바 */
 .gnb {
   float: right;
 }
@@ -118,6 +122,7 @@ header.active {
   display: inline-block;
   padding: 20px 0 20px 60px; 
 }
+/* 모바일 트리거 로고 */
 .trigger {
   display: none;
 }
@@ -132,32 +137,49 @@ header.active {
   overflow: hidden;
   padding-top: 100px;
 }
+/* 스크롤시 나타나는 컨텐츠 */
+/* project 섹션과 겹칠떄 버튼이 안눌리는 현상을 해결하기 위함 */
+.home-content.none {
+  display: none !important;
+}
 .home-content {
-  animation: opacity 1s 3.5s both;
+  display: none;
+  position: fixed;
+  width: 1300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .home-content > div {
-  width: 50%;
-  float: left;
+  width: 75%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-.home-text {
+.home-text-a {
   text-align: center;
   padding: 0 30px;
 }
-.home-text h1 {
+.home-text-a h1 {
   font-size: 4em;
   margin-bottom: 30px;
 }
-.home-text p#typeit {
+.home-text-a p#typeit {
   font-size: 2.5em;
   color: cornflowerblue;
 }
-.home-text p:last-child {
-  margin-top: 30px;
-  padding: 0 50px;
-}
-.home-text span {
+.home-text-a span {
   font-size: 2em;
 }
+.home-text-b {
+  text-align: center;
+}
+.home-text-b p {
+  font-size: 2.5em;
+}
+
+/* 얼굴 사진 */
 .home-image {
   height: 400px;
 }
@@ -169,70 +191,24 @@ header.active {
   margin: 0 auto;
   border-radius: 10px;
 }
+/* 첫 시작 화면 텍스트 */
 .welcome-text {
-  position: absolute;
+  display: none;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   margin: 0;
   text-align: center;
   font-size: 2.5em;
-  transition: 0.5s;
-  animation: dtu 2s linear both;
 }
-.home-inner::after {
-  content: '';
+/* 시작화면일때만 보이도록 */
+#show-effect-0 .welcome-text,
+#show-effect-0 .home-content {
   display: block;
-  position: absolute;
-  top: 65px;
-  left: 0;
-  width: 100%;
-  height: 95vh;
-  background-color: #000;
-  animation: overlay 1s 2s ease-in-out both;
 }
 .welcome-text span {
   display: block;
-}
-@keyframes dtu {
-  0% {
-    opacity: 0;
-    margin-top: 100px;
-  }
-  20% {
-    opacity: 1;
-    margin-top: 0;
-  }
-  70% {
-    opacity: 1;
-    margin-top: 0;
-  }
-  100% {
-    opacity: 0;
-    margin-top: -100px;
-  }
-}
-@keyframes overlay {
-  0% {
-    width: 0;
-    left: 0;
-  }
-  50% {
-    width: 100%;
-    left: 0;
-  }
-  100% {
-    width: 0;
-    left: 100%;
-  }
-}
-@keyframes opacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 /* ----------------------- section : project ----------------------- */
 #project {
@@ -251,6 +227,7 @@ header.active {
 .project > div {
   float: left;
 }
+/* 이미지 슬라이드 */
 .slick-slider {
   width: 70%;
   height: 100%;
@@ -289,6 +266,7 @@ header.active {
 .slick-dots li.slick-active {
   background-color: crimson;
 }
+/* 프로젝트 소개글 */
 .project-text {
   width: 30%;
   height: 100%;
@@ -303,6 +281,7 @@ header.active {
   line-height: 1.5em;
   margin-bottom: 30px;
 }
+/* 프로젝트 더보기 */
 .view-more {
   margin: 0 auto;
   text-align: center;
@@ -320,6 +299,7 @@ header.active {
 .github:hover {
   background-color: rgba(207, 220, 245, 0.205);;
 }
+/* 프로젝트 바로가기 버튼 */
 input[type=radio] {
   display: none;
 }
@@ -337,7 +317,6 @@ label {
 }
 .tab {
   width: 16.6666%;
-  height: 70vh;
   float: left;
 }
 label[for=tab1]:hover,
@@ -400,6 +379,7 @@ input[id=tab6]:checked ~ .tabs {
 #scss-grid {
   background-color: rgba(207, 220, 245, 0.205);;
 }
+/* scss-grid 컨텐츠들 */
 .practice-contents {
   width: 100%;
   display: grid;
@@ -430,6 +410,7 @@ input[id=tab6]:checked ~ .tabs {
 .about-me > div {
   float: left;
 }
+/* 얼굴 증명사진 */
 .face-photo {
   position: relative;
   display: flex;
@@ -445,6 +426,7 @@ input[id=tab6]:checked ~ .tabs {
   object-fit: cover;
   border-radius: 30%;
 }
+/* 인적사항 */
 .personal-info span{
   font-size: 1.5em;
   display: block;
@@ -462,6 +444,7 @@ input[id=tab6]:checked ~ .tabs {
 .personal-info a{
   color: cornflowerblue;
 }
+/* 교육 내용 */
 .educations {
   margin: 50px 0;
 }
@@ -516,6 +499,7 @@ input[id=tab6]:checked ~ .tabs {
 .info li {
   color: rgb(92, 92, 92);
 }
+/* 경력사항 */
 .experiences hr {
   border: transparent;
   background-color: cornflowerblue;
@@ -546,12 +530,14 @@ input[id=tab6]:checked ~ .tabs {
 .skill-inner .headline {
   padding-top: 60px;
 }
+/* skill들 */
 .skill-content {
   overflow: hidden;
   padding-bottom: 60px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
+/* skill 제목, 이미지 */
 .skill-title {
   width: 100px;
   height: 100px;
@@ -587,6 +573,7 @@ input[id=tab6]:checked ~ .tabs {
 .skill-title:hover span{
   display: none;
 }
+/* skill 설명 */
 .skill p {
   padding: 20px 50px;
 }
@@ -637,6 +624,7 @@ input[id=tab6]:checked ~ .tabs {
   display: inline-block;
   width: 100%;
 }
+/* contact 정보 */
 .contact-info {
   padding: 50px 0;
   text-align: center;
@@ -645,6 +633,7 @@ input[id=tab6]:checked ~ .tabs {
   font-size: 40px;
   margin-bottom: 10px;
 }
+/* 위로가기 버튼 */
 .footer-inner a {
   display: inline-block;
   width: 200px;

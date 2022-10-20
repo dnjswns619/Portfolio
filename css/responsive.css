@@ -1,3 +1,33 @@
+@media (max-width: 1100px) {
+  /* ----------------------- section : home ----------------------- */
+  .home-content {
+    width: 100%;
+  }
+  /* ----------------------- section : project ----------------------- */
+  .project > div {
+    float: none;
+  }
+  /* 이미지 슬라이드 */
+  .slick-slider {
+    width: 100%;
+  }
+  /* 프로젝트 */
+  .tab {
+    height: auto;
+  }
+  /* 프로젝트 소개글 */
+  .project-text {
+    width: 100%;
+  }
+  .project-text br {
+    display: none;
+  }
+  /* 프로젝트 바로가기 버튼 */
+  label {
+    padding: 5px;
+    margin-right: 5px;
+  }
+}
 @media (max-width:768px) {
   /* default css */
   body.active {
@@ -7,6 +37,7 @@
   .header-inner {
     width: 100%;
   }
+  /* 모바일 트리거 로고 */
   .trigger {
     display: block;
     width: 20px;
@@ -23,12 +54,14 @@
     background: url(../images/close.png) no-repeat;
     background-size: contain;
   }
+  /* 로고 */
   .logo {
     margin-left: 20px
   }
   .logo a {
     font: inherit;
   }
+  /* 네비게이션 바 */
   .gnb {
     width: 200px;
     height: 100vh;
@@ -65,19 +98,24 @@
   .home-inner {
     width: 100%;
   }
+  /* 스크롤시 나타나는 컨텐츠 */
   .home-content > div {
     float: none;
     width: 100%;
   }
-  .home-text h1 {
+  .home-text-a h1 {
     font-size: 2em;
   }
-  .home-text p#typeit {
-    font-size: 1.5em;
+  .home-text-a p#typeit {
+    font-size: 1.3em;
   }
-  .home-text span {
+  .home-text-a span {
     font-size: 1em;
   }
+  .home-text-b p {
+    font-size: 1.3em;
+  }
+  /* 얼굴 사진 */
   .home-image {
     display: none;
   }
@@ -85,12 +123,15 @@
   .project > div {
     float: none;
   }
+  /* 이미지 슬라이드 */
   .slick-slider {
     width: 100%;
   }
+  /* 프로젝트 */
   .tab {
     height: auto;
   }
+  /* 프로젝트 소개글 */
   .project-text {
     width: 100%;
   }
@@ -98,11 +139,11 @@
     display: none;
   }
   label {
-    width: 30%;
     padding: 5px;
     margin-right: 5px;
   }
   /* --------------------- section : scss & grid --------------------- */
+  /* scss-grid 컨텐츠들 */
   .practice-content a br {
     display: none;
   }
@@ -113,9 +154,11 @@
   .about-me > div {
     float: none;
   }
+  /* 얼굴 증명사진 */
   .face-photo {
     width: 100%;
   }
+  /* 인적사항 */
   .personal-info {
     margin-top: 40px;
     text-align: center;
@@ -126,6 +169,7 @@
   .about-content {
     padding: 0 20px;
   } 
+  /* 교육 내용 */
   .education {
     height: auto;
     margin-bottom: 20px;
@@ -146,6 +190,7 @@
     padding-left: 0;
     padding-top: 10px;
   }
+  /* 경력사항 */
   .experience {
     height: auto;
     margin-bottom: 20px;
@@ -154,6 +199,7 @@
   .skill-inner {
     width: 100%;
   }
+  /* skill들 */
   .skill-content {
     overflow: hidden;
     grid-template-columns: repeat(1, 1fr);
