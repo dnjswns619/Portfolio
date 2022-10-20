@@ -43,6 +43,7 @@ body.active {
   overflow: hidden;
 }
 /* common CSS */
+/* 소제목 스타일 */
 .headline-share {
   text-align: center;
   margin-top: 100px;
@@ -51,10 +52,10 @@ body.active {
   font-size: 38px;
   position: relative;
 }
-
 .headline-share p {
   font-size: 20px;
 }
+/* 바로가기 버튼 */
 .btn img {
   width: 25px;
   height: 25px;
@@ -98,12 +99,14 @@ header.active {
   overflow: hidden;
   padding: 30px 0 15px
 }
+/* 로고 */
 .logo {
   float: left;
 }
 .logo img {
   margin-top: -7px;
 }
+/* 네비게이션 */
 .gnb {
   float: right;
 }
@@ -111,6 +114,7 @@ header.active {
   margin: 10px;
   font-size: 16px;
 }
+/* 모바일 트리거 */
 .trigger {
   display: none;
 }
@@ -121,6 +125,7 @@ header.active {
   padding: 0;
   position: relative;
 }
+/* 슬라이드 타이틀 */
 .slideshow div > img {
   width: 100%;
 }
@@ -130,6 +135,7 @@ header.active {
 .slideshow div > img:nth-child(2) {
   background-color: #f5f8ff;
 }
+/* 타이틀 소개 텍스트 */
 .welcome-heading {
   position: absolute;
   left: 200px;
@@ -149,6 +155,7 @@ header.active {
 .welcome-heading p {
   margin-bottom: 50px;
 }
+/* 바로가기 버튼 */
 .welcome-btns .btn {
   display: inline-block;
   padding: 15px;
@@ -170,6 +177,7 @@ header.active {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   transform: translateY(-5px);
 }
+/* 스크롤 내리기 아이콘 */
 .mouse {
   position: absolute;
   width: 32px;
@@ -201,16 +209,12 @@ header.active {
   }
 }
 /* ----------------- section : influence-ecosystem ----------------- */
+/* influence 컨텐츠 */
 .influence-ecosystem {
   padding-bottom: 0;
 }
 .influence-inner {
   background: url(./images/visual_cont1.0cb2c10.png);
-  padding: 100px 0;
-}
-.ecosystem-inner {
-  width: 1300px;
-  margin: 0 auto;
   padding: 100px 0;
 }
 .influence-content {
@@ -273,6 +277,12 @@ header.active {
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
 }
+/* ecosystem 컨텐츠 */
+.ecosystem-inner {
+  width: 1300px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
 .ecosystem-content {
   padding: 50px 0 0;
   overflow: hidden;
@@ -298,6 +308,7 @@ header.active {
 .ecosystem-right img {
   float: right;
 }
+/* 바로가기 버튼 */
 .ecosystem-btn .btn {
   display: inline-block;
   padding: 15px;
@@ -325,6 +336,7 @@ header.active {
 .guide-content > div {
   float: left;
 }
+/* 가이드 이미지 */
 .guide-slider {
   width: 50%;
   text-align: center;
@@ -332,6 +344,7 @@ header.active {
 .guide-slider img {
   width: 75%;
 }
+/* 가이드 설명 */
 .guide-text h1 {
   font-size: 38px;
 }
@@ -357,15 +370,17 @@ header.active {
   overflow: hidden;
   padding: 40px 0;  
 }
+.channel-content > div {
+  float: left;
+  width: 50%;
+}
+/* 채널 소제목 */
 .channel-content .headline-share {
   width: 100%;
   text-align: center;
   margin-top: 0;
 }
-.channel-content > div {
-  float: left;
-  width: 50%;
-}
+/* 채널 선택 버튼 */
 input[name=tabmenu] {
   display: none;
 }
@@ -400,6 +415,7 @@ input[name=tabmenu] {
   transform: translate(-50%, -50%);
   color: cornflowerblue;
 }
+/* 채널 소개 탭들 */
 .tab {
   display: none;
   color: #000;
@@ -448,11 +464,13 @@ input[id=tab6]:checked ~ .tab-btn label[for=tab6] span {
   margin: 0 auto;
   padding-top: 100px;
 }
+/* 활용하기 컨텐츠들 */
 .focus-content {
   text-align: center;
   border-bottom: 1px solid #eee;
   padding: 50px 0;
 }
+/* 컨텐츠 */
 .focus-item {
   display: inline-block;
   width: 30%;
@@ -462,6 +480,7 @@ input[id=tab6]:checked ~ .tab-btn label[for=tab6] span {
 .focus-item img {
   width: 100%;
 }
+/* 컨텐츠 설명 */
 .focus-text {
   width: 100%;
   position: absolute;
@@ -493,6 +512,7 @@ input[id=tab6]:checked ~ .tab-btn label[for=tab6] span {
   width: 1300px;
   margin: 0 auto;
 }
+/* secvice 소제목 */
 .service .headline-share {
   background-color: #02143f;
   margin-top: 0;
@@ -513,6 +533,7 @@ input[id=tab6]:checked ~ .tab-btn label[for=tab6] span {
   left: 0;
   color: #fff;
 } 
+/* service, 비즈도구 설명 소제목 */
 .service-title {
   width: 100%;
 }
@@ -529,6 +550,7 @@ input[id=tab6]:checked ~ .tab-btn label[for=tab6] span {
 .service-tool {
   overflow: hidden;
 }
+/* service 솔루션들 */
 .service-content {
   margin: 30px 21px;
   width: 30%;
@@ -554,6 +576,7 @@ input[id=tab6]:checked ~ .tab-btn label[for=tab6] span {
   background-color: #f9f9f9;
   padding-top: 50px;
 }
+/* conjugation 소제목, 설명 */
 .conjugation .headline-share {
   border-bottom: 1px solid rgb(211, 209, 209);
   padding-bottom: 20px;
@@ -564,11 +587,13 @@ input[id=tab6]:checked ~ .tab-btn label[for=tab6] span {
 .conjugation-content {
   overflow: hidden;
 }
+/* conjugation 컨텐츠들 */
 .conjugation-content > div {
   float: left;
   width: 33.333333333%;
   height: 400px;
 }
+/* conjugation 컨텐츠 설명 */
 .conjugation-item-desc {
   background-color: #f9f9f9;
   display: flex;
@@ -592,6 +617,7 @@ input[id=tab6]:checked ~ .tab-btn label[for=tab6] span {
 .conjugation-item-desc p {
   margin-top: 0;
 }
+/* conjugation 컨텐츠 이미지 */
 .conjugation-item-photo {
   border-radius: 10px;
 }
@@ -608,9 +634,11 @@ input[id=tab6]:checked ~ .tab-btn label[for=tab6] span {
   width: 1300px;
   margin: 0 auto;
 }
+/* faq 소제목, 설명 */
 .faq-inner .headline-share {
   text-align: left;
 }
+/* faq 컨텐츠 */
 .faq-content {
   overflow: hidden;
 }
@@ -628,6 +656,7 @@ input[id=tab6]:checked ~ .tab-btn label[for=tab6] span {
 .faq-item > div {
   padding: 15px;
 }
+/* 질문 */
 .faq-title {
   position: relative;
   color: #4c98e4;
@@ -649,6 +678,7 @@ input[id=tab6]:checked ~ .tab-btn label[for=tab6] span {
   transform: rotate(90deg);
   filter: invert(72%) sepia(97%) saturate(839%) hue-rotate(173deg) brightness(101%) contrast(105%);
 }
+/* 설명 */
 .faq-desc {
   display: none;
 }
@@ -662,6 +692,7 @@ input[id=tab6]:checked ~ .tab-btn label[for=tab6] span {
 .faq-guide-image img {
   width: 100%;
 }
+/* 가이드 설명 */
 .faq-guide h2 {
   font-size: 36px;
 }
@@ -741,7 +772,6 @@ footer {
 .utd {
   animation: utd 0.5s linear both;
 }
-
 @keyframes ltr {
   0% {
     transform: translateX(-100px);

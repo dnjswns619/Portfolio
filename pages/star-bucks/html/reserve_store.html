@@ -16,12 +16,16 @@
     <title>스타벅스 리저브 매장 | Starbucks Coffee Korea</title>
 </head>
 <body>
-    <!--header-->
+    <!-------------------- header -------------------->
     <header>
         <div class="header_area">
             <div class="header_inner">
-                <h1><a href="#">메인</a></h1>
+                <!-- 로고 -->
+                <a href="#">
+                    <img src="../images/main/logo/logo.png" alt="로고이미지">
+                </a>
                 <div class="header_cont">
+                    <!-- 로그인, 나의 스타벅스, 고객센터, 매장찾기 -->
                     <ul class="up_nav">
                         <li><a href="#">Sign In</a></li>
                         <li><a href="#">My Starbucks</a></li>
@@ -29,12 +33,13 @@
                         <li><a href="#">Find a Store</a></li>
                         <li><a href="#"></a></li>
                     </ul>
+                    <!-- 네비게이션 -->
                     <nav class="nav">
                         <ul class="gnb">
                             <li><a href="../coffee/index.html">COFFEE</a></li>
                             <li><a href="../Menu/menu.html"> MENU</a></li>
                             <li class="store">
-                                <a href="./store.html">STORE</a>
+                                <a href="./../store.html">STORE</a>
                                 <ul>
                                     <li><a href="./drive_thru_store.html">드라이브 스루 매장</a></li>
                                     <li><a href="./reserve_store.html">스타벅스 리저브™ 매장</a></li>
@@ -48,6 +53,7 @@
                         </ul>
                     </nav>
                 </div>
+                <!-- 모바일 네비게이션 컨텐츠 -->
                 <div class="m_header_cont">
                     <ul class="m_nav">
                         <li><a href="">로그인</a></li>
@@ -57,6 +63,7 @@
                 </div>
             </div>
         </div>
+        <!-- store hover시 나오는 store 서브 메뉴 -->
         <div class="store_submenu">
             <div class="sublist_inner">
                 <div class="submenu_list">
@@ -85,8 +92,10 @@
             </div>
         </div>
     </header>
-    <!-- 본문 시작 -->
+    <!-------------------- header end -------------------->
+    <!---------------------- section : info ---------------------->
     <section>
+        <!-- 현재 경로 -->
         <div class=tit_area>
             <div class="tit_inner">
                 <img src="../images/reserve/content/reserve_store_tit01.jpg" alt="">
@@ -99,6 +108,7 @@
                 </div>
             </div>
         </div>
+        <!-- 리저브 매장 소개 -->
         <div class="res_sec1">
             <div class="ressec1_inner">
                 <img src="../images/reserve/content/reserve_store_fimg01.png" alt="">
@@ -110,6 +120,8 @@
             </div>
         </div>
     </section>
+    <!---------------------- section : info end---------------------->
+    <!---------------------- section : 리저브 매장 기술 ---------------------->
     <section>
         <div class="res_sec2">
             <div class="ressec2_inner">
@@ -125,12 +137,17 @@
             </div>
         </div>
     </section>
+    <!---------------------- section : 리저브 매장 기술 end ---------------------->
+    <!---------------------- section : 추출방식 ---------------------->
     <section>
         <div class="res_sec3">
             <div class="ressec3_inner">
                 <h3>다양한 추출방식으로 즐기는 리저브</h3>
+                <!-- 추출방식 이미지 -->
                 <img src="../images/reserve/content/reserve_store_fimg03.jpg" alt="" class="w_pic">
+                <!-- 추출방식 모바일 이미지 -->
                 <img src="../images/reserve/content/m_reserve_store_fimg03.jpg" alt="" class="m_pic">
+                <!-- 추출시스템 소개 -->
                 <div class="ressec3_cont1">
                     <div class="rescont1_img">
                         <img src="../images/reserve/content/m_reserveStore_bottom01.jpg" alt="" class="m_pic">
@@ -162,19 +179,24 @@
                         <p>최고의 커피, 최고의 추출 기구, 최고의 스타벅스 커피마스터가 만들어내는 진정한 커피 경험을 경험해보세요.</p>
                     </div>
                 </div>
+                <!-- 추출방식 보러가기 링크 -->
                 <a class="res_link" href="../../coffee/higher_enjoy.html">추출방식별 상세특징 보러 가기</a>
                 <p>리저브 전용 매장에서는 리저브 추출방식을 5가지(클로버®, 블랙이글, 푸어 오버(Pour Over) 핸드 드립, 케멕스, 리저브 콜드 브루)중에서 직접 선택하여 즐길 수 있습니다.<br>
                 ※ 매장 별로 보유하고 있는 장비와 장비 도입 시기는 상이할 수 있으며 리저브 일부 매장에서 먼저 선보입니다.</p>
             </div>
         </div>
     </section>
+    <!---------------------- section : 추출방식 end ---------------------->
+    <!---------------------- section : 리저브 매장 홍보 ---------------------->
     <section>
         <div class="res_sec4">
             <div class="ressec4_inner">
                 <img src="../images/reserve/content/reserve_logo.png" alt="">
                 <h5>RESERVE SPECIAL BEVERAGE</h5>
+                <!-- pc버전 매장 홍보 텍스트 -->
                 <p class="w_txt"><strong>스타벅스 청담스타R점</strong> 에서만 즐길 수 있었던 라벤더 카페 브레베, 오렌지 플로터, 라임 플로터, 럼 샷 코르타도를<br>
                     <strong>더종로R점</strong> 에서도 경험하실 수 있습니다.</p>
+                    <!-- mobile버전 매장 홍보 텍스트 -->
                 <p class="m_txt"><strong>스타벅스 청담스타R점</strong> 에서만 즐길 수 있었던<br>
                     라벤더 카페 브레베, 오렌지 플로터,<br>
                     라임 플로터, 럼 샷 코르타도를<br>
@@ -182,6 +204,8 @@
             </div>
         </div>
     </section>
+    <!---------------------- section : 리저브 매장 홍보 end ---------------------->
+    <!---------------------- section : 리저브 매장 ---------------------->
     <section>
         <div class="resstore_ber">
             <div class="resstore_inner">
@@ -192,7 +216,11 @@
                 </ul>
             </div>
         </div>
+        <!-- 리저브 매장 google 지도 -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d405397.87114047253!2d126.9394764289566!3d37.45668739660933!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z7Iqk7YOA67KF7IqkIOumrOyggOu4jCDrp6TsnqU!5e0!3m2!1sko!2skr!4v1666159207325!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
+    <!---------------------- section : 리저브 매장 end ---------------------->
+    <!---------------------- section : event ---------------------->
     <section>
         <div class="event_area">
             <div class="event_inner">
@@ -244,9 +272,11 @@
             </div>
         </div>
     </section>
-    <!-- 푸터 시작 -->
+    <!---------------------- section : event end ---------------------->
+    <!---------------------- footer ---------------------->
     <footer>
         <div class="footer_inner">
+            <!-- 모바일 링크 -->
             <ul class="m_txt">
                 <li class="li_tit"><a href="">CUSTOMER SERVICE & IDEAS<span class="footer_down_arrow"></span></a></li>
                 <li><a href="">자주하는 질문</a></li>
@@ -255,6 +285,8 @@
                 <li><a href="">고객 경헝 설문조사</a></li>
                 <li><a href="">비회원 전자영수증 조회</a></li>
             </ul>
+            <!-- pc 링크 -->
+            <!-- 세로 컨텐츠 -->
             <ul>
                 <li class="li_tit"><a href="">COMPANY<span class="footer_down_arrow"></span></a></li>
                 <li><a href="">한눈에 보기</a></li>
@@ -264,15 +296,18 @@
                 <li><a href="">세계의 스타벅스</a></li>
                 <li><a href="">글로벌 뉴스룸</a></li>
             </ul>
+            <!-- 세로 컨텐츠 -->
             <ul>
                 <li class="li_tit"><a href="">CORPORAYE SALES<span class="footer_down_arrow"></span></a></li>
                 <li><a href="">단체 및 기업 구매 안내</a></li>
             </ul>
+            <!-- 세로 컨텐츠 -->
             <ul>
                 <li class="li_tit"><a href="">PARTNERSHIP<span class="footer_down_arrow"></span></a></li>
                 <li><a href="">신규 입점 제의</a></li>
                 <li><a href="">협력 고객사 등록신청</a></li>
             </ul>
+            <!-- 세로 컨텐츠 -->
             <ul>
                 <li class="li_tit"><a href="">ONLINE COMMUNITY<span class="footer_down_arrow"></span></a></li>
                 <li><a href="">페이스북</a></li>
@@ -280,12 +315,14 @@
                 <li><a href="">유튜브</a></li>
                 <li><a href="">인스타그램</a></li>
             </ul>
+            <!-- 세로 컨텐츠 -->
             <ul>
                 <li class="li_tit"><a href="">RECRUIT<span class="footer_down_arrow"></span></a></li>
                 <li><a href="">채용소개</a></li>
                 <li><a href="">채용 지원하기</a></li>
             </ul>
         </div>
+        <!-- 모바일 바로가기 버튼 -->
         <div class="footer_util_btn">
             <ul>
                 <li><a href="">HOME</a></li>
@@ -293,6 +330,7 @@
                 <li><a href="">Join Us</a></li>
             </ul>
         </div>
+        <!-- 수상 컨텐츠 -->
         <div class="awards_area">
             <div class="awards_inner">
                 <ul>
@@ -306,6 +344,7 @@
                 <div class="awards_control"><a href="">컨트롤</a></div>
             </div>
         </div>
+        <!-- 기타 컨텐츠 -->
         <div class="etc_area">
             <ul>
                 <li><a href="">개인정보처리방침</a></li>

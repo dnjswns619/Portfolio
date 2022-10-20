@@ -7,6 +7,7 @@
     padding: 50px 15px;
   }
   /* common css */
+  /* 소제목 스타일 */
   .headline-share h1 {
     font-size: 1.7em;
   }
@@ -20,6 +21,7 @@
   .header-inner {
     width: 100%;
   }
+  /* 로고 */
   .logo {
     margin-left: 35px;
     width: 150px;
@@ -27,6 +29,7 @@
   .logo img {
     width: 100%;
   }
+  /* 네비게이션 */
   .gnb {
     float: none;
     background-color: #fff;
@@ -46,6 +49,7 @@
   .gnb a {
     display: block;
   }
+  /* 모바일 트리거 */
   .trigger {
     display: block;
     width: 30px;
@@ -66,6 +70,7 @@
     padding-top: 31px;
     height: 100vh;
   }
+  /* 슬라이드 타이틀 */
   .slideshow,
   .slick-list,
   .slick-track {
@@ -77,6 +82,7 @@
     object-fit: cover;
     object-position: left;
   }
+  /* 타이틀 소개 텍스트 */
   .welcome-heading {
     width: 100%;
     top: 50%;
@@ -107,6 +113,7 @@
   .ecosystem-inner {
     border-bottom: 1px solid #eee;
   }
+  /* influence 컨텐츠 */
   .influence-content > div {
     float: none;
     width: 100%;
@@ -128,6 +135,7 @@
   .influence-info div {
     font-size: 35px;
   }
+  /* ecosystem 컨텐츠 */
   .ecosystem-content > div {
     float: none;
     width: 100%;
@@ -158,9 +166,11 @@
     float: none;
     width: 100%;
   }
+  /* 가이드 이미지 */
   .guide-slider {
     margin: 50px 0 80px;
   }
+  /* 가이드 설명 */
   .guide-text h1 {
     font-size: 1.5em;
   }
@@ -180,6 +190,7 @@
     float: none;
     width: 100%;
   }
+  /* 채널 선택 버튼 */
   .tab.btn {
     text-align: center;
   }
@@ -190,6 +201,7 @@
   .tab-btn label {
     width: 100%;
   }
+  /* 채널 소개 탭 */
   .tab {
     padding: 20px;
   }
@@ -203,6 +215,7 @@
   .focus-inner {
     width: 100%;
   }
+  /* 활용하기 컨텐츠 */
   .focus-item {
     display: block;
     width: 100%;
@@ -216,6 +229,7 @@
     width: 100%;
     padding: 0 15px;
   }
+  /* secvice 소제목 */
   .service .headline-text {
     width: 100%;
     background: url(./images/kakao/m_kfb_tool_210521.gif) no-repeat;
@@ -232,6 +246,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
   } 
+  /* 솔루션 */
   .service-content {
     width: 50%;
     margin: 0;
@@ -240,9 +255,11 @@
   .service-content > div {
     text-align: left;
   }
+  /* service 설명 소제목 */
   .service-title p {
     font-size: 1.3em;
   }
+  /* 솔루션 설명 */
   .service-about {
     padding: 0;
   }
@@ -271,9 +288,11 @@
     width: 100%;
     height: auto;
   }
+  /* conjugation 컨텐츠들 설명 */
   .conjugation-item-desc {
     padding: 20px 0;
   }
+  /* conjugation 컨텐츠들 소제목 */
   .conjugation-item-headline {
     width: 80%;
   }
@@ -284,6 +303,7 @@
   .faq-inner {
     width: 100%;
   }
+  /* faq 소제목, 설명 */
   .faq-inner .headline-share h1 {
     font-size: 1.3em;
   }
@@ -291,6 +311,7 @@
     padding: 0;
     font-size: 1em;
   }
+  /* faq 컨텐츠 */
   .faq-content > div {
     width: 100%;
     float: none;

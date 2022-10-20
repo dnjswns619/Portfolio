@@ -1,4 +1,5 @@
 window.onload = function(){
+    // header에 마우스 올렸을때 클래스 추가 혹은 제거
     let experience = document.querySelector(".experience")
     let expClose = document.querySelector(".exp_close")
     expClose.addEventListener('click',()=>{
@@ -6,14 +7,14 @@ window.onload = function(){
     })
     let header = document.getElementById('header');
     header.addEventListener('mouseenter',function(){
-        header.classList.add('headerhov');
+        header.classList.add('hover-effect');
     })
     header.addEventListener('mouseleave',function(){
-        header.classList.toggle('headerhov');
+        header.classList.remove('hover-effect');
     })
-    // slide hover shadow
+    // slide드 hover시 shadow효과
     let slide = document.querySelectorAll('.mini');
-    for(let i=0; i<slide.length; i++){
+    for(let i = 0; i < slide.length; i++){
         slide[i].addEventListener('mouseover',function(){
             slide[i].classList.add('shadow_img');
         })
@@ -90,75 +91,43 @@ window.onload = function(){
         });
     }
     // hover item
-    let item1 = document.getElementById('item1');
-    let item2 = document.getElementById('item2');
-    let item3 = document.getElementById('item3');
-    let itemcont = document.querySelectorAll('.item_cont');
+    let item = document.querySelectorAll('.item')
+    let itemcont = document.querySelectorAll('.item_content');
     let hoverbg = document.querySelectorAll('.hover_txt');
     let bluebox = document.querySelectorAll('.blue_box');
     let conttxt = document.querySelectorAll('.cont_txt')
-    item1.addEventListener('mouseenter',function(e){
-        itemcont[0].classList.add('disappear');
-        hoverbg[0].classList.add('appear_bg');
-        bluebox[0].classList.add('box_row');
-        conttxt[0].classList.add('txt_up');
-    })
-    item1.addEventListener('mouseleave',function(e){
-        itemcont[0].classList.toggle('appear')
-        itemcont[0].classList.toggle('disappear');
-        hoverbg[0].classList.toggle('appear_bg');
-        hoverbg[0].classList.toggle('disappear_bg');
-        bluebox[0].classList.toggle('box_row');
-        bluebox[0].classList.toggle('box_up');
-        conttxt[0].classList.toggle('txt_up');
-        conttxt[0].classList.toggle('txt_down');
-    })
-    item2.addEventListener('mouseenter',function(e){
-        itemcont[1].classList.add('disappear');
-        hoverbg[1].classList.add('appear_bg');
-        bluebox[1].classList.add('box_row');
-        conttxt[1].classList.add('txt_up');
-    })
-    item2.addEventListener('mouseleave',function(e){
-        itemcont[1].classList.toggle('appear')
-        itemcont[1].classList.toggle('disappear');
-        hoverbg[1].classList.toggle('appear_bg');
-        hoverbg[1].classList.toggle('disappear_bg');
-        bluebox[1].classList.toggle('box_row');
-        bluebox[1].classList.toggle('box_up');
-        conttxt[1].classList.toggle('txt_up');
-        conttxt[1].classList.toggle('txt_down');
-    })
-    item3.addEventListener('mouseenter',function(e){
-        itemcont[2].classList.add('disappear');
-        hoverbg[2].classList.add('appear_bg');
-        bluebox[2].classList.add('box_row');
-        conttxt[2].classList.add('txt_up');
-    })
-    item3.addEventListener('mouseleave',function(e){
-        itemcont[2].classList.toggle('appear')
-        itemcont[2].classList.toggle('disappear');
-        hoverbg[2].classList.toggle('appear_bg');
-        hoverbg[2].classList.toggle('disappear_bg');
-        bluebox[2].classList.toggle('box_row');
-        bluebox[2].classList.toggle('box_up');
-        conttxt[2].classList.toggle('txt_up');
-        conttxt[2].classList.toggle('txt_down');
-    })
-    // footer 
-    let fotlink2 = document.getElementById('fot_link2');
-    let link2cont = document.getElementById('link2_cont');
-    let fotClose = document.querySelector('.fot_close');
-    fotlink2.addEventListener('click',function(){
-        fotlink2.classList.add('open');
-        link2cont.classList.add('block');
-        fotlink2.addEventListener('click',function(){
-            fotlink2.classList.toggle('open');
-            link2cont.classList.toggle('block');
+    for (let i = 0; i < 3; i++) {
+        item[i].addEventListener('mouseover', () => {
+            itemcont[i].classList.add('disappear');
+            hoverbg[i].classList.add('appear_bg');
+            bluebox[i].classList.add('box_row');
+            conttxt[i].classList.add('txt_up');
+            itemcont[i].classList.remove('appear')
+            hoverbg[i].classList.remove('disappear_bg');
+            bluebox[i].classList.remove('box_up');
+            conttxt[i].classList.remove('txt_down');
         })
+        item[i].addEventListener('mouseleave', () => {
+            itemcont[i].classList.remove('disappear');
+            hoverbg[i].classList.remove('appear_bg');
+            bluebox[i].classList.remove('box_row');
+            conttxt[i].classList.remove('txt_up');
+            itemcont[i].classList.add('appear')
+            hoverbg[i].classList.add('disappear_bg');
+            bluebox[i].classList.add('box_up');
+            conttxt[i].classList.add('txt_down');
+        })
+    }
+    // footer 
+    let footerLink = document.querySelector('.brand_links');
+    let linkContent = document.querySelector('.links_content');
+    let fotClose = document.querySelector('.fot_close');
+    footerLink.addEventListener('click', () => {
+        footerLink.classList.toggle('open');
+        linkContent.classList.toggle('block');
     })
-    fotClose.addEventListener('click',function(){
-        fotlink2.classList.toggle('open');
-        link2cont.classList.toggle('block');
+    fotClose.addEventListener('click',() => {
+        footerLink.classList.remove('open');
+        linkContent.classList.remove('block');
     })
 }

@@ -16,12 +16,16 @@
     <title>드라이브 스루 매장 | Starbucks Coffee Korea</title>
 </head>
 <body>
-    <!--header-->
+    <!-------------------- header -------------------->
     <header>
         <div class="header_area">
             <div class="header_inner">
-                <h1><a href="#">메인</a></h1>
+                <!-- 로고 -->
+                <a href="#">
+                    <img src="../images/main/logo/logo.png" alt="로고이미지">
+                </a>
                 <div class="header_cont">
+                    <!-- 로그인, 나의 스타벅스, 고객센터, 매장찾기 -->
                     <ul class="up_nav">
                         <li><a href="#">Sign In</a></li>
                         <li><a href="#">My Starbucks</a></li>
@@ -29,12 +33,13 @@
                         <li><a href="#">Find a Store</a></li>
                         <li><a href="#"></a></li>
                     </ul>
+                    <!-- 네비게이션 -->
                     <nav class="nav">
                         <ul class="gnb">
                             <li><a href="../coffee/index.html">COFFEE</a></li>
                             <li><a href="../Menu/menu.html"> MENU</a></li>
                             <li class="store">
-                                <a href="./store.html">STORE</a>
+                                <a href="./../store.html">STORE</a>
                                 <ul>
                                     <li><a href="./drive_thru_store.html">드라이브 스루 매장</a></li>
                                     <li><a href="./reserve_store.html">스타벅스 리저브™ 매장</a></li>
@@ -48,6 +53,7 @@
                         </ul>
                     </nav>
                 </div>
+                <!-- 모바일 네비게이션 컨텐츠 -->
                 <div class="m_header_cont">
                     <ul class="m_nav">
                         <li><a href="">로그인</a></li>
@@ -57,6 +63,7 @@
                 </div>
             </div>
         </div>
+        <!-- store hover시 나오는 store 서브 메뉴 -->
         <div class="store_submenu">
             <div class="sublist_inner">
                 <div class="submenu_list">
@@ -85,8 +92,10 @@
             </div>
         </div>
     </header>
-    <!-- 본문 시작 -->
+    <!-------------------- header end -------------------->
+    <!---------------------- section : info ---------------------->
     <section>
+        <!-- 현재 경로 -->
         <div class=tit_area>
             <div class="tit_inner">
                 <img src="../images/drive_thru/content/driver_store_tit.jpg" alt="">
@@ -99,6 +108,7 @@
                 </div>
             </div>
         </div>
+        <!-- 드라이브 스루 매장 소개 -->
         <div class="dt_sec1">
             <div class="dtsec1_inner">
                 <img src="../images/drive_thru/content/drive_store_fimg01.png" alt="">
@@ -109,18 +119,21 @@
             </div>
         </div>
     </section>
+    <!---------------------- section : info end---------------------->
+    <!---------------------- section : drive ---------------------->
     <section>
         <div class="dt_bg">
             <div class="dt_bg_inner">
+                <!-- drive 이미지 -->
                 <div class="dt_track">
                     <div class="dt_use"><img src="../images/drive_thru/content/drive_through_tit.png" alt=""></div>
                     <div class="dt_img1"><img src="../images/drive_thru/content/myCircle01.png" alt=""></div>
+                    <div class="dt_img2"><img src="../images/drive_thru/content/myCircle02.png" alt=""></div>
+                    <div class="dt_img3"><img src="../images/drive_thru/content/myCircle03.png" alt=""></div>
                     <div class="step1"><img src="../images/drive_thru/content/drive_step01.png" alt=""></div>
                     <div class="step1_info"><img src="../images/drive_thru/content/myText01.png" alt=""></div>
-                    <div class="dt_img2"><img src="../images/drive_thru/content/myCircle02.png" alt=""></div>
                     <div class="step2"><img src="../images/drive_thru/content/drive_step02.png" alt=""></div>
                     <div class="step2_info"><img src="../images/drive_thru/content/myText02.png" alt=""></div>
-                    <div class="dt_img3"><img src="../images/drive_thru/content/myCircle03.png" alt=""></div>
                     <div class="step3"><img src="../images/drive_thru/content/drive_step03.png" alt=""></div>
                     <div class="step3_info"><img src="../images/drive_thru/content/myText03.png" alt=""></div>
                     <div class="dt_home"><img src="../images/drive_thru/content/icon_store.png" alt=""></div>
@@ -129,6 +142,7 @@
                     <div class="left_cloud"><img src="../images/drive_thru/content/cloud_bg3.png" alt=""></div>
                 </div>
             </div>
+            <!-- 모바일 버전 drive 이미지 -->
             <div class="m_dt_track">
                 <div class="m_dt_use"><img src="../images/drive_thru/content/m_tit1.png" alt=""></div>
                 <dl class="m_dt">
@@ -152,11 +166,14 @@
             </div>
         </div>
     </section>
+    <!---------------------- section : drive end ---------------------->
+    <!---------------------- section : drive system ---------------------->
     <section>
         <div class="dt_sec2">
             <div class="dtsec2_inner">
                 <p>Did you know?</p>
                 <img src="../images/drive_thru/content/drive_through_img01.png" alt="">
+                <!-- 시스템 설명 -->
                 <div class="dtsec2_cont">
                     <p>스타벅스 최초 화상 주문 시스템</p>
                     <p class="seccont_tit"><span>"고객과 눈을 맞추고, 경청하며, 정을 나누는<br>
@@ -170,17 +187,25 @@
             </div>
         </div>
     </section>
+    <!---------------------- section : drive system end ---------------------->
+    <!---------------------- section : drive thru ---------------------->
     <section>
         <div class="dtstore_ber">
             <div class="dtstore_inner">
                 <ul>
+                    <!-- pc이미지 -->
                     <li class="w_ber"><img src="../images/drive_thru/content/driveStore_ber_img.png" alt=""></li>
+                    <!-- mobile 이미지 -->
                     <li class="m_ber"><img src="../images/drive_thru/content/m_driveStore_ber_img.png" alt=""></li>
                     <li>전국의 드라이브 스루 매장을 확인해 보세요!</li>
                 </ul>
             </div>
         </div>
+        <!-- 드라이브 쓰루 google 지도 -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d405401.4565894892!2d126.93810156933102!3d37.45602596122072!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z7Iqk7YOA67KF7Iqk65Oc65287J2067iM7JOw66OoIOunpOyepQ!5e0!3m2!1sko!2skr!4v1666159237802!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
+    <!---------------------- section : drive thru end ---------------------->
+    <!---------------------- section : event ---------------------->
     <section>
         <div class="event_area">
             <div class="event_inner">
@@ -232,9 +257,11 @@
             </div>
         </div>
     </section>
-    <!-- 푸터 시작 -->
+    <!---------------------- section : event end ---------------------->
+    <!---------------------- footer ---------------------->
     <footer>
         <div class="footer_inner">
+            <!-- 모바일 링크 -->
             <ul class="m_txt">
                 <li class="li_tit"><a href="">CUSTOMER SERVICE & IDEAS<span class="footer_down_arrow"></span></a></li>
                 <li><a href="">자주하는 질문</a></li>
@@ -243,6 +270,8 @@
                 <li><a href="">고객 경헝 설문조사</a></li>
                 <li><a href="">비회원 전자영수증 조회</a></li>
             </ul>
+            <!-- pc 링크 -->
+            <!-- 세로 컨텐츠 -->
             <ul>
                 <li class="li_tit"><a href="">COMPANY<span class="footer_down_arrow"></span></a></li>
                 <li><a href="">한눈에 보기</a></li>
@@ -252,15 +281,18 @@
                 <li><a href="">세계의 스타벅스</a></li>
                 <li><a href="">글로벌 뉴스룸</a></li>
             </ul>
+            <!-- 세로 컨텐츠 -->
             <ul>
                 <li class="li_tit"><a href="">CORPORAYE SALES<span class="footer_down_arrow"></span></a></li>
                 <li><a href="">단체 및 기업 구매 안내</a></li>
             </ul>
+            <!-- 세로 컨텐츠 -->
             <ul>
                 <li class="li_tit"><a href="">PARTNERSHIP<span class="footer_down_arrow"></span></a></li>
                 <li><a href="">신규 입점 제의</a></li>
                 <li><a href="">협력 고객사 등록신청</a></li>
             </ul>
+            <!-- 세로 컨텐츠 -->
             <ul>
                 <li class="li_tit"><a href="">ONLINE COMMUNITY<span class="footer_down_arrow"></span></a></li>
                 <li><a href="">페이스북</a></li>
@@ -268,12 +300,14 @@
                 <li><a href="">유튜브</a></li>
                 <li><a href="">인스타그램</a></li>
             </ul>
+            <!-- 세로 컨텐츠 -->
             <ul>
                 <li class="li_tit"><a href="">RECRUIT<span class="footer_down_arrow"></span></a></li>
                 <li><a href="">채용소개</a></li>
                 <li><a href="">채용 지원하기</a></li>
             </ul>
         </div>
+        <!-- 모바일 바로가기 버튼 -->
         <div class="footer_util_btn">
             <ul>
                 <li><a href="">HOME</a></li>
@@ -281,6 +315,7 @@
                 <li><a href="">Join Us</a></li>
             </ul>
         </div>
+        <!-- 수상 컨텐츠 -->
         <div class="awards_area">
             <div class="awards_inner">
                 <ul>
@@ -294,6 +329,7 @@
                 <div class="awards_control"><a href="">컨트롤</a></div>
             </div>
         </div>
+        <!-- 기타 컨텐츠 -->
         <div class="etc_area">
             <ul>
                 <li><a href="">개인정보처리방침</a></li>
