@@ -1,8 +1,8 @@
 window.onload = function(){
     // header에 마우스 올렸을때 클래스 추가 혹은 제거
     let experience = document.querySelector(".experience")
-    let expClose = document.querySelector(".exp_close")
-    expClose.addEventListener('click',()=>{
+    let experienceClose = document.querySelector(".experience_close")
+    experienceClose.addEventListener('click',()=>{
         experience.classList.add('hidden');
     })
     let header = document.getElementById('header');
@@ -121,7 +121,7 @@ window.onload = function(){
     // footer 
     let footerLink = document.querySelector('.brand_links');
     let linkContent = document.querySelector('.links_content');
-    let fotClose = document.querySelector('.fot_close');
+    let fotClose = document.querySelector('.links-close');
     footerLink.addEventListener('click', () => {
         footerLink.classList.toggle('open');
         linkContent.classList.toggle('block');

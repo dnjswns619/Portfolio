@@ -1,0 +1,82 @@
+// 변수를 담은 scss
+@import "../_variables.scss";
+// mixin을 담은 scss
+@import "../_mixin.scss";
+// animation 정보를 담은 scss
+@import "../_animation.scss";
+
+#home {
+  height: 100vh;
+  background-color: map-get($background, main);
+}
+.home-inner {
+  @include inner-pc; // pc일때 inner 스타일
+  position: relative;
+  height: inherit;
+  .home-effect {
+    width: 300px;
+    height: 300px;
+    background-color: map-get($background, white);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 300px;
+      height: 300px;
+      background-color: map-get($background, main);
+      transition: 0.5s;
+      top: 0;
+      transform: skewY(0);
+      border-right: 1px solid #fff;
+      border-bottom: 1px solid #fff;
+      animation: open 0.5s linear both;
+    }
+  }
+  .home-text {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    animation: ltr-pc 0.5s 0.5s linear both;
+    color: #fff;
+    p {
+      font-size: 4rem;
+      text-transform: uppercase;
+    }
+    span {
+      font-size: 2rem;
+    }
+  }
+}
+@include tablet-pc{
+  .home-inner {
+    @include inner-mobile;
+    // welcom 텍스트
+    .home-text {
+      left: 60%;
+      animation: ltr-mobile 1s 0.5s linear both;
+    }
+  }
+}
+@include mobile{
+  .home-inner {
+    @include inner-mobile;
+    .home-effect {
+      display: none;
+    }
+    .home-text {
+      top: 50%;
+      left: 50%;
+      p {
+        font-size: 2rem;
+      }
+      span {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

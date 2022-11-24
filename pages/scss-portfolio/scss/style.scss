@@ -1,0 +1,17 @@
+@charset 'utf-8';
+// animation 정보를 담은 scss
+@import "./_animation.scss";
+// reset css를 담은 scss
+@import "./_reset";
+// mixin을 담은 scss
+@import "./_mixin";
+// 변수를 담은 scss
+@import "./_variables";
+
+// layout
+@import "./layout/_header";
+@import "./layout/_section-home";
+@import "./layout/_section-about";
+@import "./layout/_section-portfolio";
+@import "./layout/_section-epilogue";
+

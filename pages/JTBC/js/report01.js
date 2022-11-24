@@ -19,11 +19,6 @@ window.onload = function(){
         }
     })
     // header에 마우스 올렸을때 클래스 추가 혹은 제거
-    let experience = document.querySelector(".experience")
-    let expClose = document.querySelector(".exp_close")
-    expClose.addEventListener('click',()=>{
-        experience.classList.add('hidden');
-    })
     let header = document.getElementById('header');
     header.addEventListener('mouseenter',function(){
         header.classList.add('hover-effect');
@@ -34,7 +29,7 @@ window.onload = function(){
     // footer 중앙그룹브랜드 클릭시 세부 메뉴창 띄우기
     let footerLink = document.querySelector('.brand_links');
     let linkContent = document.querySelector('.links_content');
-    let fotClose = document.querySelector('.fot_close');
+    let fotClose = document.querySelector('.links-close');
     footerLink.addEventListener('click', () => {
         footerLink.classList.toggle('open');
         linkContent.classList.toggle('block');

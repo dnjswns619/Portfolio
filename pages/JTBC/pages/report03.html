@@ -10,26 +10,22 @@
 </head>
 <body>
     <!--------------------- header --------------------->
+    <!--------------------- header --------------------->
     <header id="header">
         <div class="header_inner">
-            <!-- 로고 -->
             <h1 class="logo"><a href="">MAIN</a></h1>
-            <!-- 네비게이션 -->
-            <div class="nav">
-                <ul>
-                    <li><a href="./JTBC_CloneCoding-master/jtbc.html">회사소개</a></li>
-                    <li><a href="./onair_tech/onAirtech.html">방송기술</a></li>
-                    <li><a href="../report.html">보도제작</a></li>
-                    <li><a href="#">디자인</a></li>
-                    <li><a href="#">인재채용</a></li>
+            <nav class="nav">
+                <a href="./JTBC_CloneCoding-master/jtbc.html">회사소개</a>
+                <a href="./onair_tech/onAirtech.html">방송기술</a>
+                <a href="../report.html" class="current-page">보도제작</a>
+                <a href="#">디자인</a>
+                <a href="#" class="have-arrow">인재채용</a>
                 </ul>
-            </div>
-            <!-- 언어 선택 -->
-            <ul class="language">
-                <li>KOR</li>
-                <li><div></div></li>
-                <li>ENG</li>
-            </ul>
+            </nav>
+            <nav class="language">
+                <a href="../report.html" class="current-language">KOR</a>
+                <a href="../reporten.html">ENG</a>
+            </nav>
         </div>
     </header>
     <!--------------------- header end --------------------->
@@ -37,9 +33,7 @@
     <section>
         <div class="item_tit">
             <div class="title_inner">
-                <!-- 뒤로가기 버튼 -->
                 <a href="../report.html">뒤로가기</a>
-                <!-- 영상편집 메인 이미지 -->
                 <img src="../images/item03/rt_sb_3_hd.png" alt="">
             </div>
         </div>
@@ -49,62 +43,44 @@
     <section>
         <div class="img_title">
             <div class="title_inner">
-                <!-- 뉴스진행 소제목 -->
                 <div class="item_txt">
                     <h2>뉴스진행</h2>
                     <p> JTBC의 모든 뉴스 ,시사 프로그램을 기획, 제작, 연출을 담당하고 있습니다. PD 의 업무 범위가 넓고 기능적으로 세분화, 전문화 되어있어 프로그램의<br>
                         품질과 안정성이 높다는 것이 특징입니다.</p>
                 </div>
-                <!-- 뉴스진행 sub-image들 -->
                 <div class="item2_img">
                     <ul>
                         <li id="lt01">
-                            <!-- animation-effect-box -->
                             <div id="div01" class="xbox"></div>
-                            <!-- 뉴스진행-sub-image -->
                             <img src="../images/item03/rt_sb_3_1.png" alt="">
                             <div></div>
                             <p>뉴스 영상 편집 작업실</p>
                         </li>
                         <li id="lt02" class="sm_box">
-                            <!-- animation-effect-box -->
                             <div id="div02" class="ybox"></div>
-                            <!-- 뉴스진행-sub-image -->
                             <img src="../images/item03/rt_sb_3_2.png" alt="">
                         <li id="lt03" class="sm_box">
-                            <!-- animation-effect-box -->
                             <div id="div03" class="xbox"></div>
-                            <!-- 뉴스진행-sub-image -->
                             <img src="../images/item03/rt_sb_3_3.png" alt="">
                         </li>
                         <li id="lt04" class="sm_box">
-                            <!-- animation-effect-box -->
                             <div id="div04" class="xbox"></div>
-                            <!-- 뉴스진행-sub-image -->
                             <img src="../images/item03/rt_sb_3_4.png" alt="">
                         </li>
                         <li id="lt05" class="sm_box">
-                            <!-- animation-effect-box -->
                             <div id="div05" class="ybox"></div>
-                            <!-- 뉴스진행-sub-image -->
                             <img src="../images/item03/rt_sb_3_5.png" alt="">
                         </li>
                         <li id="lt06" class="sm_box">
-                            <!-- animation-effect-box -->
                             <div id="div06" class="xbox"></div>
-                            <!-- 뉴스진행-sub-image -->
                             <img src="../images/item03/rt_sb_3_6.png" alt="">
                         </li>
                         <li id="lt07" class="sm_box">
-                            <!-- animation-effect-box -->
                             <div id="div07" class="xbox"></div>
-                            <!-- 뉴스진행-sub-image -->
                             <img src="../images/item03/rt_sb_3_7.png" alt="">
                         </li>
                         <li id="lt08" class="sm_box">
-                            <!-- animation-effect-box -->
                             <div id="div08" class="xbox"></div>
-                            <!-- 뉴스진행-sub-image -->
                             <img src="../images/item03/rt_sb_3_8.png" alt="">
                         </li>
                     </ul>
@@ -128,10 +104,9 @@
         <!-- 중앙그룹 더보기 버튼 -->
         <div class="links_content">
             <div class="links_inner">
-                <div class="fot_close"></div>
+                <div class="links-close"></div>
                 <ul>
                     <li>
-                        <!-- 중앙그룹 신문 링크들 -->
                         <span>신문</span>
                         <ul>
                             <li>중앙일보</li>
@@ -143,7 +118,6 @@
                         </ul>
                     </li>
                     <li>
-                        <!-- 중앙그룹 방송 링크들-->
                         <span>방송</span>
                         <ul>
                             <li>JTBC</li>
@@ -155,7 +129,6 @@
                         </ul>
                     </li>
                     <li>
-                        <!-- 중앙그룹 멀티플렉스 & 레저 링크들 -->
                         <span>멀티플렉스 & 레저</span>
                         <ul>
                             <li>메가박스</li>
@@ -167,7 +140,6 @@
                         </ul>
                     </li>
                     <li class="list_2">
-                        <!-- 중앙그룹 매거진 &  출판 링크들 -->
                         <span>매거진 &  출판</span>
                         <ul>
                             <li>월간중앙</li>
@@ -183,7 +155,6 @@
                         </ul>
                     </li>
                     <li>
-                        <!-- 중앙그룹 전문 콘텐트 링크들 -->
                         <span>전문 콘텐트</span>
                         <ul>
                             <li>조인스랜드</li>
@@ -195,7 +166,6 @@
                         </ul>
                     </li>
                     <li class="list_2">
-                        <!-- 중앙그룹 서비스 링크들 -->
                         <span>서비스</span>
                         <ul>
                             <li>JOINS PRIME</li>
