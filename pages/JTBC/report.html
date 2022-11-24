@@ -18,33 +18,28 @@
     <!--------------------- header --------------------->
     <header id="header">
         <div class="header_inner">
-            <!-- 로고 -->
-            <h1 class="logo"><a href="">MAIN</a></h1>
-            <!-- 네비게이션 -->
-            <div class="nav">
-                <ul>
-                    <li><a href="./pages/JTBC_CloneCoding-master/jtbc.html">회사소개</a></li>
-                    <li><a href="./pages/onair_tech/onAirtech.html">방송기술</a></li>
-                    <li><a href="#">보도제작</a></li>
-                    <li><a href="#">디자인</a></li>
-                    <li><a href="#">인재채용</a></li>
+            <h1 class="logo">
+                <a href="">MAIN</a>
+            </h1>
+            <nav class="nav">
+                <a href="./pages/JTBC_CloneCoding-master/jtbc.html">회사소개</a>
+                <a href="./pages/onair_tech/onAirtech.html">방송기술</a>
+                <a href="#" class="current-page">보도제작</a>
+                <a href="#">디자인</a>
+                <a href="#" class="have-arrow">인재채용</a>
                 </ul>
-            </div>
-            <!-- 언어 선택 -->
-            <ul class="language">
-                <li><a href="./report.html">KOR</a></li>
-                <li><div></div></li>
-                <li><a href="./reporten.html">ENG</a></li>
-            </ul>
+            </nav>
+            <nav class="language">
+                <a href="./report.html" class="current-language">KOR</a>
+                <a href="./reporten.html">ENG</a>
+            </nav>
         </div>
     </header>
     <!--------------------- header end --------------------->
     <!--------------------- vr section --------------------->
     <section>
         <div id="vr">
-            <!-- vr 배경 -->
             <div class="vr_content"></div>
-            <!-- vr 설명 -->
             <div class="experience">
                 <div class="experience_inner">
                     <ul>
@@ -53,8 +48,7 @@
                         <li class="experience-img"></li>
                         <li class="bottom-word">뉴스룸을 360도 VR로 간접 체험해보세요.</li>
                         <li class="blue-word">Click and drag</li>
-                        <!-- 설명 닫기 버튼 -->
-                        <li class="exp_close"></li>
+                        <li class="experience_close"></li>
                     </ul>
                 </div>
             </div>
@@ -65,17 +59,18 @@
     <section class="over">
         <div class="slide_content">
             <div class="slide_inner">
-                <!-- 슬라이드 설명 -->
                 <div class="slide_title">
                     <h2>보도제작</h2>
                     <p>생방송 뉴스를 비롯한 JTBC 보도 프로그램의 기획, 제작, 편집 등을 담당하고 있습니다. 주요 이슈가 있는 곳이라면 어디든 달려가<br>
                         현장을 생생하게 취재하고 전달합니다. 신속하고 정확한 뉴스, 시사 프로그램의 보도를 위해 항상 최선을 다하고 있습니다.</p>
                 </div>
-                <!-- slide 버튼-->
-                <div class="prev default btn"></div>
-                <div class="next btn"></div>
+                <div class="prev default btn">
+                    <span class="hidden">다음 슬라이드</span>
+                </div>
+                <div class="next btn">
+                    <span class="hidden">이전 슬라이드</span>
+                </div>
                 <div class="swiper swipe_slide first">
-                    <!-- slide 컨텐츠 -->
                     <div class="slides">
                         <div class="slide mini"><img src="./images/report/thumb_3_01.png" alt=""></div>
                         <div class="slide mini"><img src="./images/report/thumb_3_02.png" alt=""></div>
@@ -100,11 +95,15 @@
             <div id="modal" class="hidden">
                 <div class="modal_bg"></div>
                 <div class="modal_cont">
-                    <!-- 모달창 버튼 -->
-                    <div class="modal_close"></div>
-                    <div class="modal-prev"></div>
-                    <div class="modal-next"></div>
-                    <!-- 모달창 컨텐츠 -->
+                    <div class="modal_close">
+                        <span class="hidden">닫기 버튼</span>
+                    </div>
+                    <div class="modal-prev">
+                        <span class="hidden">다음 슬라이드</span>
+                    </div>
+                    <div class="modal-next">
+                        <span class="hidden">이전 슬라이드</span>
+                    </div>
                     <div class="swiper swipe_slide first">
                         <div class="modal-slides">
                             <div class="slide modal-mini"><img src="./images/report/thumb_3_01.png" alt=""></div>
@@ -132,19 +131,16 @@
     <!--------------------- 보도제작 slide section end --------------------->
     <!--------------------- 보도제작 더보기 section --------------------->
     <section class="over">
-        <!-- 보도제작 더보기 컨텐츠들 -->
-        <div class="link_content">
-            <div class="link_inner">
+        <div class="report-items">
+            <div class="items-inner">
                 <!-- 보도제작 영상취재 더보기 -->
-                <a href="./pages/report01.html" class="item item0">
-                    <!-- 영상취재 설명 -->
+                <a href="./pages/report01.html" class="item item0" title="영상취재 보러가기">
                     <div class="item_content">
                         <h2>영상취재</h2>
                         <p class="item_txt">역사의 매 순간을 진실에 입각하여 영상으로<br>
                             기록합니다.</p>
-                        <p class="blue">view more</p>
+                        <p class="view-more">view more</p>
                     </div>
-                    <!-- 영상취재 설명 hover 효과 -->
                     <div class="hover_txt">
                         <div class="hover_cont">
                             <div class="blue_box"></div>
@@ -156,8 +152,7 @@
                     </div>
                 </a>
                 <!-- 보도제작 영상편집 더보기 -->
-                <a href="./pages/report02.html" class="item item1">
-                    <!-- 영상편집 설명 -->
+                <a href="./pages/report02.html" class="item item1" title="영상편집 보러가기">
                     <div class="item_content">
                         <h2>영상편집</h2>
                         <p class="item_txt">JTBC 보도 프로그램에 사용하는 모든 영상의 <br>
@@ -165,9 +160,8 @@
                             분초를 다투는 뉴스 제작 환경 속에서도 냉정함을<br>
                             잃지 않고 신뢰도 높은 뉴스를 만들기 위해<br>
                             노력하고 있습니다.</p>
-                        <p class="blue">view more</p>
+                        <p class="view-more">view more</p>
                     </div>
-                    <!-- 영상편집 설명 hover 효과 -->
                     <div class="hover_txt">
                         <div class="hover_cont">
                             <div class="blue_box"></div>
@@ -178,17 +172,14 @@
                         </div>
                     </div>
                 </a>
-                <!-- 보도제작 뉴스진행 더보기 -->
-                <a href="./pages/report03.html" class="item item2">
-                    <!-- 뉴스진행 설명 -->
+                <a href="./pages/report03.html" class="item item2" title="뉴스진행 보러가기">
                     <div class="item_content">
                         <h2>뉴스진행</h2>
                         <p class="item_txt">JTBC의 모든 뉴스, 시사 프로그램을 기획, 제작,<br>
                             연출을 담당하고 있습니다. PD의 업무 범위가 넓고 기능적으로 세분화, 전문화 되어있어 프로그램의<br>
                             품질과 안정성이 높다는 것이 특징입니다.</p>
-                            <p class="blue">view more</p>
+                            <p class="view-more">view more</p>
                     </div>
-                    <!-- 뉴스진행 설명 hover 효과 -->
                     <div class="hover_txt">
                         <div class="hover_cont">
                             <div class="blue_box"></div>
@@ -218,10 +209,9 @@
         <!-- 중앙그룹 더보기 버튼 -->
         <div class="links_content">
             <div class="links_inner">
-                <div class="fot_close"></div>
+                <div class="links-close"></div>
                 <ul>
                     <li>
-                        <!-- 중앙그룹 신문 링크들 -->
                         <span>신문</span>
                         <ul>
                             <li>중앙일보</li>
@@ -233,7 +223,6 @@
                         </ul>
                     </li>
                     <li>
-                        <!-- 중앙그룹 방송 링크들-->
                         <span>방송</span>
                         <ul>
                             <li>JTBC</li>
@@ -245,7 +234,6 @@
                         </ul>
                     </li>
                     <li>
-                        <!-- 중앙그룹 멀티플렉스 & 레저 링크들 -->
                         <span>멀티플렉스 & 레저</span>
                         <ul>
                             <li>메가박스</li>
@@ -257,7 +245,6 @@
                         </ul>
                     </li>
                     <li class="list_2">
-                        <!-- 중앙그룹 매거진 &  출판 링크들 -->
                         <span>매거진 &  출판</span>
                         <ul>
                             <li>월간중앙</li>
@@ -273,7 +260,6 @@
                         </ul>
                     </li>
                     <li>
-                        <!-- 중앙그룹 전문 콘텐트 링크들 -->
                         <span>전문 콘텐트</span>
                         <ul>
                             <li>조인스랜드</li>
@@ -285,7 +271,6 @@
                         </ul>
                     </li>
                     <li class="list_2">
-                        <!-- 중앙그룹 서비스 링크들 -->
                         <span>서비스</span>
                         <ul>
                             <li>JOINS PRIME</li>

@@ -8,9 +8,9 @@
       objs: {
         container: document.querySelector('#home'),
         messageBox: document.querySelector('.home-content'),
-        messageA: document.querySelector('.welcome-text'),
-        messageB: document.querySelector('.home-text-a'),
-        messageC: document.querySelector('.home-text-b')
+        messageA: document.querySelector('.scroll-text-a'),
+        messageB: document.querySelector('.scroll-text-b'),
+        messageC: document.querySelector('.scroll-text-c')
       },
       values: {
         messageA_opacity_out: [1, 0, {start: 0, end: 0.2}],

@@ -1,31 +1,52 @@
+@charset "utf-8";
 @media (max-width: 1100px) {
+  /* ----------------------- header ----------------------- */
+  .header-inner {
+    width: 100%;
+  }
+  .logo {
+    font-size: 1.5rem;
+  }
+  .gnb a {
+    font-size: 1rem;
+  }
   /* ----------------------- section : home ----------------------- */
   .home-content {
     width: 100%;
   }
+  .scroll-text-c p {
+    font-size: 2rem;
+  }
   /* ----------------------- section : project ----------------------- */
   .project > div {
-    float: none;
-  }
-  /* 이미지 슬라이드 */
-  .slick-slider {
     width: 100%;
   }
-  /* 프로젝트 */
   .tab {
     height: auto;
+    flex-direction: column;
   }
-  /* 프로젝트 소개글 */
-  .project-text {
-    width: 100%;
-  }
-  .project-text br {
+  .project-content br {
     display: none;
   }
-  /* 프로젝트 바로가기 버튼 */
   label {
     padding: 5px;
     margin-right: 5px;
+  }
+  /* ----------------------- section : about ----------------------- */
+  .about-inner {
+    width: 100%;
+  }
+  .educations > h2,
+  .experiences > h2 {
+    padding-left: 1em;
+  }
+  .educations > hr,
+  .experiences > hr {
+    margin-left: 2em;
+  }
+  /* ----------------------- section : skill ----------------------- */
+  .skill-inner {
+    width: 100%;
   }
 }
 @media (max-width:768px) {
@@ -34,10 +55,6 @@
     overflow: hidden;
   }
   /* ----------------------- header ----------------------- */
-  .header-inner {
-    width: 100%;
-  }
-  /* 모바일 트리거 로고 */
   .trigger {
     display: block;
     width: 20px;
@@ -54,19 +71,18 @@
     background: url(../images/close.png) no-repeat;
     background-size: contain;
   }
-  /* 로고 */
   .logo {
-    margin-left: 20px
+    font-size: 1rem;
   }
-  .logo a {
-    font: inherit;
+  .logo img {
+    display: none;
   }
-  /* 네비게이션 바 */
   .gnb {
     width: 200px;
     height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     position: absolute;
     top: 0;
     right: -220px;
@@ -74,8 +90,8 @@
     transition: 0.5s;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.212);
   }
-  .gnb a i {
-    font-size: 35px;
+  .gnb a {
+    margin-bottom: 2em;
   }
   .gnb.active {
     right: 0px;
@@ -98,67 +114,54 @@
   .home-inner {
     width: 100%;
   }
-  /* 스크롤시 나타나는 컨텐츠 */
   .home-content > div {
     float: none;
     width: 100%;
   }
-  .home-text-a h1 {
+  .scroll-text-b strong {
     font-size: 2em;
   }
-  .home-text-a p#typeit {
+  .scroll-text-b p#typeit {
     font-size: 1.3em;
   }
-  .home-text-a span {
+  .scroll-text-b span {
     font-size: 1em;
   }
-  .home-text-b p {
+  .scroll-text-c p {
     font-size: 1.3em;
-  }
-  /* 얼굴 사진 */
-  .home-image {
-    display: none;
   }
   /* ----------------------- section : project ----------------------- */
   .project > div {
     float: none;
   }
-  /* 이미지 슬라이드 */
   .slick-slider {
     width: 100%;
   }
-  /* 프로젝트 */
   .tab {
     height: auto;
   }
-  /* 프로젝트 소개글 */
-  .project-text {
+  .project-content {
     width: 100%;
   }
-  .project-text br {
+  .project-content br {
     display: none;
   }
   label {
     padding: 5px;
     margin-right: 5px;
   }
-  /* --------------------- section : scss & grid --------------------- */
-  /* scss-grid 컨텐츠들 */
-  .practice-content a br {
-    display: none;
-  }
   /* ----------------------- section : about ----------------------- */
   .about-inner {
     width: 100%;
   }
-  .about-me > div {
-    float: none;
+  .about-me,
+  .education,
+  .experience {
+    flex-direction: column;
   }
-  /* 얼굴 증명사진 */
   .face-photo {
     width: 100%;
   }
-  /* 인적사항 */
   .personal-info {
     margin-top: 40px;
     text-align: center;
@@ -169,10 +172,10 @@
   .about-content {
     padding: 0 20px;
   } 
-  /* 교육 내용 */
   .education {
     height: auto;
     margin-bottom: 20px;
+    padding-left: 1em;
   }
   .education >div {
     float: none;
@@ -190,16 +193,15 @@
     padding-left: 0;
     padding-top: 10px;
   }
-  /* 경력사항 */
   .experience {
     height: auto;
     margin-bottom: 20px;
+    padding-left: 1em;
   }
   /* ----------------------- section : skill ----------------------- */
   .skill-inner {
     width: 100%;
   }
-  /* skill들 */
   .skill-content {
     overflow: hidden;
     grid-template-columns: repeat(1, 1fr);
@@ -213,11 +215,13 @@
   
   /* ----------------------- section : epilogue ----------------------- */
   .epilogue-inner {
-    width: 100%;
     padding: 0 20px
   }
   .epilogue-inner h2 {
     font-size: 29px;
+  }
+  .epilogue-inner strong {
+    font-size: 1.3rem;
   }
   .epilogue-inner p {
     line-height: 1.5em;
@@ -226,13 +230,10 @@
     display: none;
   }
   /* ----------------------- footer ----------------------- */
-  .footer-inner {
-    width: 100%;
-  }
   .footer-inner a {
     bottom: 0;
   }
   .contact-info {
-    padding-bottom: 70px;
+    padding-bottom: 100px;
   }
 }

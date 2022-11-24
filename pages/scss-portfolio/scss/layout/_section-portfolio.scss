@@ -1,0 +1,84 @@
+// mixin을 담은 scss
+@import "../_mixin";
+// 변수를 담은 scss
+@import "../_variables";
+// animation 정보를 담은 scss
+@import "../_animation.scss";
+
+#portfolio {
+  background-color: map-get($background, secondary); // rgb(162, 203, 247)
+  & > h2 {
+    @include h2-design; // h2 공통 디자인
+  }
+}
+.portfolio-inner {
+  margin-top: 50px;
+  padding-bottom: 50px;
+  strong {
+    color: $h2-color; // royalblue
+    padding-left: 50px;
+  }
+  .items {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    .focus {
+      grid-area: span 2 / span 2;
+    }
+    div {
+      position: relative;
+      text-align: center;
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: 0.5s;
+        background-color: rgba(34, 34, 34, 0.3);
+      }
+      &:hover::after {
+        opacity: 1;
+      }
+      &:hover span {
+        animation: moveup 0.5s linear both;
+      }
+      a {
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
+      span {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        opacity: 0;
+        color: #fff;
+        transition: 0.5s;
+        z-index: 5;
+      }
+    }
+  }
+}
+@include tablet-pc{
+  .portfolio-inner {
+    .items {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+@include mobile{
+  .portfolio-inner {
+    .items {
+      grid-template-columns: repeat(1, 1fr);
+      .focus {
+        grid-area: span 1;
+      }
+    }
+  }
+}

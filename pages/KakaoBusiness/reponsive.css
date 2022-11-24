@@ -1,14 +1,54 @@
+@charset "utf-8";
+@media screen and (max-width: 1023px) {
+  /* ---------------- section : home ---------------- */
+  .title-message {
+    width: 100%;
+    left: 0;
+  }
+  .title-message strong {
+    font-size: 2rem
+  }
+  /* ----------------- section : influence-ecosystem ----------------- */
+  .influence-text p {
+    font-size: 1.8rem;
+  }
+  .influence-info div {
+    font-size: 2.5rem;
+  }
+  /* ----------------- section : influence-ecosystem ----------------- */
+  .ecosystem-text p {
+    font-size: 1.7rem;
+    line-height: 1.5em;
+  }
+  .ecosystem-img {
+    width: 50%;
+  }
+  /* --------------- section : guide --------------- */
+  .guide-text h2 {
+    font-size: 1.8rem;
+  }
+  .guide-about {
+    padding: 0;
+  }
+  /* --------------- section : focus --------------- */
+  .focus-item {
+    width: 40%;
+  }
+  /* --------------- section : sevice --------------- */
+  .service-about br {
+    display: none;
+  }
+}
 @media (max-width:768px) {
   /* default css */
-  body {
+  html {
     font-size: 16px;
   }
   section {
     padding: 50px 15px;
   }
   /* common css */
-  /* 소제목 스타일 */
-  .headline-share h1 {
+  .headline-share h2 {
     font-size: 1.7em;
   }
   .headline-share p {
@@ -21,23 +61,15 @@
   .header-inner {
     width: 100%;
   }
-  /* 로고 */
-  .logo {
-    margin-left: 35px;
-    width: 150px;
-  }
-  .logo img {
-    width: 100%;
-  }
-  /* 네비게이션 */
   .gnb {
-    float: none;
+    flex-direction: column;
+    justify-content: flex-start;
     background-color: #fff;
     position: fixed;
     height: 100vh;
     width: 250px;
     top: 0;
-    right: -270px;
+    right: -250px;
     box-shadow: 3px 0 3px rgba(0, 0, 0, 0.15);
     padding-top: 70px;
     padding-left: 15px;
@@ -49,7 +81,6 @@
   .gnb a {
     display: block;
   }
-  /* 모바일 트리거 */
   .trigger {
     display: block;
     width: 30px;
@@ -65,12 +96,11 @@
     height: 30px;
   }
   
-  /* ---------------- section : welocme ---------------- */
-  .welcome {
+  /* ---------------- section : home ---------------- */
+  #home {
     padding-top: 31px;
     height: 100vh;
   }
-  /* 슬라이드 타이틀 */
   .slideshow,
   .slick-list,
   .slick-track {
@@ -82,21 +112,20 @@
     object-fit: cover;
     object-position: left;
   }
-  /* 타이틀 소개 텍스트 */
-  .welcome-heading {
+  .title-message {
     width: 100%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
   }
-  .welcome-heading h1 {
-    font-size: 26px;
+  .title-message strong {
+    font-size: 1.4rem;
   }
-  .welcome-heading span {
-    font-size: 18px;
+  .title-message span {
+    font-size: 1rem;
   }
-  .welcome-heading p {
+  .title-message p {
     padding: 0 30px;
   }
   .mouse {
@@ -113,45 +142,31 @@
   .ecosystem-inner {
     border-bottom: 1px solid #eee;
   }
-  /* influence 컨텐츠 */
-  .influence-content > div {
+  .influence-inner > div {
     float: none;
     width: 100%;
     text-align: center;
   }
-  .influence-left {
-    padding-right: 0;
+  .influence-text {
+    padding: 0;
   }
-  .influence-left h3 {
-    padding-right: 0;
-  }
-  .influence-left p {
-    font-size: 20px;
+  .influence-text p {
+    font-size: 1.5rem;
   }
   .influence-right > div {
     float: none;
     width: 100%;
   }
-  .influence-info div {
-    font-size: 35px;
-  }
-  /* ecosystem 컨텐츠 */
-  .ecosystem-content > div {
-    float: none;
+  .ecosystem-content {
+    flex-direction: column;
     width: 100%;
     text-align: center;
   }
-  .ecosystem-left {
-    padding-right: 0;
-    padding-top: 20px;
+  .ecosystem-text,
+  .ecosystem-img {
+    width: 100%;
   }
-  .ecosystem-left p {
-    font-size: 20px;
-  }
-  .ecosystem-right {
-    margin-top: 40px;
-  }
-  .ecosystem-right img {
+  .ecosystem-img img {
     width: 100%;
   }
   /* --------------- section : guide --------------- */
@@ -162,37 +177,24 @@
   .guide-inner {
     width: 100%;
   }
+  .guide-content {
+    flex-direction: column;
+  }
   .guide-content > div {
-    float: none;
     width: 100%;
   }
-  /* 가이드 이미지 */
   .guide-slider {
     margin: 50px 0 80px;
   }
-  /* 가이드 설명 */
-  .guide-text h1 {
-    font-size: 1.5em;
+  .guide-text {
+    text-align: center;
   }
-  .guide-about h2 {
-    font-size: 1.4em;
-  }
-  
   /* ----------------- section : channel ----------------- */
-  .channel {
-    padding-top: 30px;
-    background: linear-gradient(to right, #69acfe, #69aefd);;
-  }
   .channel-inner {
     width: 100%;
   }
   .channel-content > div {
-    float: none;
     width: 100%;
-  }
-  /* 채널 선택 버튼 */
-  .tab.btn {
-    text-align: center;
   }
   .tab-btn {
     display: grid;
@@ -201,25 +203,24 @@
   .tab-btn label {
     width: 100%;
   }
-  /* 채널 소개 탭 */
   .tab {
     padding: 20px;
+    text-align: center;
   }
-  .tab h2 br {
+  .tab br {
     display: none;
-  }
-  .tab h2 {
-    font-size: 26px;
   }
   /* --------------- section : focus --------------- */
   .focus-inner {
     width: 100%;
   }
-  /* 활용하기 컨텐츠 */
   .focus-item {
     display: block;
     width: 100%;
     margin: 0 0 50px;
+  }
+  .focus-text h3 {
+    font-size: 1.5em;
   }
   /* ----------------- section : service ----------------- */
   #service {
@@ -227,26 +228,19 @@
   }
   .service-inner {
     width: 100%;
-    padding: 0 15px;
   }
-  /* secvice 소제목 */
   .service .headline-text {
     width: 100%;
-    background: url(./images/kakao/m_kfb_tool_210521.gif) no-repeat;
+    background: url(./images/m_kfb_tool_210521.gif) no-repeat;
     background-size: contain;
     background-position: center;
+  }
+  .service .headline-text h2 {
+    width: 100%;
+    padding-left: 0;
     text-align: center;
-  }
-  .service .headline-text h1 br {
-    display: none;
-  }
-  .service .headline-text h1 {
-    width: 58%;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    padding-top: 5em;
   } 
-  /* 솔루션 */
   .service-content {
     width: 50%;
     margin: 0;
@@ -255,44 +249,18 @@
   .service-content > div {
     text-align: left;
   }
-  /* service 설명 소제목 */
-  .service-title p {
-    font-size: 1.3em;
-  }
-  /* 솔루션 설명 */
-  .service-about {
-    padding: 0;
-  }
-  .service-about h2 {
-    font-size: 1em;
-    font-weight: bold;
-    margin: 0;
-  }
   .service-about p br {
     display: none;
   }
-  .service-about p {
-    font-size: 0.7em;
-    line-height: 1.5em;
-    margin-top: 5px;
-  }
-  .service-mockup img {
-    width: 100%;
-  }
   /* ----------------- section : conjugation ----------------- */
-  .conjugation {
-    padding-top: 5px;
-  }
   .conjugation-content > div {
     float: none;
     width: 100%;
     height: auto;
   }
-  /* conjugation 컨텐츠들 설명 */
   .conjugation-item-desc {
     padding: 20px 0;
   }
-  /* conjugation 컨텐츠들 소제목 */
   .conjugation-item-headline {
     width: 80%;
   }
@@ -302,10 +270,6 @@
   /* ----------------- section : faq ----------------- */
   .faq-inner {
     width: 100%;
-  }
-  /* faq 소제목, 설명 */
-  .faq-inner .headline-share h1 {
-    font-size: 1.3em;
   }
   .faq-inner .headline-share p {
     padding: 0;

@@ -1,0 +1,31 @@
+@import "../_mixin.scss";
+
+.header-inner {
+  @include inner-pc; // pc일때 inner 스타일
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  .header-nav {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+  }
+}
+@include tablet-pc{
+  .header-inner {
+    @include inner-mobile;
+    .header-logo {
+      padding-left: 1em;
+    }
+  }
+}
+@include mobile{
+  .header-inner {
+    @include inner-mobile;
+    .header-logo {
+      padding-left: 1em;
+    }
+    .header-nav {
+      gap: 5px;
+    }
+  }
+}
