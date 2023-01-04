@@ -2,6 +2,7 @@
 
 /* section : news-slide */
 .main-slide {
+  overflow: hidden;
   .swiper-wrapper {
     transition-duration: 3s !important;
   }

@@ -230,10 +230,10 @@
     display: none;
   }
   /* ----------------------- footer ----------------------- */
-  .footer-inner a {
-    bottom: 0;
+  .top-btn {
+    display: none;
   }
   .contact-info {
-    padding-bottom: 100px;
+    padding-bottom: 50px;
   }
 }

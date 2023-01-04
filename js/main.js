@@ -10,7 +10,8 @@
         messageBox: document.querySelector('.home-content'),
         messageA: document.querySelector('.scroll-text-a'),
         messageB: document.querySelector('.scroll-text-b'),
-        messageC: document.querySelector('.scroll-text-c')
+        messageC: document.querySelector('.scroll-text-c'),
+        airplane: document.querySelector('.airplane'),
       },
       values: {
         messageA_opacity_out: [1, 0, {start: 0, end: 0.2}],
@@ -18,7 +19,13 @@
         messageB_opacity_in: [0, 1, {start: 0.25, end: 0.35}],
         messageB_opacity_out: [1, 0, {start: 0.45, end: 0.55}],
         messageC_opacity_in: [0, 1, {start: 0.55, end: 0.65}],
-        messageC_opacity_out: [1, 0, {start: 0.7, end: 0.8}]
+        messageC_opacity_out: [1, 0, {start: 0.7, end: 0.8}],
+        airplane_translateX_first: [0, 100, {start: 0, end: 0.45}],
+        airplane_translateX_second: [100, 0, {start: 0.55, end: 0.8}],
+        airplane_translateY_first: [0, 20, {start: 0, end: 0.45}],
+        airplane_translateY_second: [10, 0, {start: 0.55, end: 0.8}],
+        airplane_rotate_45: [45, 47, {start: 0, end: 0.45}],
+        airplane_rotate_90: [89, 90, {start:0.28, end: 0.4}],
       }
     },
     {
@@ -114,9 +121,25 @@
         // project 섹션이랑 겹치는 부분에선 display none을 주기 위해 
         if(scrollRatio >= 0.8) {
           objs.messageBox.classList.add('none');
+          objs.messageA.classList.add('none');
         } else {
           objs.messageBox.classList.remove('none');
+          objs.messageA.classList.remove('none');
         }
+        if (scrollRatio <= 0.5) {
+          objs.airplane.style.marginLeft = `${calcValues(values.airplane_translateX_first, currentYOffSet)}%`;
+        } else {
+          objs.airplane.style.marginLeft = `${calcValues(values.airplane_translateX_second, currentYOffSet)}%`
+          
+        }
+        if (scrollRatio <= 0.5) {
+          objs.airplane.style.marginTop = `${calcValues(values.airplane_translateY_first, currentYOffSet)}%`;
+          objs.airplane.style.transform = `rotate(47deg)`;
+        } else {
+          objs.airplane.style.marginTop = `${calcValues(values.airplane_translateY_second, currentYOffSet)}%`;
+          objs.airplane.style.transform = `scaleX(-1) rotate(40deg)`;
+        } 
+        
         break;
     }
   }

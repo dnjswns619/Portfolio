@@ -1,0 +1,21 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Festive&family=Hind+Siliguri:wght@300;400;500;600;700&family=Merriweather:wght@300&family=Noto+Sans+KR:wght@300;400;500;700;900&family=Zen+Old+Mincho&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Festive&family=Hind+Siliguri:wght@300;400;500;600;700&family=Merriweather:wght@300&family=Noto+Sans+KR:wght@300;400;500;700;900&family=Zen+Old+Mincho&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Festive&family=Gentium+Book+Basic&family=Hind+Siliguri:wght@300;400;500;600;700&family=Merriweather:wght@300&family=Noto+Sans+KR:wght@300;400;500;700;900&family=Zen+Old+Mincho&display=swap');
+
+@import "./abstracts/mixin";
+@import "./abstracts/variable";
+
+@import "./base/base";
+
+@import "./layout/header";
+@import "./layout/footer";
+
+@import "./pages/main";
+@import "./pages/glasses";
+@import "./pages/sunglasses";
+@import "./pages/accessorie";
+@import "./pages/campaign";
+@import "./pages/journal";
+@import "./pages/brand";
+@import "./pages/buy";

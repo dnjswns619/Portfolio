@@ -1,0 +1,24 @@
+@charset "utf-8";
+
+.brand {
+  &__img {
+    width: 100%;
+    height: calc(100vh - 60px);
+    margin-bottom: 300px;
+    background: url(../images/771c2dd4f02af30b7ea150c28faaf17e.jpg) no-repeat;
+    background-size: cover;
+  }
+  &__info {
+    margin-bottom: 600px;
+    text-align: center;
+    &--title {
+      @include font-merriweather;
+      font-size: 1.84rem;
+    }
+    &--text {
+      font-size: 0.75rem;
+      letter-spacing: -0.5px;
+      color: #353535;
+    }
+  }
+}

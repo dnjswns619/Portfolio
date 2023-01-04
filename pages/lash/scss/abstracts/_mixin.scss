@@ -1,0 +1,78 @@
+@charset "utf-8";
+@import "./variable";
+
+@mixin pc {
+  @media (max-width: #{$pc}) {
+    @content;
+  }
+}
+@mixin laptop {
+  @media (max-width: #{$laptop}) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+@mixin font-notosans {
+  font-family: $notosans;
+}
+@mixin font-merriweather {
+  font-family: $merriweather;
+  font-weight: 300;
+}
+@mixin active-display {
+  display: none;
+  &.block {
+    display: block;
+  }
+}
+@mixin inner-style-5px {
+  &__inner {
+    padding: 0 5px;
+  }
+}
+@mixin grid-style {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  width: 100%;
+}
+@mixin item-img-style {
+  width: 100%;
+  border-radius: 10px;
+}
+@mixin item-info-style {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+  font-weight: 600;
+  &--name {
+    margin: 0 0 0.5em 0;
+  }
+}
+@mixin item-color-style {
+  &-color {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    padding-bottom: 2.5rem;
+  }
+  &__color {
+    padding: 0 0.5rem;
+    &--img {
+      width: 100%;
+      border: 1px solid #eee;
+      border-radius: 50%;
+    }
+  }
+}
+@mixin product-info-title {
+  display: block;
+  padding: 1.1em 0;
+  border-bottom: 1px solid #000;
+  background: url(../images/point_dw.png) no-repeat;
+  background-position: right;
+}
