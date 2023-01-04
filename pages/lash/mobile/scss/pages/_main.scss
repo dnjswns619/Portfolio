@@ -1,0 +1,212 @@
+@charset "utf-8";
+@import "../../../scss/abstracts/variable";
+
+.main1 {
+  position: absolute;
+  top: 60px;
+  width: 100%;
+  height: 986px;
+  background-color: #fff;
+  z-index: 10;
+  &__banner {
+    width: 100%;
+    height: 100%;
+    &--title {
+      .font--notosans {
+        font-family: $notosans;
+        font-weight: normal;
+      }
+      font-family: $bookbasic;
+      margin: 3rem 0;
+      text-align: center;
+    }
+    &--info {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      width: calc(100% - 2rem);
+      height: 650px;
+      margin: 0 auto;
+      background: url(../../images/m_main20232.jpg) no-repeat center;
+      background-size: cover;
+      border-radius: 1em;
+      color: #fff;
+    }
+  }
+  .banner {
+    &__title {
+      font-size: 1.5rem;
+      font-family: $bookbasic;
+    }
+    &__description {
+      margin: 0;
+      padding: 3rem 0;
+      opacity: 0.85;
+      color: #1b1b1b;
+      text-align: center;
+    }
+    &__more-btn {
+      margin: 2em 0 3rem;
+      padding: 2px 1.2rem;
+      border: 1px solid #fff;
+      border-radius: 1em;
+      font-size: 0.8rem;
+      color: #fff;
+    }
+  }
+}
+.main2 {
+  z-index: 5;
+  position: absolute;
+  top: 60px;
+  width: 100%;
+  height: calc(989px + 100vh);
+  &__banner {
+    position: sticky;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 100vh;
+    background: url(../../images/m_middle2.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    &--info {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      color: #fff;
+    }
+  }
+  .banner {
+    &__title {
+      font-size: 2.5rem;
+      font-family: $bookbasic;
+    }
+    &__description {
+      padding: 0 2vw;
+      text-align: center;
+      opacity: 0.85;
+    }
+    &__more-btn {
+      margin: 2em 0 3rem;
+      padding: 2px 1.2rem;
+      border: 1px solid #fff;
+      border-radius: 1em;
+      font-size: 0.8rem;
+      color: #fff;
+    }
+  }
+}
+.main3 {
+  z-index: 1;
+  position: absolute;
+  top: 60px;
+  width: 100%;
+  height: calc(989px + 200vh);
+  &__banner {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 100vh;
+    background: url(../../images/m_middle1.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    &--info {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      color: #fff;
+    }
+  }
+  .banner {
+    &__title {
+      font-size: 2.5rem;
+      font-family: $bookbasic;
+    }
+    &__more-btn {
+      margin: 2em 0 3rem;
+      padding: 2px 1.2rem;
+      border: 1px solid #fff;
+      border-radius: 1em;
+      font-size: 0.8rem;
+      color: #fff;
+    }
+  }
+}
+.slide {
+  padding-top: calc(989px + 200vh + 3em);
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 300px;
+    height: 500px;
+    margin: 0 auto;
+    border-radius: 1em;
+    &--wrapper {
+      text-align: center;
+      color: #fff;
+    }
+    &--text {
+      font-size: 0.68rem;
+    }
+    &--title {
+      font-family: $merriweather;
+    }
+  }
+  &__title {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+}
+.swiper {
+  overflow: hidden;
+  &-slide {
+    margin-right: 0;
+    &1{
+      background: url(../../images/1.jpg) no-repeat;
+      background-size: cover;
+    }
+    &2{
+      background: url(../../images/2_new.jpg) no-repeat;
+      background-size: cover;
+    }
+    &3{
+      background: url(../../images/3_new.jpg) no-repeat;
+      background-size: cover;
+    }
+    &4{
+      background: url(../../images/4_new.jpg) no-repeat;
+      background-size: cover;
+    }
+    &5{
+      background: url(../../images/5_new.jpg) no-repeat;
+      background-size: cover;
+    }
+    &6{
+      background: url(../../images/6.jpg) no-repeat;
+      background-size: cover;
+    }
+    &7{
+      background: url(../../images/7_new.jpg) no-repeat;
+      background-size: cover;
+    }
+  }
+}
+  
+.swiper-scrollbar {
+  margin: 3rem 0 1.8rem 0;
+  width: 70%;
+  height: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+}

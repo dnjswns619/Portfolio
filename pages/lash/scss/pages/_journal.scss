@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+.journal {
+  @include inner-style-5px;
+  &__grid-box {
+    @include grid-style;
+  }
+  &__item {
+    &--img {
+      @include item-img-style;
+    }
+    &--info {
+      padding: 0 0.5rem
+    }
+    &--title {
+      @include font-merriweather;
+      display: inline-block;
+      margin: 2em 0 0.5em;
+      font-size: 1.4rem;
+    }
+    &--text {
+      @include font-notosans;
+      line-height: 1.7em;
+      font-size: 0.9rem;
+      color: #1b1c1c;
+    }
+  }
+}
+@include laptop {
+  .journal {
+    &__grid-box {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

@@ -313,10 +313,12 @@
           objs.messageB.style.opacity = calcValues(values.messageB_opacity_out, currentYOffset);
           objs.messageC.style.opacity = calcValues(values.messageC_opacity_in, currentYOffset);
           objs.messageC.style.transform = `translate3d(0, ${calcValues(values.messageC_translateY_in, currentYOffset)}%, 0)`;
+          
         } else {
           objs.messageC.style.opacity = calcValues(values.messageC_opacity_out, currentYOffset);
           objs.messageC.style.transform = `translate3d(0, ${calcValues(values.messageC_translateY_out, currentYOffset)}%, 0)`;
         }
+        
         break;
       case 1:
         // let sequence = Math.round(calcValues(values.imageSeqeunce,currentYOffset));
@@ -419,7 +421,7 @@
         }
         if (scrollRatio >= 0.8) {
           objs.canvas.classList.remove('sticky');
-          objs.canvas.style.marginTop = `${0.79 * scrollHeight}px`;
+          objs.canvas.style.marginTop = `${0.77 * scrollHeight}px`;
           objs.canvas.style.transform = `translate3d(-50%, 0, 0) scale(${calcValues(values.canvas_scale, currentYOffset)})`
         } else {
           objs.canvas.style.marginTop = `0px`;

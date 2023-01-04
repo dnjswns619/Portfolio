@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <script>
+    //  PC웹페이지에 적용할부분
+    var ua = window.navigator.userAgent.toLowerCase();
+    var mobileWindowWidth
+    if(/iphone/.test(ua) || /android/.test(ua) || /opera/.test(ua) || /bada/.test(ua) || /ipad/.test(ua) || /windows ce/.test(ua)) {
+        document.location.replace("./mobile/index.html");
+    }
+  </script>
+  <title>LASH 래쉬 &#124; </title>
+</head>
+<body>
+  <header class="header">
+    <div class="header__inner">
+      <h1 class="header__logo">
+        <a href="./index.html">
+          <img class="header__logo--img" src="./images/lash_logo.png" alt="lash">
+        </a>
+      </h1>
+      <nav class="header__nav1">
+        <a href="./pages/frame.html" class="header__nav1--item">안경테</a>
+        <a href="./pages/sunglasses.html" class="header__nav1--item">선글라스</a>
+        <a href="./pages/accessorie.html" class="header__nav1--item">악세서리</a>
+      </nav>
+      <nav class="header__nav2">
+        <a href="./pages/campaign.html" class="header__nav2--item">캠페인</a>
+        <a href="./pages/journal.html" class="header__nav2--item">저널</a>
+        <a href="./pages/brand.html" class="header__nav2--item">브랜드</a>
+      </nav>
+      <div class="header__utill">
+        <div class="header__utill--search">
+          <a href="#">
+            <span class="hidden">검색</span>
+            <img class="utill-img" src="./images/search.png" alt="">
+          </a>
+        </div>
+        <a href="#" class="header__utill--member">
+          <span class="hidden">내 정보 보기</span>
+          <img class="utill-img" src="./images/my.png" alt="">
+        </a>
+        <a href="#" class="header__utill--order">
+          <span class="hidden">장바구니</span>
+          <img class="utill-img" src="./images/cart.png" alt="">
+        </a>
+      </div>
+    </div>
+    <div class="header__inner--mobile">
+      <a class="header__menu" href="javascript:void(0);">메뉴</a>
+      <div class="header__menu--block">
+        <nav class="header__nav">
+          <a class="header__nav--search" href="#">검색</a>
+          <div class="header__nav--collection">
+            <a class="header__nav--collection-btn" href="javascript:void(0);">아이웨어 컬렉션</a>
+            <div class="header__nav--collection-box">
+              <a class="header__nav--collection-item" href="./pages/frame.html">안경테</a>
+              <a class="header__nav--collection-item" href="./pages/sunglasses.html">선글라스</a>
+              <a class="header__nav--collection-item" href="./pages/accessorie.html">악세서리</a>
+            </div>
+          </div>
+          <a  class="header__nav--item" href="./pages/campaign.html">캠페인</a>
+          <a  class="header__nav--item" href="./pages/journal.html">저널</a>
+          <a  class="header__nav--item" href="./pages/brand.html">브랜드</a>
+        </nav>
+        <nav class="header__utill">
+          <a class="header__utill--item" href="#">login</a>
+          <a class="header__utill--item" href="#">join us</a>
+          <a class="header__utill--item" href="#">Contact Us</a>
+          <a class="header__utill--item" href="#">FAQ</a>
+        </nav>
+      </div>
+      <h1 class="header__logo">
+        <a href="">
+          <img class="header__logo--img" src="../images/lash_logo.png" alt="lash">
+        </a>
+      </h1>
+      <a class="header__order" href="#">장바구니</a>
+    </div>
+  </header>
+  <main>
+    <section>
+      <div class="main">
+        <div class="main__banner banner">
+          <div class="main__banner--img"></div>
+          <div class="main__banner--info">
+            <div class="banner__info ">
+              <h2 class="banner__info--title">lash 2023 COLLECTION</h2>
+              <p class="banner__info--description">래쉬의 2023 컬렉션은 선명하며, 복잡하지 않은 것의 아름다움과<br>
+                편안하고 유행하지 않는 우아함을 담은 유니폼을 제안합니다.</p>
+              <a class="banner__btn banner__btn--view-more" href="">자세히 보기</a>
+              <a class="banner__btn banner__btn--view-item" href="">신제품 보기</a>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <a href="" class="slide__item">
+            <img class="slide__item--img" src="./images/1_new.jpg" alt="">
+            <span class="slide__item--text">2022 lash refined</span>
+          </a>
+          <a href="" class="slide__item">
+            <img class="slide__item--img" src="./images/2.jpg" alt="">
+            <span class="slide__item--text">Restrospect &#39;portrait	&#39;</span>
+          </a>
+          <a href="" class="slide__item">
+            <img class="slide__item--img" src="./images/3.jpg" alt="">
+            <span class="slide__item--text">LEE DONG HWI VINTAGE<br>
+            LOOK BOOK</span>
+          </a>
+          <a href="" class="slide__item">
+            <img class="slide__item--img" src="./images/4.jpg" alt="">
+            <span class="slide__item--text">2022 VINTAGE 2ND BIKE<br>
+              LOOK BOOK</span>
+          </a>
+          <a href="" class="slide__item">
+            <img class="slide__item--img" src="./images/5_new.jpg" alt="">
+            <span class="slide__item--text">22S&#47;S COLLECTION<br>
+              &#39;MODERN UNIFORM	&#39;</span>
+          </a>
+          <a href="" class="slide__item">
+            <img class="slide__item--img" src="./images/6.jpg" alt="">
+            <span class="slide__item--text">lasg 2021 SPECIAL<br>
+            EDITION &#39;Refined&#39;</span>
+          </a>
+          <a href="" class="slide__item">
+            <img class="slide__item--img" src="./images/7_new.jpg" alt="">
+            <span class="slide__item--text">follow us</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__flex-box">
+        <div class="footer__flex-box--logo">
+          <img class="footer__logo--img" src="./images/footer_logo2.png" alt="lash">
+        </div>
+        <div class="footer__flex-box--follow">
+          <p class="follow-text">Instagram을 팔로우하시면 신상품과 트렌드에 대한 소식을 받으실 수 있습니다.</p>
+          <a href="#" class="follow-btn">
+            <span class="hidden">인스타그램 바로가기</span>
+            팔로우하기
+          </a>
+        </div>
+      </div>
+      <div class="footer__sns">
+        <a href="#">
+          <span class="hidden">페이스북 바로가기</span>
+          <img src="./images/footer_fb.png" alt="">
+        </a>
+        <a href="#">
+          <span class="hidden">인스타그램 바로가기</span>
+          <img src="./images/footer_ins.png" alt="">
+        </a>
+        <a href="#">
+          <span class="hidden">핀터레스트 바로가기</span>
+          <img src="./images/footer_pt.png" alt="">
+        </a>
+      </div>
+      <div class="footer__info">
+        <p class="footer__info--text">
+          빅스타아이엔지 주식회사 | 서울시 성동구 성수이로 7길 7 209호 | 사업자등록번호: 220-88-60430 | 통신판매번호: 제2017-서울성동-0524호 | 대표자: 김대성 | 고객센터번호: 02-557-4164 | 이메일: cs@lasheyewear.com
+        </p>
+        <p class="footer__info--text">
+          호스팅서비스 사업자: Cafe24 <a href="#" class="footer__info--link">이용약관</a> <a href="#" class="footer__info--link">개인정보처리방침</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/main.js"></script>
+  <script src="./mobile/js/mobile-header.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+.accessorie {
+  @include inner-style-5px;
+  &__grid-box {
+    @include grid-style;
+  }
+  .item {
+    &__img {
+      @include item-img-style;
+    }
+    &__info {
+      @include item-info-style;
+    }
+    &__info--price {
+      color: #999;
+    }
+  }
+}
+@include laptop {
+  .accessorie {
+    &__grid-box {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+@include mobile {
+  .accessorie {
+    &__grid-box {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+.campaign {
+  @include inner-style-5px;
+  &__grid-box {
+    @include grid-style;
+  }
+  &__item {
+    position: relative;
+    &--img {
+      width: 100%;
+      height: calc((100vh - 64px) * 0.6);
+      border-radius: 10px;
+    }
+    &--text {
+      @include font-merriweather;
+      position: absolute;
+      bottom: 1.5em;
+      left: 1em;
+      font-size: 1.2rem;
+      letter-spacing: -0.5px;
+      color: #fff;
+    }
+  }
+}
+@include laptop {
+  .campaign {
+    &__grid-box {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+@include mobile {
+  .campaign {
+    &__grid-box {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  color: #1b1c1c;
+}
+a {
+  color: #1b1c1c;
+  text-decoration: none;
+}
+.hidden {
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip-path: polygon(0 0, 0 0, 0 0);
+}
+.fixed {
+  position: fixed;
+  top: -520px;
+}
+.static {
+  position: static;
+}
